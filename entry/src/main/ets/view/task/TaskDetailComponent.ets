@@ -115,8 +115,8 @@ export default struct TaskDetail {
           .listItemStyle()
           .enabled(
             this.settingParams?.isOpen
-              // && this.settingParams?.taskID !== taskType.smile
-              // && this.settingParams?.taskID !== taskType.brushTeeth
+              && this.settingParams?.taskID !== taskType.smile
+              && this.settingParams?.taskID !== taskType.brushTeeth
           )
           .onClick(() => {
             this.broadCast.emit(
