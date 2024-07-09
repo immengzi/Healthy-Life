@@ -450,7 +450,7 @@ export class FrequencyDialog extends ViewPU {
                         }, Text);
                         Text.pop();
                         this.observeComponentCreation2((elmtId, isInitialRender) => {
-                            Toggle.create({ type: ToggleType.Checkbox });
+                            Toggle.create({ type: ToggleType.Checkbox, isOn: this.frequency.split(' ').includes(item?.label) });
                             Toggle.onChange((isOn) => {
                                 item.isChecked = isOn;
                             });

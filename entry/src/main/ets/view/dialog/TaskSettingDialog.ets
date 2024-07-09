@@ -204,7 +204,7 @@ export struct FrequencyDialog {
           ListItem() {
             Row() {
               Text(item?.label).fontSize(Const.DEFAULT_20)
-              Toggle({ type: ToggleType.Checkbox })
+              Toggle({ type: ToggleType.Checkbox, isOn: this.frequency.split(' ').includes(item?.label)})
                 .onChange((isOn) => {
                   item.isChecked = isOn;
                 })
