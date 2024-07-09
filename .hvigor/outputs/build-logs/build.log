@@ -1,0 +1,1545 @@
+[2024-07-09T11:40:16.365] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2024-07-09T11:40:17.282] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: false,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' }
+}
+[2024-07-09T11:40:17.314] [DEBUG] debug-file - hvigorfile, resolving E:\Files\Chrome_Files\Healthy_life\hvigorfile.ts
+[2024-07-09T11:40:19.661] [DEBUG] debug-file - hvigorfile, require result:  { appTasks: [Getter] }
+[2024-07-09T11:40:19.921] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2024-07-09T11:40:19.926] [DEBUG] debug-file - Product 'default' using build option: {
+  "debuggable": true
+} in this build.
+[2024-07-09T11:40:19.945] [DEBUG] debug-file - Local scan or download hmscore sdk components toolchains,ets,native
+[2024-07-09T11:40:19.936] [DEBUG] debug-file - Local scan or download HarmonyOS sdk components toolchains,ets,js,native
+[2024-07-09T11:40:19.964] [DEBUG] debug-file - Sdk init in 35 ms 
+[2024-07-09T11:40:20.003] [DEBUG] debug-file - Project task initialization takes 37 ms 
+[2024-07-09T11:40:20.013] [DEBUG] debug-file - hvigorfile, resolving E:\Files\Chrome_Files\Healthy_life\entry\hvigorfile.ts
+[2024-07-09T11:40:20.033] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2024-07-09T11:40:20.045] [DEBUG] debug-file - Module entry task initialization takes 7 ms 
+[2024-07-09T11:40:20.048] [DEBUG] debug-file - project has submodules:entry
+[2024-07-09T11:40:20.072] [DEBUG] debug-file - Executing task :entry:clean
+[2024-07-09T11:40:20.076] [DEBUG] debug-file - entry : clean cost memory 0.2328338623046875
+[2024-07-09T11:40:16.367] [DEBUG] debug-file - env: hvigor-config.json5 content = { modelVersion: '5.0.0', dependencies: {} }
+[2024-07-09T11:40:20.120] [DEBUG] debug-file - Current worker pool is stopped or closed.
+[2024-07-09T11:40:17.284] [DEBUG] debug-file - Since current hvigor version 5.2.2 differs from last hvigor version 
+      undefined, delete file-cache.json and task-cache.json.
+[2024-07-09T11:40:19.662] [DEBUG] debug-file - hvigorfile, binding system plugins { appTasks: [Getter] }
+[2024-07-09T11:40:19.921] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2024-07-09T11:40:19.928] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2024-07-09T11:40:20.004] [DEBUG] debug-file - hvigorfile, resolve finished E:\Files\Chrome_Files\Healthy_life\hvigorfile.ts
+[2024-07-09T11:40:20.021] [DEBUG] debug-file - hvigorfile, require result:  { hapTasks: [Getter] }
+[2024-07-09T11:40:20.033] [DEBUG] debug-file - Target 'default' config: {}
+[2024-07-09T11:40:20.045] [DEBUG] debug-file - hvigorfile, resolve finished E:\Files\Chrome_Files\Healthy_life\entry\hvigorfile.ts
+[2024-07-09T11:40:20.049] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2024-07-09T11:40:20.073] [DEBUG] debug-file - clean: Worker pool is inactive.
+[2024-07-09T11:40:20.076] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 828 ms 
+[2024-07-09T11:40:16.371] [DEBUG] debug-file - env: daemon=false
+[2024-07-09T11:40:20.132] [DEBUG] debug-file - Current worker pool is terminated.
+[2024-07-09T11:40:17.286] [DEBUG] debug-file - Cache service initialization finished in 3 ms 
+[2024-07-09T11:40:19.921] [DEBUG] debug-file - Product 'default' build option: {}
+[2024-07-09T11:40:20.021] [DEBUG] debug-file - hvigorfile, binding system plugins { hapTasks: [Getter] }
+[2024-07-09T11:40:20.034] [DEBUG] debug-file - Module 'entry' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2024-07-09T11:40:20.055] [DEBUG] debug-file - load to the disk finished
+[2024-07-09T11:40:20.077] [INFO] debug-file - Finished :entry:clean... after 4 ms 
+[2024-07-09T11:40:16.372] [DEBUG] debug-file - no-daemon, use the parent process.execArgv --max-old-space-size=8192,--expose-gc
+[2024-07-09T11:40:19.921] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2024-07-09T11:40:20.034] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2024-07-09T11:40:20.057] [DEBUG] debug-file - Module Healthy_life Collected Dependency: 
+[2024-07-09T11:40:20.078] [DEBUG] debug-file - Executing task ::clean
+[2024-07-09T11:40:20.034] [DEBUG] debug-file - Module 'entry' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2024-07-09T11:40:20.057] [DEBUG] debug-file - Module Healthy_life's total dependency: 0
+[2024-07-09T11:40:20.078] [DEBUG] debug-file - clean: Worker pool is inactive.
+[2024-07-09T11:40:20.060] [DEBUG] debug-file - Module entry Collected Dependency: 
+[2024-07-09T11:40:20.078] [DEBUG] debug-file - Healthy_life : clean cost memory 0.02721405029296875
+[2024-07-09T11:40:20.060] [DEBUG] debug-file - Module entry's total dependency: 0
+[2024-07-09T11:40:20.078] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 830 ms 
+[2024-07-09T11:40:20.065] [DEBUG] debug-file - Configuration phase cost:2 s 766 ms 
+[2024-07-09T11:40:20.079] [INFO] debug-file - Finished ::clean... after 1 ms 
+[2024-07-09T11:40:20.069] [DEBUG] debug-file - Configuration task cost before running: 2 s 820 ms 
+[2024-07-09T11:40:20.079] [DEBUG] debug-file - Executing task :entry:init
+[2024-07-09T11:40:20.079] [DEBUG] debug-file - entry : init cost memory 0.0098419189453125
+[2024-07-09T11:40:20.079] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 831 ms 
+[2024-07-09T11:40:20.079] [INFO] debug-file - Finished :entry:init... after 1 ms 
+[2024-07-09T11:40:20.079] [DEBUG] debug-file - Executing task ::init
+[2024-07-09T11:40:20.080] [DEBUG] debug-file - Healthy_life : init cost memory 0.008544921875
+[2024-07-09T11:40:20.080] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 832 ms 
+[2024-07-09T11:40:20.080] [INFO] debug-file - Finished ::init... after 1 ms 
+[2024-07-09T11:40:20.094] [DEBUG] debug-file - Module 'entry' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2024-07-09T11:40:20.100] [DEBUG] debug-file - hvigor start cli arguments:{
+  prop: [ 'product=default' ],
+  sync: true,
+  parallel: true,
+  incremental: true,
+  daemon: false,
+  _: [ '--analyze=normal' ]
+}
+[2024-07-09T11:40:20.107] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2024-07-09T11:40:20.107] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2024-07-09T11:40:28.997] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2024-07-09T11:40:29.321] [DEBUG] debug-file - env: daemon=true
+[2024-07-09T11:40:29.004] [DEBUG] debug-file - env: hvigor-config.json5 content = { modelVersion: '5.0.0', dependencies: {} }
+[2024-07-09T11:40:30.881] [DEBUG] debug-file - hvigor start cli arguments:{
+  prop: [
+    'module=entry@default',
+    'product=default',
+    'requiredDeviceType=phone'
+  ],
+  mode: 'module',
+  parallel: true,
+  incremental: true,
+  daemon: true,
+  _: [ 'assembleHap', '--analyze=normal' ]
+}
+[2024-07-09T11:40:30.924] [DEBUG] debug-file - session manager: set active socket. socketId=0YVuYQ9LeC5maqadAAAB
+[2024-07-09T11:40:31.172] [DEBUG] debug-file - java daemon tryConnect success
+[2024-07-09T11:40:32.475] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' }
+}
+[2024-07-09T11:40:32.482] [DEBUG] debug-file - Cache service initialization finished in 6 ms 
+[2024-07-09T11:40:32.497] [DEBUG] debug-file - hvigorfile, resolving E:\Files\Chrome_Files\Healthy_life\hvigorfile.ts
+[2024-07-09T11:40:35.027] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2024-07-09T11:40:35.029] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2024-07-09T11:40:35.864] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2024-07-09T11:40:35.865] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2024-07-09T11:40:35.865] [DEBUG] debug-file - Product 'default' build option: {}
+[2024-07-09T11:40:35.865] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2024-07-09T11:40:35.874] [DEBUG] debug-file - Product 'default' using build option: {
+  "debuggable": true
+} in this build.
+[2024-07-09T11:40:35.878] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2024-07-09T11:40:35.889] [DEBUG] debug-file - Local scan or download HarmonyOS sdk components toolchains,ets,js,native
+[2024-07-09T11:40:35.897] [DEBUG] debug-file - Local scan or download hmscore sdk components toolchains,ets,native
+[2024-07-09T11:40:35.933] [DEBUG] debug-file - Sdk init in 53 ms 
+[2024-07-09T11:40:36.073] [DEBUG] debug-file - Project task initialization takes 134 ms 
+[2024-07-09T11:40:36.073] [DEBUG] debug-file - hvigorfile, resolve finished E:\Files\Chrome_Files\Healthy_life\hvigorfile.ts
+[2024-07-09T11:40:36.108] [DEBUG] debug-file - hvigorfile, resolving E:\Files\Chrome_Files\Healthy_life\entry\hvigorfile.ts
+[2024-07-09T11:40:36.140] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2024-07-09T11:40:36.140] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2024-07-09T11:40:36.189] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2024-07-09T11:40:36.190] [DEBUG] debug-file - Target 'default' config: {}
+[2024-07-09T11:40:36.191] [DEBUG] debug-file - Module 'entry' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2024-07-09T11:40:36.191] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2024-07-09T11:40:36.192] [DEBUG] debug-file - Module 'entry' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2024-07-09T11:40:36.223] [DEBUG] debug-file - Module entry task initialization takes 24 ms 
+[2024-07-09T11:40:36.223] [DEBUG] debug-file - hvigorfile, resolve finished E:\Files\Chrome_Files\Healthy_life\entry\hvigorfile.ts
+[2024-07-09T11:40:36.530] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 304 ms 
+[2024-07-09T11:40:36.532] [DEBUG] debug-file - project has submodules:entry
+[2024-07-09T11:40:36.534] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2024-07-09T11:40:36.571] [DEBUG] debug-file - load to the disk finished
+[2024-07-09T11:40:36.575] [DEBUG] debug-file - Module Healthy_life Collected Dependency: 
+[2024-07-09T11:40:36.576] [DEBUG] debug-file - Module Healthy_life's total dependency: 0
+[2024-07-09T11:40:36.591] [DEBUG] debug-file - Module entry Collected Dependency: 
+[2024-07-09T11:40:36.591] [DEBUG] debug-file - Module entry's total dependency: 0
+[2024-07-09T11:40:36.607] [DEBUG] debug-file - Configuration phase cost:4 s 118 ms 
+[2024-07-09T11:40:36.615] [DEBUG] debug-file - Configuration task cost before running: 4 s 156 ms 
+[2024-07-09T11:40:36.626] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:36.627] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:36.627] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:36.664] [DEBUG] debug-file - Executing task :entry:default@PreBuild
+[2024-07-09T11:40:36.706] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2024-07-09T11:40:36.707] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2024-07-09T11:40:37.858] [DEBUG] debug-file - current product is not Atomic service.
+[2024-07-09T11:40:37.862] [DEBUG] debug-file - Use tool [win32: JAVA_HOME, CLASSPATH]
+ [
+  { JAVA_HOME: 'D:\\Program Files\\Huawei\\DevEco Studio\\jbr' },
+  { CLASSPATH: undefined }
+]
+[2024-07-09T11:40:37.863] [DEBUG] debug-file - Use tool [win32: NODE_HOME]
+ [
+  {
+    NODE_HOME: 'D:\\Program Files\\Huawei\\DevEco Studio\\tools\\node'
+  }
+]
+[2024-07-09T11:40:37.864] [DEBUG] debug-file - entry : default@PreBuild cost memory 10.919235229492188
+[2024-07-09T11:40:37.865] [DEBUG] debug-file - runTaskFromQueue task cost before running: 5 s 405 ms 
+[2024-07-09T11:40:37.872] [INFO] debug-file - Finished :entry:default@PreBuild... after 1 s 201 ms 
+[2024-07-09T11:40:37.879] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:37.880] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:37.880] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:37.882] [DEBUG] debug-file - Executing task :entry:default@GenerateMetadata
+[2024-07-09T11:40:37.896] [DEBUG] debug-file - entry : default@GenerateMetadata cost memory 0.10723114013671875
+[2024-07-09T11:40:37.903] [DEBUG] debug-file - runTaskFromQueue task cost before running: 5 s 440 ms 
+[2024-07-09T11:40:37.906] [INFO] debug-file - Finished :entry:default@GenerateMetadata... after 17 ms 
+[2024-07-09T11:40:37.920] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:37.921] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:37.921] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:37.928] [DEBUG] debug-file - Executing task :entry:default@ConfigureCmake
+[2024-07-09T11:40:37.929] [DEBUG] debug-file - entry : default@ConfigureCmake cost memory 0.013153076171875
+[2024-07-09T11:40:37.930] [DEBUG] debug-file - runTaskFromQueue task cost before running: 5 s 471 ms 
+[2024-07-09T11:40:37.931] [INFO] debug-file - Finished :entry:default@ConfigureCmake... after 2 ms 
+[2024-07-09T11:40:37.975] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:37.975] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:37.975] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:37.977] [DEBUG] debug-file - Executing task :entry:default@MergeProfile
+[2024-07-09T11:40:37.980] [DEBUG] debug-file - Change app api release type with 'Beta1'
+[2024-07-09T11:40:37.981] [DEBUG] debug-file - Change app compile API version with '5.0.0.25'
+[2024-07-09T11:40:37.981] [DEBUG] debug-file - Change app target API version with '50000012'
+[2024-07-09T11:40:37.982] [DEBUG] debug-file - Change app minimum API version with '50000012'
+[2024-07-09T11:40:37.985] [DEBUG] debug-file - Use cli appEnvironment
+[2024-07-09T11:40:38.010] [DEBUG] debug-file - entry : default@MergeProfile cost memory 0.1496429443359375
+[2024-07-09T11:40:38.010] [DEBUG] debug-file - runTaskFromQueue task cost before running: 5 s 551 ms 
+[2024-07-09T11:40:38.012] [INFO] debug-file - Finished :entry:default@MergeProfile... after 33 ms 
+[2024-07-09T11:40:38.017] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.017] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.017] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:38.019] [DEBUG] debug-file - Executing task :entry:default@CreateBuildProfile
+[2024-07-09T11:40:38.062] [DEBUG] debug-file - entry : default@CreateBuildProfile cost memory 0.0792999267578125
+[2024-07-09T11:40:38.063] [DEBUG] debug-file - runTaskFromQueue task cost before running: 5 s 604 ms 
+[2024-07-09T11:40:38.064] [INFO] debug-file - Finished :entry:default@CreateBuildProfile... after 44 ms 
+[2024-07-09T11:40:38.077] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.078] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.078] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:38.080] [DEBUG] debug-file - Executing task :entry:default@PreCheckSyscap
+[2024-07-09T11:40:38.085] [DEBUG] debug-file - entry : default@PreCheckSyscap cost memory 0.013458251953125
+[2024-07-09T11:40:38.087] [DEBUG] debug-file - runTaskFromQueue task cost before running: 5 s 627 ms 
+[2024-07-09T11:40:38.088] [INFO] debug-file - Finished :entry:default@PreCheckSyscap... after 7 ms 
+[2024-07-09T11:40:38.094] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.094] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.094] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:38.137] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgContextInfo
+[2024-07-09T11:40:38.140] [DEBUG] debug-file - entry : default@GeneratePkgContextInfo cost memory 0.01975250244140625
+[2024-07-09T11:40:38.141] [DEBUG] debug-file - runTaskFromQueue task cost before running: 5 s 682 ms 
+[2024-07-09T11:40:38.141] [INFO] debug-file - Finished :entry:default@GeneratePkgContextInfo... after 4 ms 
+[2024-07-09T11:40:38.147] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.148] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.148] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:38.153] [DEBUG] debug-file - Executing task :entry:default@ProcessIntegratedHsp
+[2024-07-09T11:40:38.156] [DEBUG] debug-file - entry : default@ProcessIntegratedHsp cost memory 0.0447845458984375
+[2024-07-09T11:40:38.157] [DEBUG] debug-file - runTaskFromQueue task cost before running: 5 s 697 ms 
+[2024-07-09T11:40:38.165] [INFO] debug-file - Finished :entry:default@ProcessIntegratedHsp... after 4 ms 
+[2024-07-09T11:40:38.197] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.198] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.202] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:38.205] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithCmake
+[2024-07-09T11:40:38.213] [DEBUG] debug-file - entry : default@BuildNativeWithCmake cost memory 0.01438140869140625
+[2024-07-09T11:40:38.214] [DEBUG] debug-file - runTaskFromQueue task cost before running: 5 s 755 ms 
+[2024-07-09T11:40:38.215] [INFO] debug-file - Finished :entry:default@BuildNativeWithCmake... after 10 ms 
+[2024-07-09T11:40:38.238] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.239] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.239] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:38.241] [DEBUG] debug-file - Executing task :entry:default@MakePackInfo
+[2024-07-09T11:40:38.254] [DEBUG] debug-file - Module Pack Info:  {
+  summary: {
+    app: {
+      bundleName: 'com.example.healthy_life',
+      bundleType: 'app',
+      version: [Object]
+    },
+    modules: [ [Object] ]
+  },
+  packages: [
+    {
+      deviceType: [Array],
+      moduleType: 'entry',
+      deliveryWithInstall: true,
+      name: 'entry-default'
+    }
+  ]
+}
+[2024-07-09T11:40:38.270] [DEBUG] debug-file - entry : default@MakePackInfo cost memory 0.1700286865234375
+[2024-07-09T11:40:38.270] [DEBUG] debug-file - runTaskFromQueue task cost before running: 5 s 811 ms 
+[2024-07-09T11:40:38.276] [INFO] debug-file - Finished :entry:default@MakePackInfo... after 30 ms 
+[2024-07-09T11:40:38.284] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.284] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.284] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:38.292] [DEBUG] debug-file - Executing task :entry:default@ProcessProfile
+[2024-07-09T11:40:38.298] [DEBUG] debug-file - [
+  'D:\\Program Files\\Huawei\\DevEco Studio\\tools\\node\\node.exe',
+  'D:\\Program Files\\Huawei\\DevEco Studio\\sdk\\HarmonyOS-NEXT-DB1\\openharmony\\ets\\build-tools\\ets-loader\\bin\\ark\\ts2abc.js',
+  '--target-api-version',
+  '12'
+]
+[2024-07-09T11:40:38.931] [DEBUG] debug-file - 12.0.2.0
+[2024-07-09T11:40:38.935] [DEBUG] debug-file - entry : default@ProcessProfile cost memory 1.9633560180664062
+[2024-07-09T11:40:38.935] [DEBUG] debug-file - runTaskFromQueue task cost before running: 6 s 476 ms 
+[2024-07-09T11:40:38.936] [INFO] debug-file - Finished :entry:default@ProcessProfile... after 644 ms 
+[2024-07-09T11:40:38.940] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.940] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.940] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:38.942] [DEBUG] debug-file - Executing task :entry:default@SyscapTransform
+[2024-07-09T11:40:38.945] [DEBUG] debug-file - entry : default@SyscapTransform cost memory 0.04106903076171875
+[2024-07-09T11:40:38.946] [DEBUG] debug-file - runTaskFromQueue task cost before running: 6 s 487 ms 
+[2024-07-09T11:40:38.947] [INFO] debug-file - Finished :entry:default@SyscapTransform... after 4 ms 
+[2024-07-09T11:40:38.951] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.951] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.951] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:38.955] [DEBUG] debug-file - Executing task :entry:default@ProcessRouterMap
+[2024-07-09T11:40:38.973] [DEBUG] debug-file - entry : default@ProcessRouterMap cost memory 0.21572113037109375
+[2024-07-09T11:40:38.973] [DEBUG] debug-file - runTaskFromQueue task cost before running: 6 s 514 ms 
+[2024-07-09T11:40:38.976] [INFO] debug-file - Finished :entry:default@ProcessRouterMap... after 18 ms 
+[2024-07-09T11:40:38.981] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.981] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.981] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:38.982] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithNinja
+[2024-07-09T11:40:38.985] [DEBUG] debug-file - entry : default@BuildNativeWithNinja cost memory 0.0355224609375
+[2024-07-09T11:40:38.985] [DEBUG] debug-file - runTaskFromQueue task cost before running: 6 s 526 ms 
+[2024-07-09T11:40:38.985] [INFO] debug-file - Finished :entry:default@BuildNativeWithNinja... after 4 ms 
+[2024-07-09T11:40:38.989] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.990] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:38.990] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:38.992] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@ProcessResource
+[2024-07-09T11:40:38.995] [DEBUG] debug-file - Executing task :entry:default@ProcessResource
+[2024-07-09T11:40:38.999] [DEBUG] debug-file - entry : default@ProcessResource cost memory 0.08931732177734375
+[2024-07-09T11:40:39.001] [DEBUG] debug-file - runTaskFromQueue task cost before running: 6 s 541 ms 
+[2024-07-09T11:40:39.002] [INFO] debug-file - Finished :entry:default@ProcessResource... after 7 ms 
+[2024-07-09T11:40:39.006] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:39.006] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:39.006] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:39.010] [DEBUG] debug-file - Executing task :entry:default@GenerateLoaderJson
+[2024-07-09T11:40:39.029] [DEBUG] debug-file - entry : default@GenerateLoaderJson cost memory 0.9578857421875
+[2024-07-09T11:40:39.029] [DEBUG] debug-file - runTaskFromQueue task cost before running: 6 s 570 ms 
+[2024-07-09T11:40:39.036] [INFO] debug-file - Finished :entry:default@GenerateLoaderJson... after 19 ms 
+[2024-07-09T11:40:39.040] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:39.041] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:39.041] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:39.044] [DEBUG] debug-file - Executing task :entry:default@ProcessLibs
+[2024-07-09T11:40:39.058] [DEBUG] debug-file - default@ProcessLibs work[0] is submitted.
+[2024-07-09T11:40:39.060] [DEBUG] debug-file - default@ProcessLibs work[0] is pushed to ready queue.
+[2024-07-09T11:40:39.061] [DEBUG] debug-file - A work dispatched to worker[7] failed because unable to get work from ready queue.
+[2024-07-09T11:40:39.063] [DEBUG] debug-file - default@ProcessLibs work[0] has been dispatched to worker[6].
+[2024-07-09T11:40:39.063] [DEBUG] debug-file - default@ProcessLibs work[0] is dispatched.
+[2024-07-09T11:40:39.063] [DEBUG] debug-file - entry : default@ProcessLibs cost memory 0.40647125244140625
+[2024-07-09T11:40:39.073] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:39.073] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:39.073] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:39.075] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@CompileResource
+[2024-07-09T11:40:39.077] [DEBUG] debug-file - Executing task :entry:default@CompileResource
+[2024-07-09T11:40:39.384] [DEBUG] debug-file - Use tool [D:\Program Files\Huawei\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\toolchains\restool.exe]
+ [
+  'D:\\Program Files\\Huawei\\DevEco Studio\\sdk\\HarmonyOS-NEXT-DB1\\openharmony\\toolchains\\restool.exe',
+  '-l',
+  'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\intermediates\\res\\default\\resConfig.json'
+]
+[2024-07-09T11:40:39.386] [DEBUG] debug-file - current process  memoryUsage: {
+  rss: 237457408,
+  heapTotal: 144031744,
+  heapUsed: 112327472,
+  external: 1452915,
+  arrayBuffers: 174266
+} os memoryUsage :14.075508117675781
+[2024-07-09T11:40:39.694] [DEBUG] debug-file - Info: restool resources compile success.
+
+[2024-07-09T11:40:39.704] [DEBUG] debug-file - entry : default@CompileResource cost memory 6.770301818847656
+[2024-07-09T11:40:39.705] [DEBUG] debug-file - runTaskFromQueue task cost before running: 7 s 246 ms 
+[2024-07-09T11:40:39.707] [INFO] debug-file - Finished :entry:default@CompileResource... after 628 ms 
+[2024-07-09T11:40:39.711] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:39.711] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:39.712] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:39.717] [DEBUG] debug-file - Executing task :entry:default@CompileArkTS
+[2024-07-09T11:40:39.749] [DEBUG] debug-file - build config:
+[2024-07-09T11:40:39.749] [DEBUG] debug-file - {
+  moduleType: 'entry',
+  perf: 0,
+  targetName: '.default',
+  packageManagerType: 'ohpm',
+  localPropertiesPath: 'E:\\Files\\Chrome_Files\\Healthy_life\\local.properties',
+  isPreview: false,
+  isOhosTest: false,
+  buildMode: 'Debug',
+  watchMode: 'false',
+  aceProfilePath: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\intermediates\\res\\default\\resources\\base\\profile',
+  etsLoaderPath: 'D:\\Program Files\\Huawei\\DevEco Studio\\sdk\\HarmonyOS-NEXT-DB1\\openharmony\\ets\\build-tools\\ets-loader',
+  modulePath: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry',
+  testFrameworkPar: {
+    testMode: undefined,
+    coveragePathFilter: undefined,
+    coverageMode: undefined
+  },
+  needCoverageInsert: false,
+  debugLine: false,
+  projectTopDir: 'E:\\Files\\Chrome_Files\\Healthy_life',
+  compileSdkVersion: 12,
+  compatibleSdkVersion: 12,
+  bundleName: 'com.example.healthy_life',
+  etsLoaderVersion: '5.0.0.25',
+  etsLoaderReleaseType: 'Beta1',
+  aotCompileMode: 'type',
+  apPath: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\modules.ap',
+  entryModuleName: 'entry',
+  entryModuleVersion: '1.0.0',
+  entryPackageName: 'entry',
+  allModuleNameHash: '6356ac49ecf49e6af75567d988768c76',
+  externalApiPaths: [
+    'D:\\Program Files\\Huawei\\DevEco Studio\\sdk\\HarmonyOS-NEXT-DB1\\hms\\ets'
+  ],
+  compilerTypes: undefined,
+  isCrossplatform: false,
+  hvigorPluginFile: undefined,
+  buildGeneratedProfilePath: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\generated\\profile\\default',
+  bundleType: 'app',
+  arkTSVersion: undefined,
+  apiVersion: 12,
+  needCompleteSourcesMap: false,
+  isFaMode: false,
+  strictMode: undefined,
+  buildDir: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build',
+  deviceTypes: [ 'phone' ],
+  moduleDependencies: { dependency: {} },
+  projectDependencies: { dependency: {} },
+  useNormalizedOHMUrl: false,
+  pkgContextInfo: undefined,
+  ohPackagePathMap: {},
+  dependencyAliasMap: {},
+  permission: { requestPermissions: [ [Object] ], definePermissions: undefined },
+  integratedHsp: false,
+  projectArkOption: undefined,
+  sourceMapDir: undefined,
+  branchElimination: false,
+  transformLib: undefined,
+  caseSensitiveCheck: false,
+  tsImportSendable: false,
+  resolveConflictMode: true,
+  depName2RootPath: {},
+  aceModuleJsonPath: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\intermediates\\res\\default\\module.json',
+  appResource: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\intermediates\\res\\default\\ResourceTable.txt',
+  rawFileResource: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\intermediates\\res\\default\\resources\\rawfile',
+  resourceTableHash: 'f68aff736333edfe6eddf0708a7e4f06',
+  runtimeOS: 'HarmonyOS',
+  sdkInfo: 'false:12:5.0.0.25:Beta1',
+  aceModuleRoot: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\src\\main\\ets',
+  compileMode: 'esmodule',
+  aceSuperVisualPath: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\src\\main\\supervisual',
+  aceBuildJson: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\intermediates\\loader\\default\\loader.json',
+  cachePath: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\cache\\default\\default@CompileArkTS\\esmodule\\debug',
+  aceModuleBuild: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\intermediates\\loader_out\\default\\ets',
+  supportChunks: true,
+  pkgNameToPkgBriefInfo: {
+    entry: {
+      pkgRoot: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry',
+      originalSourceRoots: undefined,
+      sourceRoots: [Array],
+      pkgName: 'entry'
+    }
+  },
+  projectModel: {
+    'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\src\\main': {
+      moduleName: 'entry',
+      modulePkgPath: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry'
+    },
+    'E:\\Files\\Chrome_Files\\Healthy_life\\entry': {
+      moduleName: 'entry',
+      modulePkgPath: 'E:\\Files\\Chrome_Files\\Healthy_life\\entry'
+    },
+    'E:\\Files\\Chrome_Files\\Healthy_life': {
+      moduleName: 'Healthy_life',
+      modulePkgPath: 'E:\\Files\\Chrome_Files\\Healthy_life'
+    }
+  },
+  pkgJsonFileHash: '52c5f33230ea56a2aeae467df5dcdd03',
+  allModulePaths: [ 'E:\\Files\\Chrome_Files\\Healthy_life\\entry' ],
+  routerMap: {},
+  obfuscationOptions: undefined,
+  mockParams: {
+    decorator: '@MockSetup',
+    packageName: '@ohos/hamock',
+    etsSourceRootPath: 'src/main/ets',
+    mockConfigPath: undefined,
+    mockConfigKey2ModuleInfo: {}
+  },
+  otherPaths: {
+    'entry/*': [
+      '..\\*',
+      '..\\..\\..\\build\\default\\generated\\profile\\default\\*'
+    ]
+  },
+  collectImportersConfig: undefined
+}
+[2024-07-09T11:40:39.750] [DEBUG] debug-file - Compile arkts with external api path: D:\Program Files\Huawei\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\hms\ets
+[2024-07-09T11:40:39.753] [DEBUG] debug-file - default@CompileArkTS work[1] is submitted.
+[2024-07-09T11:40:39.754] [DEBUG] debug-file - default@CompileArkTS work[1] is pushed to ready queue.
+[2024-07-09T11:40:39.754] [DEBUG] debug-file - A work dispatched to worker[7] failed because unable to get work from ready queue.
+[2024-07-09T11:40:39.754] [DEBUG] debug-file - A work dispatched to worker[6] failed because of worker busy.
+[2024-07-09T11:40:39.755] [DEBUG] debug-file - A work dispatched to worker[5] failed because unable to get work from ready queue.
+[2024-07-09T11:40:39.755] [DEBUG] debug-file - A work dispatched to worker[4] failed because unable to get work from ready queue.
+[2024-07-09T11:40:39.755] [DEBUG] debug-file - A work dispatched to worker[3] failed because unable to get work from ready queue.
+[2024-07-09T11:40:39.755] [DEBUG] debug-file - A work dispatched to worker[2] failed because unable to get work from ready queue.
+[2024-07-09T11:40:39.755] [DEBUG] debug-file - A work dispatched to worker[1] failed because unable to get work from ready queue.
+[2024-07-09T11:40:39.755] [DEBUG] debug-file - default@CompileArkTS work[1] has been dispatched to worker[0].
+[2024-07-09T11:40:39.756] [DEBUG] debug-file - default@CompileArkTS work[1] is dispatched.
+[2024-07-09T11:40:39.756] [DEBUG] debug-file - CopyResources startTime: 61352102840900
+[2024-07-09T11:40:39.756] [DEBUG] debug-file - default@CompileArkTS work[2] is submitted.
+[2024-07-09T11:40:39.758] [DEBUG] debug-file - default@CompileArkTS work[2] is pushed to ready queue.
+[2024-07-09T11:40:39.758] [DEBUG] debug-file - A work dispatched to worker[7] failed because unable to get work from ready queue.
+[2024-07-09T11:40:39.758] [DEBUG] debug-file - A work dispatched to worker[6] failed because of worker busy.
+[2024-07-09T11:40:39.760] [DEBUG] debug-file - default@CompileArkTS work[2] has been dispatched to worker[5].
+[2024-07-09T11:40:39.761] [DEBUG] debug-file - default@CompileArkTS work[2] is dispatched.
+[2024-07-09T11:40:39.774] [DEBUG] debug-file - default@CompileArkTS work[3] is submitted.
+[2024-07-09T11:40:39.775] [DEBUG] debug-file - default@CompileArkTS work[3] is pushed to ready queue.
+[2024-07-09T11:40:39.776] [DEBUG] debug-file - A work dispatched to worker[7] failed because unable to get work from ready queue.
+[2024-07-09T11:40:39.776] [DEBUG] debug-file - A work dispatched to worker[6] failed because of worker busy.
+[2024-07-09T11:40:39.776] [DEBUG] debug-file - A work dispatched to worker[5] failed because of worker busy.
+[2024-07-09T11:40:39.776] [DEBUG] debug-file - A work dispatched to worker[4] failed because unable to get work from ready queue.
+[2024-07-09T11:40:39.776] [DEBUG] debug-file - A work dispatched to worker[3] failed because unable to get work from ready queue.
+[2024-07-09T11:40:39.777] [DEBUG] debug-file - A work dispatched to worker[2] failed because unable to get work from ready queue.
+[2024-07-09T11:40:39.777] [DEBUG] debug-file - default@CompileArkTS work[3] has been dispatched to worker[1].
+[2024-07-09T11:40:39.777] [DEBUG] debug-file - default@CompileArkTS work[3] is dispatched.
+[2024-07-09T11:40:39.778] [DEBUG] debug-file - entry : default@CompileArkTS cost memory 2.2827682495117188
+[2024-07-09T11:40:39.781] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:39.781] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:39.782] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:39.786] [DEBUG] debug-file - Executing task :entry:default@BuildJS
+[2024-07-09T11:40:39.791] [DEBUG] debug-file - entry : default@BuildJS cost memory 0.13239288330078125
+[2024-07-09T11:40:39.791] [DEBUG] debug-file - runTaskFromQueue task cost before running: 7 s 332 ms 
+[2024-07-09T11:40:39.791] [INFO] debug-file - Finished :entry:default@BuildJS... after 6 ms 
+[2024-07-09T11:40:40.963] [DEBUG] debug-file - default@ProcessLibs work[0] done.
+[2024-07-09T11:40:40.964] [DEBUG] debug-file - A work dispatched to worker[6] failed because unable to get work from ready queue.
+[2024-07-09T11:40:40.965] [INFO] debug-file - Finished :entry:default@ProcessLibs... after 1 s 920 ms 
+[2024-07-09T11:40:40.970] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:40.970] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:40.971] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:40.974] [DEBUG] debug-file - Executing task :entry:default@DoNativeStrip
+[2024-07-09T11:40:40.976] [DEBUG] debug-file - default@DoNativeStrip work[4] is submitted.
+[2024-07-09T11:40:40.977] [DEBUG] debug-file - default@DoNativeStrip work[4] is pushed to ready queue.
+[2024-07-09T11:40:40.977] [DEBUG] debug-file - A work dispatched to worker[7] failed because unable to get work from ready queue.
+[2024-07-09T11:40:40.978] [DEBUG] debug-file - default@DoNativeStrip work[4] has been dispatched to worker[6].
+[2024-07-09T11:40:40.978] [DEBUG] debug-file - default@DoNativeStrip work[4] is dispatched.
+[2024-07-09T11:40:40.978] [DEBUG] debug-file - entry : default@DoNativeStrip cost memory 0.1497955322265625
+[2024-07-09T11:40:40.992] [DEBUG] debug-file - Do not need strip, copying .so files to stripped_native_libs
+[2024-07-09T11:40:41.019] [DEBUG] debug-file - default@DoNativeStrip work[4] done.
+[2024-07-09T11:40:41.019] [DEBUG] debug-file - A work dispatched to worker[6] failed because unable to get work from ready queue.
+[2024-07-09T11:40:41.021] [INFO] debug-file - Finished :entry:default@DoNativeStrip... after 45 ms 
+[2024-07-09T11:40:41.026] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:41.027] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:40:41.027] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:40:41.030] [DEBUG] debug-file - Executing task :entry:default@CacheNativeLibs
+[2024-07-09T11:40:41.031] [DEBUG] debug-file - default@CacheNativeLibs work[5] is submitted.
+[2024-07-09T11:40:41.042] [DEBUG] debug-file - default@CacheNativeLibs work[5] is pushed to ready queue.
+[2024-07-09T11:40:41.043] [DEBUG] debug-file - A work dispatched to worker[7] failed because unable to get work from ready queue.
+[2024-07-09T11:40:41.043] [DEBUG] debug-file - default@CacheNativeLibs work[5] has been dispatched to worker[6].
+[2024-07-09T11:40:41.044] [DEBUG] debug-file - default@CacheNativeLibs work[5] is dispatched.
+[2024-07-09T11:40:41.044] [DEBUG] debug-file - entry : default@CacheNativeLibs cost memory 0.32848358154296875
+[2024-07-09T11:40:41.404] [DEBUG] debug-file - CopyResources is end, endTime: 61353750608800
+[2024-07-09T11:40:41.405] [DEBUG] debug-file - default@CompileArkTS work[2] done.
+[2024-07-09T11:40:41.406] [DEBUG] debug-file - A work dispatched to worker[5] failed because unable to get work from ready queue.
+[2024-07-09T11:40:41.868] [DEBUG] debug-file - default@CacheNativeLibs work[5] done.
+[2024-07-09T11:40:41.868] [DEBUG] debug-file - A work dispatched to worker[6] failed because unable to get work from ready queue.
+[2024-07-09T11:40:41.869] [INFO] debug-file - Finished :entry:default@CacheNativeLibs... after 839 ms 
+[2024-07-09T11:40:52.311] [DEBUG] debug-file - Ark compile task finished.finished time is 61364656493100
+[2024-07-09T11:40:52.320] [DEBUG] debug-file - default@CompileArkTS work[3] done.
+[2024-07-09T11:40:52.322] [DEBUG] debug-file - A work dispatched to worker[1] failed because unable to get work from ready queue.
+[2024-07-09T11:41:00.339] [INFO] debug-file - [33mWARN: [33mArkTS:WARN File: E:/Files/Chrome_Files/Healthy_life/entry/src/main/ets/view/HomeComponent.ets:162:8
+ 'onScroll' has been deprecated.
+[39m
+
+[2024-07-09T11:41:00.340] [DEBUG] debug-file - Ark compile task finished.finished time is 61372686260200
+[2024-07-09T11:41:00.350] [DEBUG] debug-file - default@CompileArkTS work[1] done.
+[2024-07-09T11:41:00.351] [DEBUG] debug-file - A work dispatched to worker[0] failed because unable to get work from ready queue.
+[2024-07-09T11:41:00.353] [INFO] debug-file - Finished :entry:default@CompileArkTS... after 20 s 634 ms 
+[2024-07-09T11:41:00.355] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:41:00.355] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:41:00.355] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:41:00.356] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgModuleJson
+[2024-07-09T11:41:00.360] [DEBUG] debug-file - entry : default@GeneratePkgModuleJson cost memory 0.0472259521484375
+[2024-07-09T11:41:00.360] [DEBUG] debug-file - runTaskFromQueue task cost before running: 27 s 901 ms 
+[2024-07-09T11:41:00.361] [INFO] debug-file - Finished :entry:default@GeneratePkgModuleJson... after 5 ms 
+[2024-07-09T11:41:00.364] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:41:00.364] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:41:00.364] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:41:00.370] [DEBUG] debug-file - Executing task :entry:default@PackageHap
+[2024-07-09T11:41:00.380] [DEBUG] debug-file - Use tool [D:\Program Files\Huawei\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\toolchains\lib\app_packing_tool.jar]
+ [
+  'java',
+  '-Dfile.encoding=GBK',
+  '-jar',
+  'D:\\Program Files\\Huawei\\DevEco Studio\\sdk\\HarmonyOS-NEXT-DB1\\openharmony\\toolchains\\lib\\app_packing_tool.jar',
+  '--mode',
+  'hap',
+  '--force',
+  'true',
+  '--lib-path',
+  'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\intermediates\\stripped_native_libs\\default',
+  '--json-path',
+  'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\intermediates\\package\\default\\module.json',
+  '--resources-path',
+  'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\intermediates\\res\\default\\resources',
+  '--index-path',
+  'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\intermediates\\res\\default\\resources.index',
+  '--pack-info-path',
+  'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\outputs\\default\\pack.info',
+  '--out-path',
+  'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\outputs\\default\\entry-default-unsigned.hap',
+  '--ets-path',
+  'E:\\Files\\Chrome_Files\\Healthy_life\\entry\\build\\default\\intermediates\\loader_out\\default\\ets'
+]
+[2024-07-09T11:41:00.383] [DEBUG] debug-file - default@PackageHap work[6] is submitted.
+[2024-07-09T11:41:00.384] [DEBUG] debug-file - default@PackageHap work[6] is pushed to ready queue.
+[2024-07-09T11:41:00.384] [DEBUG] debug-file - A work dispatched to worker[7] failed because unable to get work from ready queue.
+[2024-07-09T11:41:00.384] [DEBUG] debug-file - default@PackageHap work[6] has been dispatched to worker[6].
+[2024-07-09T11:41:00.384] [DEBUG] debug-file - default@PackageHap work[6] is dispatched.
+[2024-07-09T11:41:00.387] [DEBUG] debug-file - entry : default@PackageHap cost memory 0.5398178100585938
+[2024-07-09T11:41:00.390] [DEBUG] debug-file - current process  memoryUsage: {
+  rss: 1021796352,
+  heapTotal: 56864768,
+  heapUsed: 53898640,
+  external: 2099763,
+  arrayBuffers: 25066
+} os memoryUsage :13.981548309326172
+[2024-07-09T11:41:00.981] [DEBUG] debug-file - default@PackageHap work[6] done.
+[2024-07-09T11:41:00.981] [DEBUG] debug-file - A work dispatched to worker[6] failed because unable to get work from ready queue.
+[2024-07-09T11:41:00.983] [INFO] debug-file - Finished :entry:default@PackageHap... after 611 ms 
+[2024-07-09T11:41:00.986] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:41:00.986] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T11:41:00.986] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T11:41:00.988] [DEBUG] debug-file - Executing task :entry:default@SignHap
+[2024-07-09T11:41:00.989] [WARN] debug-file - Will skip sign 'hos_hap'. No signingConfigs profile is configured in current project.
+             If needed, configure the signingConfigs in E:\Files\Chrome_Files\Healthy_life\build-profile.json5.
+[2024-07-09T11:41:00.991] [DEBUG] debug-file - entry : default@SignHap cost memory 0.09295654296875
+[2024-07-09T11:41:00.991] [DEBUG] debug-file - runTaskFromQueue task cost before running: 28 s 532 ms 
+[2024-07-09T11:41:00.991] [INFO] debug-file - Finished :entry:default@SignHap... after 3 ms 
+[2024-07-09T11:41:00.993] [DEBUG] debug-file - Executing task :entry:assembleHap
+[2024-07-09T11:41:00.993] [DEBUG] debug-file - entry : assembleHap cost memory 0.01160430908203125
+[2024-07-09T11:41:00.993] [DEBUG] debug-file - runTaskFromQueue task cost before running: 28 s 534 ms 
+[2024-07-09T11:41:00.993] [INFO] debug-file - Finished :entry:assembleHap... after 1 ms 
+[2024-07-09T11:41:01.005] [DEBUG] debug-file - Update task entry:default@PreBuild input file:E:\Files\Chrome_Files\Healthy_life\AppScope\app.json5 cache by regenerate.
+[2024-07-09T11:41:01.006] [DEBUG] debug-file - Update task entry:default@PreBuild input file:E:\Files\Chrome_Files\Healthy_life\entry\src\main\module.json5 cache by regenerate.
+[2024-07-09T11:41:01.006] [DEBUG] debug-file - Update task entry:default@PreBuild input file:E:\Files\Chrome_Files\Healthy_life\entry\src\main\resources\base\profile\form_config.json cache by regenerate.
+[2024-07-09T11:41:01.006] [DEBUG] debug-file - Update task entry:default@PreBuild input file:E:\Files\Chrome_Files\Healthy_life\build-profile.json5 cache by regenerate.
+[2024-07-09T11:41:01.007] [DEBUG] debug-file - Update task entry:default@PreBuild input file:E:\Files\Chrome_Files\Healthy_life\entry\build-profile.json5 cache by regenerate.
+[2024-07-09T11:41:01.007] [DEBUG] debug-file - Update task entry:default@PreBuild input file:E:\Files\Chrome_Files\Healthy_life\entry\src\main\resources\base\profile\main_pages.json cache by regenerate.
+[2024-07-09T11:41:01.008] [DEBUG] debug-file - Update task entry:default@PreBuild input file:E:\Files\Chrome_Files\Healthy_life\hvigor\hvigor-config.json5 cache by regenerate.
+[2024-07-09T11:41:01.008] [DEBUG] debug-file - Update task entry:default@PreBuild input file:E:\Files\Chrome_Files\Healthy_life\entry\oh-package.json5 cache by regenerate.
+[2024-07-09T11:41:01.009] [DEBUG] debug-file - Incremental task entry:default@PreBuild post-execution cost:5 ms .
+[2024-07-09T11:41:01.009] [DEBUG] debug-file - Update task entry:default@GenerateMetadata input file:E:\Files\Chrome_Files\Healthy_life\entry\src\main\module.json5 cache by regenerate.
+[2024-07-09T11:41:01.010] [DEBUG] debug-file - Update task entry:default@GenerateMetadata output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\hap_metadata\default\output_metadata.json cache.
+[2024-07-09T11:41:01.010] [DEBUG] debug-file - Incremental task entry:default@GenerateMetadata post-execution cost:2 ms .
+[2024-07-09T11:41:01.010] [DEBUG] debug-file - Update task entry:default@MergeProfile input file:E:\Files\Chrome_Files\Healthy_life\AppScope\app.json5 cache by regenerate.
+[2024-07-09T11:41:01.011] [DEBUG] debug-file - Update task entry:default@MergeProfile input file:E:\Files\Chrome_Files\Healthy_life\build-profile.json5 cache by regenerate.
+[2024-07-09T11:41:01.011] [DEBUG] debug-file - Update task entry:default@MergeProfile input file:E:\Files\Chrome_Files\Healthy_life\entry\src\main\module.json5 cache by regenerate.
+[2024-07-09T11:41:01.011] [DEBUG] debug-file - Update task entry:default@MergeProfile output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\merge_profile\default\module.json cache.
+[2024-07-09T11:41:01.012] [DEBUG] debug-file - Incremental task entry:default@MergeProfile post-execution cost:2 ms .
+[2024-07-09T11:41:01.012] [DEBUG] debug-file - Update task entry:default@CreateBuildProfile input file:E:\Files\Chrome_Files\Healthy_life\AppScope\app.json5 cache by regenerate.
+[2024-07-09T11:41:01.012] [DEBUG] debug-file - Update task entry:default@CreateBuildProfile input file:E:\Files\Chrome_Files\Healthy_life\build-profile.json5 cache by regenerate.
+[2024-07-09T11:41:01.013] [DEBUG] debug-file - Update task entry:default@CreateBuildProfile output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\generated\profile\default\BuildProfile.ets cache.
+[2024-07-09T11:41:01.014] [DEBUG] debug-file - Incremental task entry:default@CreateBuildProfile post-execution cost:2 ms .
+[2024-07-09T11:41:01.014] [DEBUG] debug-file - Update task entry:default@GeneratePkgContextInfo output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader\default\pkgContextInfo.json cache.
+[2024-07-09T11:41:01.014] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgContextInfo post-execution cost:1 ms .
+[2024-07-09T11:41:01.015] [DEBUG] debug-file - Update task entry:default@ProcessIntegratedHsp output file:E:\Files\Chrome_Files\Healthy_life\build\cache\default\integrated_hsp\integratedHspCache.json cache.
+[2024-07-09T11:41:01.016] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp post-execution cost:2 ms .
+[2024-07-09T11:41:01.016] [DEBUG] debug-file - Update task entry:default@MakePackInfo input file:E:\Files\Chrome_Files\Healthy_life\AppScope\app.json5 cache by regenerate.
+[2024-07-09T11:41:01.016] [DEBUG] debug-file - Update task entry:default@MakePackInfo input file:E:\Files\Chrome_Files\Healthy_life\entry\src\main\module.json5 cache by regenerate.
+[2024-07-09T11:41:01.016] [DEBUG] debug-file - Update task entry:default@MakePackInfo input file:E:\Files\Chrome_Files\Healthy_life\build-profile.json5 cache by regenerate.
+[2024-07-09T11:41:01.017] [DEBUG] debug-file - Update task entry:default@MakePackInfo input file:E:\Files\Chrome_Files\Healthy_life\entry\src\main\resources\base\profile\form_config.json cache by regenerate.
+[2024-07-09T11:41:01.017] [DEBUG] debug-file - Update task entry:default@MakePackInfo output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\pack.info cache.
+[2024-07-09T11:41:01.017] [DEBUG] debug-file - Incremental task entry:default@MakePackInfo post-execution cost:2 ms .
+[2024-07-09T11:41:01.017] [DEBUG] debug-file - Update task entry:default@ProcessProfile input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\merge_profile\default\module.json cache by regenerate.
+[2024-07-09T11:41:01.018] [DEBUG] debug-file - Update task entry:default@ProcessProfile output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\process_profile\default\module.json cache.
+[2024-07-09T11:41:01.018] [DEBUG] debug-file - Incremental task entry:default@ProcessProfile post-execution cost:1 ms .
+[2024-07-09T11:41:01.019] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:D:\Program Files\Huawei\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\toolchains\syscap_tool.exe cache by regenerate.
+[2024-07-09T11:41:01.019] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:D:\Program Files\Huawei\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\ets\api\device-define cache by regenerate.
+[2024-07-09T11:41:01.021] [DEBUG] debug-file - Update task entry:default@SyscapTransform output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\syscap\default\rpcid.sc cache.
+[2024-07-09T11:41:01.021] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform post-execution cost:3 ms .
+[2024-07-09T11:41:01.023] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap input file:E:\Files\Chrome_Files\Healthy_life\entry\oh-package.json5 cache by regenerate.
+[2024-07-09T11:41:01.023] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap input file:E:\Files\Chrome_Files\Healthy_life\oh-package.json5 cache by regenerate.
+[2024-07-09T11:41:01.024] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap input file:E:\Files\Chrome_Files\Healthy_life\entry\src\main\module.json5 cache by regenerate.
+[2024-07-09T11:41:01.024] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\router_map\default\intermediates_temp_routerMap.json cache.
+[2024-07-09T11:41:01.024] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\router_map\default\intermediate_routerMap_for_loader.json cache.
+[2024-07-09T11:41:01.024] [DEBUG] debug-file - Incremental task entry:default@ProcessRouterMap post-execution cost:3 ms .
+[2024-07-09T11:41:01.024] [DEBUG] debug-file - Update task entry:default@ProcessResource output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\resConfig.json cache.
+[2024-07-09T11:41:01.024] [DEBUG] debug-file - Incremental task entry:default@ProcessResource post-execution cost:1 ms .
+[2024-07-09T11:41:01.027] [DEBUG] debug-file - Update task entry:default@GenerateLoaderJson input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\router_map\default\intermediates_temp_routerMap.json cache by regenerate.
+[2024-07-09T11:41:01.027] [DEBUG] debug-file - Update task entry:default@GenerateLoaderJson output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader\default\loader.json cache.
+[2024-07-09T11:41:01.028] [DEBUG] debug-file - Incremental task entry:default@GenerateLoaderJson post-execution cost:3 ms .
+[2024-07-09T11:41:01.028] [DEBUG] debug-file - Update task entry:default@ProcessLibs input file:E:\Files\Chrome_Files\Healthy_life\build-profile.json5 cache by regenerate.
+[2024-07-09T11:41:01.028] [DEBUG] debug-file - Update task entry:default@ProcessLibs input file:E:\Files\Chrome_Files\Healthy_life\entry\build-profile.json5 cache by regenerate.
+[2024-07-09T11:41:01.029] [DEBUG] debug-file - Update task entry:default@ProcessLibs output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\libs\default cache.
+[2024-07-09T11:41:01.029] [DEBUG] debug-file - Incremental task entry:default@ProcessLibs post-execution cost:2 ms .
+[2024-07-09T11:41:01.031] [DEBUG] debug-file - Update task entry:default@CompileResource input file:E:\Files\Chrome_Files\Healthy_life\entry\src\main\resources cache by regenerate.
+[2024-07-09T11:41:01.039] [DEBUG] debug-file - Update task entry:default@CompileResource input file:E:\Files\Chrome_Files\Healthy_life\AppScope\resources cache by regenerate.
+[2024-07-09T11:41:01.040] [DEBUG] debug-file - Update task entry:default@CompileResource input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\process_profile\default\module.json cache by regenerate.
+[2024-07-09T11:41:01.041] [DEBUG] debug-file - Update task entry:default@CompileResource input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\resConfig.json cache by regenerate.
+[2024-07-09T11:41:01.041] [DEBUG] debug-file - Update task entry:default@CompileResource output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default cache.
+[2024-07-09T11:41:01.047] [DEBUG] debug-file - Update task entry:default@CompileResource output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\generated\r\default\ResourceTable.h cache.
+[2024-07-09T11:41:01.048] [DEBUG] debug-file - Update task entry:default@CompileResource output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\generated\r\default cache.
+[2024-07-09T11:41:01.049] [DEBUG] debug-file - Incremental task entry:default@CompileResource post-execution cost:20 ms .
+[2024-07-09T11:41:01.050] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader\default cache by regenerate.
+[2024-07-09T11:41:01.051] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2024-07-09T11:41:01.051] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\module.json cache by regenerate.
+[2024-07-09T11:41:01.051] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2024-07-09T11:41:01.052] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:E:\Files\Chrome_Files\Healthy_life\entry\src\main\ets cache by regenerate.
+[2024-07-09T11:41:01.067] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:E:\Files\Chrome_Files\Healthy_life\entry\src\main\resources\base\profile\form_config.json cache by regenerate.
+[2024-07-09T11:41:01.067] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\generated\profile\default\BuildProfile.ets cache by regenerate.
+[2024-07-09T11:41:01.067] [DEBUG] debug-file - Update task entry:default@CompileArkTS output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader_out\default\ets cache.
+[2024-07-09T11:41:01.068] [DEBUG] debug-file - Incremental task entry:default@CompileArkTS post-execution cost:20 ms .
+[2024-07-09T11:41:01.070] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader\default cache by regenerate.
+[2024-07-09T11:41:01.070] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2024-07-09T11:41:01.070] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\module.json cache by regenerate.
+[2024-07-09T11:41:01.071] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2024-07-09T11:41:01.071] [DEBUG] debug-file - Update task entry:default@BuildJS output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader_out\default\js cache.
+[2024-07-09T11:41:01.072] [DEBUG] debug-file - Incremental task entry:default@BuildJS post-execution cost:4 ms .
+[2024-07-09T11:41:01.072] [DEBUG] debug-file - Update task entry:default@DoNativeStrip input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\libs\default cache by regenerate.
+[2024-07-09T11:41:01.073] [DEBUG] debug-file - Update task entry:default@DoNativeStrip output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\stripped_native_libs\default cache.
+[2024-07-09T11:41:01.073] [DEBUG] debug-file - Incremental task entry:default@DoNativeStrip post-execution cost:2 ms .
+[2024-07-09T11:41:01.073] [DEBUG] debug-file - Update task entry:default@CacheNativeLibs input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\libs\default cache by regenerate.
+[2024-07-09T11:41:01.074] [DEBUG] debug-file - Update task entry:default@CacheNativeLibs input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\stripped_native_libs\default cache by regenerate.
+[2024-07-09T11:41:01.074] [DEBUG] debug-file - Update task entry:default@CacheNativeLibs output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\patch\default\base_native_libs.json cache.
+[2024-07-09T11:41:01.074] [DEBUG] debug-file - Incremental task entry:default@CacheNativeLibs post-execution cost:2 ms .
+[2024-07-09T11:41:01.074] [DEBUG] debug-file - Update task entry:default@GeneratePkgModuleJson input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\module.json cache by regenerate.
+[2024-07-09T11:41:01.075] [DEBUG] debug-file - Update task entry:default@GeneratePkgModuleJson output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\package\default\module.json cache.
+[2024-07-09T11:41:01.075] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgModuleJson post-execution cost:1 ms .
+[2024-07-09T11:41:01.076] [DEBUG] debug-file - Update task entry:default@PackageHap input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\stripped_native_libs\default cache by regenerate.
+[2024-07-09T11:41:01.076] [DEBUG] debug-file - Update task entry:default@PackageHap input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\module.json cache by regenerate.
+[2024-07-09T11:41:01.076] [DEBUG] debug-file - Update task entry:default@PackageHap input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\resources cache by regenerate.
+[2024-07-09T11:41:01.088] [DEBUG] debug-file - Update task entry:default@PackageHap input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\resources.index cache by regenerate.
+[2024-07-09T11:41:01.089] [DEBUG] debug-file - Update task entry:default@PackageHap input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\pack.info cache by regenerate.
+[2024-07-09T11:41:01.090] [DEBUG] debug-file - Update task entry:default@PackageHap input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader_out\default\ets cache by regenerate.
+[2024-07-09T11:41:01.091] [DEBUG] debug-file - Update task entry:default@PackageHap input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\generated\profile\default\BuildProfile.ets cache by regenerate.
+[2024-07-09T11:41:01.092] [DEBUG] debug-file - Update task entry:default@PackageHap output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\entry-default-unsigned.hap cache.
+[2024-07-09T11:41:01.092] [DEBUG] debug-file - Update task entry:default@PackageHap output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\mapping\sourceMaps.map cache.
+[2024-07-09T11:41:01.092] [DEBUG] debug-file - Incremental task entry:default@PackageHap post-execution cost:17 ms .
+[2024-07-09T11:41:01.092] [DEBUG] debug-file - Update task entry:default@SignHap input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\entry-default-unsigned.hap cache by regenerate.
+[2024-07-09T11:41:01.092] [DEBUG] debug-file - Update task entry:default@SignHap output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\entry-default-signed.hap cache.
+[2024-07-09T11:41:01.093] [DEBUG] debug-file - Incremental task entry:default@SignHap post-execution cost:1 ms .
+[2024-07-09T14:18:42.065] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' }
+}
+[2024-07-09T14:18:42.084] [DEBUG] debug-file - Cache service initialization finished in 19 ms 
+[2024-07-09T14:18:42.095] [DEBUG] debug-file - hvigorfile, resolving E:\Files\Chrome_Files\Healthy_life\hvigorfile.ts
+[2024-07-09T14:18:42.120] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2024-07-09T14:18:42.120] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2024-07-09T14:18:42.132] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2024-07-09T14:18:42.132] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2024-07-09T14:18:42.133] [DEBUG] debug-file - Product 'default' build option: {}
+[2024-07-09T14:18:42.133] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2024-07-09T14:18:42.134] [DEBUG] debug-file - Product 'default' using build option: {
+  "debuggable": true
+} in this build.
+[2024-07-09T14:18:42.136] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2024-07-09T14:18:42.145] [DEBUG] debug-file - Sdk init in 9 ms 
+[2024-07-09T14:18:42.164] [DEBUG] debug-file - Project task initialization takes 17 ms 
+[2024-07-09T14:18:42.164] [DEBUG] debug-file - hvigorfile, resolve finished E:\Files\Chrome_Files\Healthy_life\hvigorfile.ts
+[2024-07-09T14:18:42.168] [DEBUG] debug-file - hvigorfile, resolving E:\Files\Chrome_Files\Healthy_life\entry\hvigorfile.ts
+[2024-07-09T14:18:42.174] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2024-07-09T14:18:42.174] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2024-07-09T14:18:42.179] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2024-07-09T14:18:42.179] [DEBUG] debug-file - Target 'default' config: {}
+[2024-07-09T14:18:42.179] [DEBUG] debug-file - Module 'entry' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2024-07-09T14:18:42.179] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2024-07-09T14:18:42.180] [DEBUG] debug-file - Module 'entry' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2024-07-09T14:18:42.182] [DEBUG] debug-file - Module entry task initialization takes 1 ms 
+[2024-07-09T14:18:42.182] [DEBUG] debug-file - hvigorfile, resolve finished E:\Files\Chrome_Files\Healthy_life\entry\hvigorfile.ts
+[2024-07-09T14:18:42.274] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 91 ms 
+[2024-07-09T14:18:42.274] [DEBUG] debug-file - project has submodules:entry
+[2024-07-09T14:18:42.274] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2024-07-09T14:18:42.281] [DEBUG] debug-file - load to the disk finished
+[2024-07-09T14:18:42.282] [DEBUG] debug-file - Module Healthy_life Collected Dependency: 
+[2024-07-09T14:18:42.283] [DEBUG] debug-file - Module Healthy_life's total dependency: 0
+[2024-07-09T14:18:42.284] [DEBUG] debug-file - Module entry Collected Dependency: 
+[2024-07-09T14:18:42.284] [DEBUG] debug-file - Module entry's total dependency: 0
+[2024-07-09T14:18:42.286] [DEBUG] debug-file - Configuration phase cost:199 ms 
+[2024-07-09T14:18:42.287] [DEBUG] debug-file - Configuration task cost before running: 236 ms 
+[2024-07-09T14:18:42.289] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.289] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.289] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.293] [DEBUG] debug-file - Executing task :entry:default@PreBuild
+[2024-07-09T14:18:42.301] [DEBUG] debug-file - Incremental task entry:default@PreBuild pre-execution cost: 6 ms .
+[2024-07-09T14:18:42.302] [DEBUG] debug-file - entry : default@PreBuild cost memory 0.342193603515625
+[2024-07-09T14:18:42.303] [INFO] debug-file - UP-TO-DATE :entry:default@PreBuild...  
+[2024-07-09T14:18:42.305] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.305] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.306] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.306] [DEBUG] debug-file - Executing task :entry:default@GenerateMetadata
+[2024-07-09T14:18:42.309] [DEBUG] debug-file - Incremental task entry:default@GenerateMetadata pre-execution cost: 2 ms .
+[2024-07-09T14:18:42.309] [DEBUG] debug-file - entry : default@GenerateMetadata cost memory 0.13144683837890625
+[2024-07-09T14:18:42.309] [INFO] debug-file - UP-TO-DATE :entry:default@GenerateMetadata...  
+[2024-07-09T14:18:42.311] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.311] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.311] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.312] [DEBUG] debug-file - Executing task :entry:default@ConfigureCmake
+[2024-07-09T14:18:42.312] [DEBUG] debug-file - entry : default@ConfigureCmake cost memory 0.01296234130859375
+[2024-07-09T14:18:42.312] [DEBUG] debug-file - runTaskFromQueue task cost before running: 261 ms 
+[2024-07-09T14:18:42.312] [INFO] debug-file - Finished :entry:default@ConfigureCmake... after 1 ms 
+[2024-07-09T14:18:42.314] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.315] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.315] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.316] [DEBUG] debug-file - Executing task :entry:default@MergeProfile
+[2024-07-09T14:18:42.318] [DEBUG] debug-file - Incremental task entry:default@MergeProfile pre-execution cost: 2 ms .
+[2024-07-09T14:18:42.318] [DEBUG] debug-file - entry : default@MergeProfile cost memory 0.10379791259765625
+[2024-07-09T14:18:42.318] [INFO] debug-file - UP-TO-DATE :entry:default@MergeProfile...  
+[2024-07-09T14:18:42.320] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.321] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.321] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.322] [DEBUG] debug-file - Executing task :entry:default@CreateBuildProfile
+[2024-07-09T14:18:42.325] [DEBUG] debug-file - Incremental task entry:default@CreateBuildProfile pre-execution cost: 2 ms .
+[2024-07-09T14:18:42.325] [DEBUG] debug-file - entry : default@CreateBuildProfile cost memory 0.10547637939453125
+[2024-07-09T14:18:42.326] [INFO] debug-file - UP-TO-DATE :entry:default@CreateBuildProfile...  
+[2024-07-09T14:18:42.328] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.328] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.328] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.328] [DEBUG] debug-file - Executing task :entry:default@PreCheckSyscap
+[2024-07-09T14:18:42.329] [DEBUG] debug-file - entry : default@PreCheckSyscap cost memory 0.01322174072265625
+[2024-07-09T14:18:42.329] [DEBUG] debug-file - runTaskFromQueue task cost before running: 277 ms 
+[2024-07-09T14:18:42.329] [INFO] debug-file - Finished :entry:default@PreCheckSyscap... after 1 ms 
+[2024-07-09T14:18:42.331] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.331] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.331] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.337] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgContextInfo
+[2024-07-09T14:18:42.337] [DEBUG] debug-file - entry : default@GeneratePkgContextInfo cost memory 0.019256591796875
+[2024-07-09T14:18:42.337] [DEBUG] debug-file - runTaskFromQueue task cost before running: 286 ms 
+[2024-07-09T14:18:42.338] [INFO] debug-file - Finished :entry:default@GeneratePkgContextInfo... after 1 ms 
+[2024-07-09T14:18:42.340] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.340] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.340] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.342] [DEBUG] debug-file - Executing task :entry:default@ProcessIntegratedHsp
+[2024-07-09T14:18:42.343] [DEBUG] debug-file - entry:default@ProcessIntegratedHsp is not up-to-date, since the output file 'E:\Files\Chrome_Files\Healthy_life\build\cache\default\integrated_hsp\integratedHspCache.json' does not exist.
+[2024-07-09T14:18:42.343] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp pre-execution cost: 1 ms .
+[2024-07-09T14:18:42.343] [DEBUG] debug-file - entry : default@ProcessIntegratedHsp cost memory 0.08141326904296875
+[2024-07-09T14:18:42.343] [DEBUG] debug-file - runTaskFromQueue task cost before running: 292 ms 
+[2024-07-09T14:18:42.344] [INFO] debug-file - Finished :entry:default@ProcessIntegratedHsp... after 2 ms 
+[2024-07-09T14:18:42.345] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.346] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.346] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.346] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithCmake
+[2024-07-09T14:18:42.346] [DEBUG] debug-file - entry : default@BuildNativeWithCmake cost memory 0.0139617919921875
+[2024-07-09T14:18:42.347] [DEBUG] debug-file - runTaskFromQueue task cost before running: 295 ms 
+[2024-07-09T14:18:42.347] [INFO] debug-file - Finished :entry:default@BuildNativeWithCmake... after 1 ms 
+[2024-07-09T14:18:42.349] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.349] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.349] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.350] [DEBUG] debug-file - Executing task :entry:default@MakePackInfo
+[2024-07-09T14:18:42.353] [DEBUG] debug-file - Incremental task entry:default@MakePackInfo pre-execution cost: 3 ms .
+[2024-07-09T14:18:42.353] [DEBUG] debug-file - entry : default@MakePackInfo cost memory 0.14366912841796875
+[2024-07-09T14:18:42.354] [INFO] debug-file - UP-TO-DATE :entry:default@MakePackInfo...  
+[2024-07-09T14:18:42.357] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.358] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.358] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.359] [DEBUG] debug-file - Executing task :entry:default@ProcessProfile
+[2024-07-09T14:18:42.360] [DEBUG] debug-file - Incremental task entry:default@ProcessProfile pre-execution cost: 1 ms .
+[2024-07-09T14:18:42.360] [DEBUG] debug-file - entry : default@ProcessProfile cost memory 0.058013916015625
+[2024-07-09T14:18:42.361] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessProfile...  
+[2024-07-09T14:18:42.363] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.363] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.363] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.364] [DEBUG] debug-file - Executing task :entry:default@SyscapTransform
+[2024-07-09T14:18:42.367] [DEBUG] debug-file - entry:default@SyscapTransform is not up-to-date, since the output file 'E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\syscap\default\rpcid.sc' does not exist.
+[2024-07-09T14:18:42.367] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform pre-execution cost: 3 ms .
+[2024-07-09T14:18:42.367] [DEBUG] debug-file - entry : default@SyscapTransform cost memory 0.1170501708984375
+[2024-07-09T14:18:42.368] [DEBUG] debug-file - runTaskFromQueue task cost before running: 316 ms 
+[2024-07-09T14:18:42.368] [INFO] debug-file - Finished :entry:default@SyscapTransform... after 4 ms 
+[2024-07-09T14:18:42.370] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.371] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.371] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.373] [DEBUG] debug-file - Executing task :entry:default@ProcessRouterMap
+[2024-07-09T14:18:42.377] [DEBUG] debug-file - Incremental task entry:default@ProcessRouterMap pre-execution cost: 3 ms .
+[2024-07-09T14:18:42.377] [DEBUG] debug-file - entry : default@ProcessRouterMap cost memory 0.254302978515625
+[2024-07-09T14:18:42.379] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessRouterMap...  
+[2024-07-09T14:18:42.380] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.380] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.381] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.381] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithNinja
+[2024-07-09T14:18:42.383] [DEBUG] debug-file - entry : default@BuildNativeWithNinja cost memory 0.02867889404296875
+[2024-07-09T14:18:42.383] [DEBUG] debug-file - runTaskFromQueue task cost before running: 332 ms 
+[2024-07-09T14:18:42.383] [INFO] debug-file - Finished :entry:default@BuildNativeWithNinja... after 2 ms 
+[2024-07-09T14:18:42.385] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.385] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.386] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.386] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@ProcessResource
+[2024-07-09T14:18:42.388] [DEBUG] debug-file - Executing task :entry:default@ProcessResource
+[2024-07-09T14:18:42.389] [DEBUG] debug-file - Incremental task entry:default@ProcessResource pre-execution cost: 1 ms .
+[2024-07-09T14:18:42.390] [DEBUG] debug-file - entry : default@ProcessResource cost memory 0.10234832763671875
+[2024-07-09T14:18:42.392] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessResource...  
+[2024-07-09T14:18:42.396] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.397] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.397] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.399] [DEBUG] debug-file - Executing task :entry:default@GenerateLoaderJson
+[2024-07-09T14:18:42.408] [DEBUG] debug-file - Incremental task entry:default@GenerateLoaderJson pre-execution cost: 6 ms .
+[2024-07-09T14:18:42.408] [DEBUG] debug-file - entry : default@GenerateLoaderJson cost memory 0.469207763671875
+[2024-07-09T14:18:42.411] [INFO] debug-file - UP-TO-DATE :entry:default@GenerateLoaderJson...  
+[2024-07-09T14:18:42.413] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.414] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.414] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.415] [DEBUG] debug-file - Executing task :entry:default@ProcessLibs
+[2024-07-09T14:18:42.416] [DEBUG] debug-file - Incremental task entry:default@ProcessLibs pre-execution cost: 1 ms .
+[2024-07-09T14:18:42.417] [DEBUG] debug-file - entry : default@ProcessLibs cost memory 0.07262420654296875
+[2024-07-09T14:18:42.417] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessLibs...  
+[2024-07-09T14:18:42.419] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.419] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.419] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.419] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@CompileResource
+[2024-07-09T14:18:42.421] [DEBUG] debug-file - Executing task :entry:default@CompileResource
+[2024-07-09T14:18:42.443] [DEBUG] debug-file - Incremental task entry:default@CompileResource pre-execution cost: 21 ms .
+[2024-07-09T14:18:42.443] [DEBUG] debug-file - entry : default@CompileResource cost memory 1.5689620971679688
+[2024-07-09T14:18:42.445] [INFO] debug-file - UP-TO-DATE :entry:default@CompileResource...  
+[2024-07-09T14:18:42.447] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.447] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.447] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.448] [DEBUG] debug-file - Executing task :entry:default@DoNativeStrip
+[2024-07-09T14:18:42.449] [DEBUG] debug-file - Incremental task entry:default@DoNativeStrip pre-execution cost: 1 ms .
+[2024-07-09T14:18:42.449] [DEBUG] debug-file - entry : default@DoNativeStrip cost memory 0.0610504150390625
+[2024-07-09T14:18:42.449] [INFO] debug-file - UP-TO-DATE :entry:default@DoNativeStrip...  
+[2024-07-09T14:18:42.451] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.451] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.451] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.454] [DEBUG] debug-file - Executing task :entry:default@CompileArkTS
+[2024-07-09T14:18:42.473] [DEBUG] debug-file - Incremental task entry:default@CompileArkTS pre-execution cost: 17 ms .
+[2024-07-09T14:18:42.473] [DEBUG] debug-file - entry : default@CompileArkTS cost memory 1.1836166381835938
+[2024-07-09T14:18:42.475] [INFO] debug-file - UP-TO-DATE :entry:default@CompileArkTS...  
+[2024-07-09T14:18:42.478] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.478] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.478] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.481] [DEBUG] debug-file - Executing task :entry:default@BuildJS
+[2024-07-09T14:18:42.484] [DEBUG] debug-file - entry : default@BuildJS cost memory 0.12457275390625
+[2024-07-09T14:18:42.484] [DEBUG] debug-file - runTaskFromQueue task cost before running: 433 ms 
+[2024-07-09T14:18:42.484] [INFO] debug-file - Finished :entry:default@BuildJS... after 4 ms 
+[2024-07-09T14:18:42.486] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.486] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.486] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.487] [DEBUG] debug-file - Executing task :entry:default@CacheNativeLibs
+[2024-07-09T14:18:42.489] [DEBUG] debug-file - Incremental task entry:default@CacheNativeLibs pre-execution cost: 1 ms .
+[2024-07-09T14:18:42.489] [DEBUG] debug-file - entry : default@CacheNativeLibs cost memory 0.07749176025390625
+[2024-07-09T14:18:42.490] [INFO] debug-file - UP-TO-DATE :entry:default@CacheNativeLibs...  
+[2024-07-09T14:18:42.492] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.492] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.492] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.493] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgModuleJson
+[2024-07-09T14:18:42.496] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgModuleJson pre-execution cost: 1 ms .
+[2024-07-09T14:18:42.496] [DEBUG] debug-file - entry : default@GeneratePkgModuleJson cost memory 0.08502197265625
+[2024-07-09T14:18:42.496] [INFO] debug-file - UP-TO-DATE :entry:default@GeneratePkgModuleJson...  
+[2024-07-09T14:18:42.498] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.498] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.498] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.502] [DEBUG] debug-file - Executing task :entry:default@PackageHap
+[2024-07-09T14:18:42.522] [DEBUG] debug-file - Incremental task entry:default@PackageHap pre-execution cost: 20 ms .
+[2024-07-09T14:18:42.522] [DEBUG] debug-file - entry : default@PackageHap cost memory -6.060890197753906
+[2024-07-09T14:18:42.526] [INFO] debug-file - UP-TO-DATE :entry:default@PackageHap...  
+[2024-07-09T14:18:42.529] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.529] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:18:42.530] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:18:42.533] [DEBUG] debug-file - Executing task :entry:default@SignHap
+[2024-07-09T14:18:42.534] [WARN] debug-file - Will skip sign 'hos_hap'. No signingConfigs profile is configured in current project.
+             If needed, configure the signingConfigs in E:\Files\Chrome_Files\Healthy_life\build-profile.json5.
+[2024-07-09T14:18:42.540] [DEBUG] debug-file - entry:default@SignHap is not up-to-date, since the output file 'E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\entry-default-signed.hap' does not exist.
+[2024-07-09T14:18:42.541] [DEBUG] debug-file - Incremental task entry:default@SignHap pre-execution cost: 6 ms .
+[2024-07-09T14:18:42.541] [DEBUG] debug-file - entry : default@SignHap cost memory 0.13166046142578125
+[2024-07-09T14:18:42.542] [DEBUG] debug-file - runTaskFromQueue task cost before running: 490 ms 
+[2024-07-09T14:18:42.543] [INFO] debug-file - Finished :entry:default@SignHap... after 9 ms 
+[2024-07-09T14:18:42.546] [DEBUG] debug-file - Executing task :entry:assembleHap
+[2024-07-09T14:18:42.546] [DEBUG] debug-file - entry : assembleHap cost memory 0.01142120361328125
+[2024-07-09T14:18:42.547] [DEBUG] debug-file - runTaskFromQueue task cost before running: 495 ms 
+[2024-07-09T14:18:42.547] [INFO] debug-file - Finished :entry:assembleHap... after 1 ms 
+[2024-07-09T14:18:42.562] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PreBuild is up-to-date.
+[2024-07-09T14:18:42.562] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateMetadata is up-to-date.
+[2024-07-09T14:18:42.562] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MergeProfile is up-to-date.
+[2024-07-09T14:18:42.562] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CreateBuildProfile is up-to-date.
+[2024-07-09T14:18:42.562] [DEBUG] debug-file - Update task entry:default@GeneratePkgContextInfo output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader\default\pkgContextInfo.json cache.
+[2024-07-09T14:18:42.574] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgContextInfo post-execution cost:12 ms .
+[2024-07-09T14:18:42.576] [DEBUG] debug-file - Update task entry:default@ProcessIntegratedHsp output file:E:\Files\Chrome_Files\Healthy_life\build\cache\default\integrated_hsp\integratedHspCache.json cache.
+[2024-07-09T14:18:42.576] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp post-execution cost:2 ms .
+[2024-07-09T14:18:42.576] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MakePackInfo is up-to-date.
+[2024-07-09T14:18:42.576] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessProfile is up-to-date.
+[2024-07-09T14:18:42.577] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:D:\Program Files\Huawei\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\toolchains\syscap_tool.exe cache by regenerate.
+[2024-07-09T14:18:42.577] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:D:\Program Files\Huawei\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\ets\api\device-define cache by regenerate.
+[2024-07-09T14:18:42.578] [DEBUG] debug-file - Update task entry:default@SyscapTransform output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\syscap\default\rpcid.sc cache.
+[2024-07-09T14:18:42.578] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform post-execution cost:2 ms .
+[2024-07-09T14:18:42.578] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessRouterMap is up-to-date.
+[2024-07-09T14:18:42.578] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessResource is up-to-date.
+[2024-07-09T14:18:42.579] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateLoaderJson is up-to-date.
+[2024-07-09T14:18:42.579] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessLibs is up-to-date.
+[2024-07-09T14:18:42.579] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileResource is up-to-date.
+[2024-07-09T14:18:42.579] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@DoNativeStrip is up-to-date.
+[2024-07-09T14:18:42.579] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileArkTS is up-to-date.
+[2024-07-09T14:18:42.580] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader\default cache by regenerate.
+[2024-07-09T14:18:42.581] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2024-07-09T14:18:42.581] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\module.json cache by regenerate.
+[2024-07-09T14:18:42.581] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2024-07-09T14:18:42.582] [DEBUG] debug-file - Update task entry:default@BuildJS output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader_out\default\js cache.
+[2024-07-09T14:18:42.582] [DEBUG] debug-file - Incremental task entry:default@BuildJS post-execution cost:4 ms .
+[2024-07-09T14:18:42.582] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CacheNativeLibs is up-to-date.
+[2024-07-09T14:18:42.582] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GeneratePkgModuleJson is up-to-date.
+[2024-07-09T14:18:42.583] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PackageHap is up-to-date.
+[2024-07-09T14:18:42.583] [DEBUG] debug-file - Update task entry:default@SignHap input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\entry-default-unsigned.hap cache by regenerate.
+[2024-07-09T14:18:42.584] [DEBUG] debug-file - Update task entry:default@SignHap output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\entry-default-signed.hap cache.
+[2024-07-09T14:18:42.584] [DEBUG] debug-file - Incremental task entry:default@SignHap post-execution cost:2 ms .
+[2024-07-09T14:31:15.126] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' }
+}
+[2024-07-09T14:31:15.136] [DEBUG] debug-file - Cache service initialization finished in 10 ms 
+[2024-07-09T14:31:15.167] [DEBUG] debug-file - hvigorfile, resolving E:\Files\Chrome_Files\Healthy_life\hvigorfile.ts
+[2024-07-09T14:31:15.189] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2024-07-09T14:31:15.190] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2024-07-09T14:31:15.204] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2024-07-09T14:31:15.204] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2024-07-09T14:31:15.204] [DEBUG] debug-file - Product 'default' build option: {}
+[2024-07-09T14:31:15.204] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2024-07-09T14:31:15.207] [DEBUG] debug-file - Product 'default' using build option: {
+  "debuggable": true
+} in this build.
+[2024-07-09T14:31:15.209] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2024-07-09T14:31:15.222] [DEBUG] debug-file - Sdk init in 13 ms 
+[2024-07-09T14:31:15.243] [DEBUG] debug-file - Project task initialization takes 20 ms 
+[2024-07-09T14:31:15.243] [DEBUG] debug-file - hvigorfile, resolve finished E:\Files\Chrome_Files\Healthy_life\hvigorfile.ts
+[2024-07-09T14:31:15.249] [DEBUG] debug-file - hvigorfile, resolving E:\Files\Chrome_Files\Healthy_life\entry\hvigorfile.ts
+[2024-07-09T14:31:15.255] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2024-07-09T14:31:15.255] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2024-07-09T14:31:15.263] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2024-07-09T14:31:15.264] [DEBUG] debug-file - Target 'default' config: {}
+[2024-07-09T14:31:15.264] [DEBUG] debug-file - Module 'entry' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2024-07-09T14:31:15.264] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2024-07-09T14:31:15.264] [DEBUG] debug-file - Module 'entry' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2024-07-09T14:31:15.271] [DEBUG] debug-file - Module entry task initialization takes 2 ms 
+[2024-07-09T14:31:15.271] [DEBUG] debug-file - hvigorfile, resolve finished E:\Files\Chrome_Files\Healthy_life\entry\hvigorfile.ts
+[2024-07-09T14:31:15.365] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 93 ms 
+[2024-07-09T14:31:15.365] [DEBUG] debug-file - project has submodules:entry
+[2024-07-09T14:31:15.368] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2024-07-09T14:31:15.374] [DEBUG] debug-file - load to the disk finished
+[2024-07-09T14:31:15.375] [DEBUG] debug-file - Module Healthy_life Collected Dependency: 
+[2024-07-09T14:31:15.375] [DEBUG] debug-file - Module Healthy_life's total dependency: 0
+[2024-07-09T14:31:15.376] [DEBUG] debug-file - Module entry Collected Dependency: 
+[2024-07-09T14:31:15.377] [DEBUG] debug-file - Module entry's total dependency: 0
+[2024-07-09T14:31:15.378] [DEBUG] debug-file - Configuration phase cost:235 ms 
+[2024-07-09T14:31:15.379] [DEBUG] debug-file - Configuration task cost before running: 268 ms 
+[2024-07-09T14:31:15.381] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.381] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.381] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.386] [DEBUG] debug-file - Executing task :entry:default@PreBuild
+[2024-07-09T14:31:15.395] [DEBUG] debug-file - Incremental task entry:default@PreBuild pre-execution cost: 5 ms .
+[2024-07-09T14:31:15.395] [DEBUG] debug-file - entry : default@PreBuild cost memory 0.339324951171875
+[2024-07-09T14:31:15.398] [INFO] debug-file - UP-TO-DATE :entry:default@PreBuild...  
+[2024-07-09T14:31:15.400] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.400] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.400] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.401] [DEBUG] debug-file - Executing task :entry:default@GenerateMetadata
+[2024-07-09T14:31:15.403] [DEBUG] debug-file - Incremental task entry:default@GenerateMetadata pre-execution cost: 2 ms .
+[2024-07-09T14:31:15.403] [DEBUG] debug-file - entry : default@GenerateMetadata cost memory 0.13030242919921875
+[2024-07-09T14:31:15.404] [INFO] debug-file - UP-TO-DATE :entry:default@GenerateMetadata...  
+[2024-07-09T14:31:15.405] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.406] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.406] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.406] [DEBUG] debug-file - Executing task :entry:default@ConfigureCmake
+[2024-07-09T14:31:15.406] [DEBUG] debug-file - entry : default@ConfigureCmake cost memory 0.01282501220703125
+[2024-07-09T14:31:15.406] [DEBUG] debug-file - runTaskFromQueue task cost before running: 295 ms 
+[2024-07-09T14:31:15.407] [INFO] debug-file - Finished :entry:default@ConfigureCmake... after 1 ms 
+[2024-07-09T14:31:15.409] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.409] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.409] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.410] [DEBUG] debug-file - Executing task :entry:default@MergeProfile
+[2024-07-09T14:31:15.411] [DEBUG] debug-file - Incremental task entry:default@MergeProfile pre-execution cost: 2 ms .
+[2024-07-09T14:31:15.412] [DEBUG] debug-file - entry : default@MergeProfile cost memory 0.10237884521484375
+[2024-07-09T14:31:15.412] [INFO] debug-file - UP-TO-DATE :entry:default@MergeProfile...  
+[2024-07-09T14:31:15.414] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.414] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.414] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.414] [DEBUG] debug-file - Executing task :entry:default@CreateBuildProfile
+[2024-07-09T14:31:15.416] [DEBUG] debug-file - Incremental task entry:default@CreateBuildProfile pre-execution cost: 2 ms .
+[2024-07-09T14:31:15.416] [DEBUG] debug-file - entry : default@CreateBuildProfile cost memory 0.10418701171875
+[2024-07-09T14:31:15.417] [INFO] debug-file - UP-TO-DATE :entry:default@CreateBuildProfile...  
+[2024-07-09T14:31:15.418] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.418] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.418] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.419] [DEBUG] debug-file - Executing task :entry:default@PreCheckSyscap
+[2024-07-09T14:31:15.420] [DEBUG] debug-file - entry : default@PreCheckSyscap cost memory 0.01309967041015625
+[2024-07-09T14:31:15.420] [DEBUG] debug-file - runTaskFromQueue task cost before running: 309 ms 
+[2024-07-09T14:31:15.420] [INFO] debug-file - Finished :entry:default@PreCheckSyscap... after 1 ms 
+[2024-07-09T14:31:15.422] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.422] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.422] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.427] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgContextInfo
+[2024-07-09T14:31:15.427] [DEBUG] debug-file - entry : default@GeneratePkgContextInfo cost memory 0.0191802978515625
+[2024-07-09T14:31:15.427] [DEBUG] debug-file - runTaskFromQueue task cost before running: 316 ms 
+[2024-07-09T14:31:15.428] [INFO] debug-file - Finished :entry:default@GeneratePkgContextInfo... after 1 ms 
+[2024-07-09T14:31:15.430] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.430] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.430] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.431] [DEBUG] debug-file - Executing task :entry:default@ProcessIntegratedHsp
+[2024-07-09T14:31:15.432] [DEBUG] debug-file - entry:default@ProcessIntegratedHsp is not up-to-date, since the output file 'E:\Files\Chrome_Files\Healthy_life\build\cache\default\integrated_hsp\integratedHspCache.json' does not exist.
+[2024-07-09T14:31:15.432] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp pre-execution cost: 1 ms .
+[2024-07-09T14:31:15.432] [DEBUG] debug-file - entry : default@ProcessIntegratedHsp cost memory 0.0804290771484375
+[2024-07-09T14:31:15.432] [DEBUG] debug-file - runTaskFromQueue task cost before running: 321 ms 
+[2024-07-09T14:31:15.433] [INFO] debug-file - Finished :entry:default@ProcessIntegratedHsp... after 2 ms 
+[2024-07-09T14:31:15.434] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.434] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.434] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.435] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithCmake
+[2024-07-09T14:31:15.435] [DEBUG] debug-file - entry : default@BuildNativeWithCmake cost memory 0.013885498046875
+[2024-07-09T14:31:15.435] [DEBUG] debug-file - runTaskFromQueue task cost before running: 324 ms 
+[2024-07-09T14:31:15.435] [INFO] debug-file - Finished :entry:default@BuildNativeWithCmake... after 1 ms 
+[2024-07-09T14:31:15.437] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.437] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.437] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.437] [DEBUG] debug-file - Executing task :entry:default@MakePackInfo
+[2024-07-09T14:31:15.440] [DEBUG] debug-file - Incremental task entry:default@MakePackInfo pre-execution cost: 2 ms .
+[2024-07-09T14:31:15.440] [DEBUG] debug-file - entry : default@MakePackInfo cost memory 0.14241790771484375
+[2024-07-09T14:31:15.441] [INFO] debug-file - UP-TO-DATE :entry:default@MakePackInfo...  
+[2024-07-09T14:31:15.443] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.443] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.443] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.444] [DEBUG] debug-file - Executing task :entry:default@ProcessProfile
+[2024-07-09T14:31:15.445] [DEBUG] debug-file - Incremental task entry:default@ProcessProfile pre-execution cost: 1 ms .
+[2024-07-09T14:31:15.445] [DEBUG] debug-file - entry : default@ProcessProfile cost memory 0.05926513671875
+[2024-07-09T14:31:15.446] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessProfile...  
+[2024-07-09T14:31:15.447] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.447] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.447] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.449] [DEBUG] debug-file - Executing task :entry:default@SyscapTransform
+[2024-07-09T14:31:15.451] [DEBUG] debug-file - entry:default@SyscapTransform is not up-to-date, since the output file 'E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\syscap\default\rpcid.sc' does not exist.
+[2024-07-09T14:31:15.451] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform pre-execution cost: 2 ms .
+[2024-07-09T14:31:15.451] [DEBUG] debug-file - entry : default@SyscapTransform cost memory 0.117340087890625
+[2024-07-09T14:31:15.451] [DEBUG] debug-file - runTaskFromQueue task cost before running: 340 ms 
+[2024-07-09T14:31:15.452] [INFO] debug-file - Finished :entry:default@SyscapTransform... after 3 ms 
+[2024-07-09T14:31:15.453] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.454] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.454] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.455] [DEBUG] debug-file - Executing task :entry:default@ProcessRouterMap
+[2024-07-09T14:31:15.460] [DEBUG] debug-file - Incremental task entry:default@ProcessRouterMap pre-execution cost: 4 ms .
+[2024-07-09T14:31:15.460] [DEBUG] debug-file - entry : default@ProcessRouterMap cost memory 0.252655029296875
+[2024-07-09T14:31:15.462] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessRouterMap...  
+[2024-07-09T14:31:15.463] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.463] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.463] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.464] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithNinja
+[2024-07-09T14:31:15.465] [DEBUG] debug-file - entry : default@BuildNativeWithNinja cost memory 0.0282745361328125
+[2024-07-09T14:31:15.465] [DEBUG] debug-file - runTaskFromQueue task cost before running: 354 ms 
+[2024-07-09T14:31:15.465] [INFO] debug-file - Finished :entry:default@BuildNativeWithNinja... after 1 ms 
+[2024-07-09T14:31:15.467] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.467] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.467] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.468] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@ProcessResource
+[2024-07-09T14:31:15.469] [DEBUG] debug-file - Executing task :entry:default@ProcessResource
+[2024-07-09T14:31:15.470] [DEBUG] debug-file - Incremental task entry:default@ProcessResource pre-execution cost: 1 ms .
+[2024-07-09T14:31:15.470] [DEBUG] debug-file - entry : default@ProcessResource cost memory 0.10137939453125
+[2024-07-09T14:31:15.473] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessResource...  
+[2024-07-09T14:31:15.478] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.478] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.478] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.480] [DEBUG] debug-file - Executing task :entry:default@GenerateLoaderJson
+[2024-07-09T14:31:15.487] [DEBUG] debug-file - Incremental task entry:default@GenerateLoaderJson pre-execution cost: 5 ms .
+[2024-07-09T14:31:15.487] [DEBUG] debug-file - entry : default@GenerateLoaderJson cost memory 0.46503448486328125
+[2024-07-09T14:31:15.491] [INFO] debug-file - UP-TO-DATE :entry:default@GenerateLoaderJson...  
+[2024-07-09T14:31:15.493] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.493] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.493] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.495] [DEBUG] debug-file - Executing task :entry:default@ProcessLibs
+[2024-07-09T14:31:15.496] [DEBUG] debug-file - Incremental task entry:default@ProcessLibs pre-execution cost: 2 ms .
+[2024-07-09T14:31:15.496] [DEBUG] debug-file - entry : default@ProcessLibs cost memory 0.07318878173828125
+[2024-07-09T14:31:15.497] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessLibs...  
+[2024-07-09T14:31:15.498] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.498] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.498] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.499] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@CompileResource
+[2024-07-09T14:31:15.500] [DEBUG] debug-file - Executing task :entry:default@CompileResource
+[2024-07-09T14:31:15.520] [DEBUG] debug-file - Incremental task entry:default@CompileResource pre-execution cost: 19 ms .
+[2024-07-09T14:31:15.520] [DEBUG] debug-file - entry : default@CompileResource cost memory 1.5670013427734375
+[2024-07-09T14:31:15.522] [INFO] debug-file - UP-TO-DATE :entry:default@CompileResource...  
+[2024-07-09T14:31:15.523] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.523] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.523] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.525] [DEBUG] debug-file - Executing task :entry:default@DoNativeStrip
+[2024-07-09T14:31:15.526] [DEBUG] debug-file - Incremental task entry:default@DoNativeStrip pre-execution cost: 1 ms .
+[2024-07-09T14:31:15.527] [DEBUG] debug-file - entry : default@DoNativeStrip cost memory 0.0610809326171875
+[2024-07-09T14:31:15.527] [INFO] debug-file - UP-TO-DATE :entry:default@DoNativeStrip...  
+[2024-07-09T14:31:15.529] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.529] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.530] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.532] [DEBUG] debug-file - Executing task :entry:default@CompileArkTS
+[2024-07-09T14:31:15.550] [DEBUG] debug-file - Incremental task entry:default@CompileArkTS pre-execution cost: 16 ms .
+[2024-07-09T14:31:15.551] [DEBUG] debug-file - entry : default@CompileArkTS cost memory 1.0852279663085938
+[2024-07-09T14:31:15.553] [INFO] debug-file - UP-TO-DATE :entry:default@CompileArkTS...  
+[2024-07-09T14:31:15.555] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.555] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.555] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.557] [DEBUG] debug-file - Executing task :entry:default@BuildJS
+[2024-07-09T14:31:15.560] [DEBUG] debug-file - entry : default@BuildJS cost memory 0.1325531005859375
+[2024-07-09T14:31:15.561] [DEBUG] debug-file - runTaskFromQueue task cost before running: 450 ms 
+[2024-07-09T14:31:15.561] [INFO] debug-file - Finished :entry:default@BuildJS... after 4 ms 
+[2024-07-09T14:31:15.563] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.563] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.563] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.565] [DEBUG] debug-file - Executing task :entry:default@CacheNativeLibs
+[2024-07-09T14:31:15.567] [DEBUG] debug-file - Incremental task entry:default@CacheNativeLibs pre-execution cost: 2 ms .
+[2024-07-09T14:31:15.567] [DEBUG] debug-file - entry : default@CacheNativeLibs cost memory 0.0780029296875
+[2024-07-09T14:31:15.568] [INFO] debug-file - UP-TO-DATE :entry:default@CacheNativeLibs...  
+[2024-07-09T14:31:15.571] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.571] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.571] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.572] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgModuleJson
+[2024-07-09T14:31:15.574] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgModuleJson pre-execution cost: 1 ms .
+[2024-07-09T14:31:15.574] [DEBUG] debug-file - entry : default@GeneratePkgModuleJson cost memory 0.0841217041015625
+[2024-07-09T14:31:15.575] [INFO] debug-file - UP-TO-DATE :entry:default@GeneratePkgModuleJson...  
+[2024-07-09T14:31:15.577] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.577] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.578] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.581] [DEBUG] debug-file - Executing task :entry:default@PackageHap
+[2024-07-09T14:31:15.594] [DEBUG] debug-file - Incremental task entry:default@PackageHap pre-execution cost: 12 ms .
+[2024-07-09T14:31:15.594] [DEBUG] debug-file - entry : default@PackageHap cost memory -6.07354736328125
+[2024-07-09T14:31:15.595] [INFO] debug-file - UP-TO-DATE :entry:default@PackageHap...  
+[2024-07-09T14:31:15.596] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.596] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:31:15.596] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:31:15.598] [DEBUG] debug-file - Executing task :entry:default@SignHap
+[2024-07-09T14:31:15.598] [WARN] debug-file - Will skip sign 'hos_hap'. No signingConfigs profile is configured in current project.
+             If needed, configure the signingConfigs in E:\Files\Chrome_Files\Healthy_life\build-profile.json5.
+[2024-07-09T14:31:15.599] [DEBUG] debug-file - entry:default@SignHap is not up-to-date, since the output file 'E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\entry-default-signed.hap' does not exist.
+[2024-07-09T14:31:15.599] [DEBUG] debug-file - Incremental task entry:default@SignHap pre-execution cost: 1 ms .
+[2024-07-09T14:31:15.600] [DEBUG] debug-file - entry : default@SignHap cost memory 0.13034820556640625
+[2024-07-09T14:31:15.600] [DEBUG] debug-file - runTaskFromQueue task cost before running: 489 ms 
+[2024-07-09T14:31:15.600] [INFO] debug-file - Finished :entry:default@SignHap... after 2 ms 
+[2024-07-09T14:31:15.602] [DEBUG] debug-file - Executing task :entry:assembleHap
+[2024-07-09T14:31:15.602] [DEBUG] debug-file - entry : assembleHap cost memory 0.01142120361328125
+[2024-07-09T14:31:15.602] [DEBUG] debug-file - runTaskFromQueue task cost before running: 491 ms 
+[2024-07-09T14:31:15.602] [INFO] debug-file - Finished :entry:assembleHap... after 1 ms 
+[2024-07-09T14:31:15.615] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PreBuild is up-to-date.
+[2024-07-09T14:31:15.615] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateMetadata is up-to-date.
+[2024-07-09T14:31:15.615] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MergeProfile is up-to-date.
+[2024-07-09T14:31:15.615] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CreateBuildProfile is up-to-date.
+[2024-07-09T14:31:15.615] [DEBUG] debug-file - Update task entry:default@GeneratePkgContextInfo output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader\default\pkgContextInfo.json cache.
+[2024-07-09T14:31:15.615] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgContextInfo post-execution cost:1 ms .
+[2024-07-09T14:31:15.616] [DEBUG] debug-file - Update task entry:default@ProcessIntegratedHsp output file:E:\Files\Chrome_Files\Healthy_life\build\cache\default\integrated_hsp\integratedHspCache.json cache.
+[2024-07-09T14:31:15.617] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp post-execution cost:2 ms .
+[2024-07-09T14:31:15.617] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MakePackInfo is up-to-date.
+[2024-07-09T14:31:15.617] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessProfile is up-to-date.
+[2024-07-09T14:31:15.617] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:D:\Program Files\Huawei\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\toolchains\syscap_tool.exe cache by regenerate.
+[2024-07-09T14:31:15.618] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:D:\Program Files\Huawei\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\ets\api\device-define cache by regenerate.
+[2024-07-09T14:31:15.618] [DEBUG] debug-file - Update task entry:default@SyscapTransform output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\syscap\default\rpcid.sc cache.
+[2024-07-09T14:31:15.618] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform post-execution cost:2 ms .
+[2024-07-09T14:31:15.619] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessRouterMap is up-to-date.
+[2024-07-09T14:31:15.619] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessResource is up-to-date.
+[2024-07-09T14:31:15.619] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateLoaderJson is up-to-date.
+[2024-07-09T14:31:15.619] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessLibs is up-to-date.
+[2024-07-09T14:31:15.619] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileResource is up-to-date.
+[2024-07-09T14:31:15.619] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@DoNativeStrip is up-to-date.
+[2024-07-09T14:31:15.619] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileArkTS is up-to-date.
+[2024-07-09T14:31:15.620] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader\default cache by regenerate.
+[2024-07-09T14:31:15.621] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2024-07-09T14:31:15.621] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\module.json cache by regenerate.
+[2024-07-09T14:31:15.621] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2024-07-09T14:31:15.622] [DEBUG] debug-file - Update task entry:default@BuildJS output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader_out\default\js cache.
+[2024-07-09T14:31:15.622] [DEBUG] debug-file - Incremental task entry:default@BuildJS post-execution cost:3 ms .
+[2024-07-09T14:31:15.622] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CacheNativeLibs is up-to-date.
+[2024-07-09T14:31:15.622] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GeneratePkgModuleJson is up-to-date.
+[2024-07-09T14:31:15.622] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PackageHap is up-to-date.
+[2024-07-09T14:31:15.623] [DEBUG] debug-file - Update task entry:default@SignHap input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\entry-default-unsigned.hap cache by regenerate.
+[2024-07-09T14:31:15.623] [DEBUG] debug-file - Update task entry:default@SignHap output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\entry-default-signed.hap cache.
+[2024-07-09T14:31:15.624] [DEBUG] debug-file - Incremental task entry:default@SignHap post-execution cost:1 ms .
+[2024-07-09T14:33:35.719] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' }
+}
+[2024-07-09T14:33:35.725] [DEBUG] debug-file - Cache service initialization finished in 6 ms 
+[2024-07-09T14:33:35.736] [DEBUG] debug-file - hvigorfile, resolving E:\Files\Chrome_Files\Healthy_life\hvigorfile.ts
+[2024-07-09T14:33:35.747] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2024-07-09T14:33:35.747] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2024-07-09T14:33:35.755] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2024-07-09T14:33:35.755] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2024-07-09T14:33:35.755] [DEBUG] debug-file - Product 'default' build option: {}
+[2024-07-09T14:33:35.755] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2024-07-09T14:33:35.756] [DEBUG] debug-file - Product 'default' using build option: {
+  "debuggable": true
+} in this build.
+[2024-07-09T14:33:35.757] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2024-07-09T14:33:35.766] [DEBUG] debug-file - Sdk init in 7 ms 
+[2024-07-09T14:33:35.787] [DEBUG] debug-file - Project task initialization takes 20 ms 
+[2024-07-09T14:33:35.788] [DEBUG] debug-file - hvigorfile, resolve finished E:\Files\Chrome_Files\Healthy_life\hvigorfile.ts
+[2024-07-09T14:33:35.796] [DEBUG] debug-file - hvigorfile, resolving E:\Files\Chrome_Files\Healthy_life\entry\hvigorfile.ts
+[2024-07-09T14:33:35.801] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2024-07-09T14:33:35.801] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2024-07-09T14:33:35.806] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2024-07-09T14:33:35.807] [DEBUG] debug-file - Target 'default' config: {}
+[2024-07-09T14:33:35.807] [DEBUG] debug-file - Module 'entry' target 'default' build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+}
+[2024-07-09T14:33:35.807] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2024-07-09T14:33:35.807] [DEBUG] debug-file - Module 'entry' target 'default' using build option: {
+  "debuggable": true,
+  "copyFrom": "default"
+} in this build.
+[2024-07-09T14:33:35.810] [DEBUG] debug-file - Module entry task initialization takes 2 ms 
+[2024-07-09T14:33:35.811] [DEBUG] debug-file - hvigorfile, resolve finished E:\Files\Chrome_Files\Healthy_life\entry\hvigorfile.ts
+[2024-07-09T14:33:35.913] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 102 ms 
+[2024-07-09T14:33:35.913] [DEBUG] debug-file - project has submodules:entry
+[2024-07-09T14:33:35.914] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2024-07-09T14:33:35.918] [DEBUG] debug-file - load to the disk finished
+[2024-07-09T14:33:35.919] [DEBUG] debug-file - Module Healthy_life Collected Dependency: 
+[2024-07-09T14:33:35.919] [DEBUG] debug-file - Module Healthy_life's total dependency: 0
+[2024-07-09T14:33:35.920] [DEBUG] debug-file - Module entry Collected Dependency: 
+[2024-07-09T14:33:35.920] [DEBUG] debug-file - Module entry's total dependency: 0
+[2024-07-09T14:33:35.923] [DEBUG] debug-file - Configuration phase cost:195 ms 
+[2024-07-09T14:33:35.925] [DEBUG] debug-file - Configuration task cost before running: 213 ms 
+[2024-07-09T14:33:35.926] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.927] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.927] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:35.929] [DEBUG] debug-file - Executing task :entry:default@PreBuild
+[2024-07-09T14:33:35.936] [DEBUG] debug-file - Incremental task entry:default@PreBuild pre-execution cost: 5 ms .
+[2024-07-09T14:33:35.937] [DEBUG] debug-file - entry : default@PreBuild cost memory 0.34151458740234375
+[2024-07-09T14:33:35.939] [INFO] debug-file - UP-TO-DATE :entry:default@PreBuild...  
+[2024-07-09T14:33:35.941] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.942] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.942] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:35.943] [DEBUG] debug-file - Executing task :entry:default@GenerateMetadata
+[2024-07-09T14:33:35.945] [DEBUG] debug-file - Incremental task entry:default@GenerateMetadata pre-execution cost: 2 ms .
+[2024-07-09T14:33:35.945] [DEBUG] debug-file - entry : default@GenerateMetadata cost memory 0.1303558349609375
+[2024-07-09T14:33:35.946] [INFO] debug-file - UP-TO-DATE :entry:default@GenerateMetadata...  
+[2024-07-09T14:33:35.950] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.950] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.950] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:35.951] [DEBUG] debug-file - Executing task :entry:default@ConfigureCmake
+[2024-07-09T14:33:35.951] [DEBUG] debug-file - entry : default@ConfigureCmake cost memory 0.01282501220703125
+[2024-07-09T14:33:35.951] [DEBUG] debug-file - runTaskFromQueue task cost before running: 239 ms 
+[2024-07-09T14:33:35.951] [INFO] debug-file - Finished :entry:default@ConfigureCmake... after 1 ms 
+[2024-07-09T14:33:35.953] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.954] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.954] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:35.954] [DEBUG] debug-file - Executing task :entry:default@MergeProfile
+[2024-07-09T14:33:35.956] [DEBUG] debug-file - Incremental task entry:default@MergeProfile pre-execution cost: 2 ms .
+[2024-07-09T14:33:35.956] [DEBUG] debug-file - entry : default@MergeProfile cost memory 0.10205078125
+[2024-07-09T14:33:35.956] [INFO] debug-file - UP-TO-DATE :entry:default@MergeProfile...  
+[2024-07-09T14:33:35.958] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.958] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.958] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:35.959] [DEBUG] debug-file - Executing task :entry:default@CreateBuildProfile
+[2024-07-09T14:33:35.961] [DEBUG] debug-file - Incremental task entry:default@CreateBuildProfile pre-execution cost: 2 ms .
+[2024-07-09T14:33:35.961] [DEBUG] debug-file - entry : default@CreateBuildProfile cost memory 0.10418701171875
+[2024-07-09T14:33:35.961] [INFO] debug-file - UP-TO-DATE :entry:default@CreateBuildProfile...  
+[2024-07-09T14:33:35.963] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.963] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.963] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:35.964] [DEBUG] debug-file - Executing task :entry:default@PreCheckSyscap
+[2024-07-09T14:33:35.965] [DEBUG] debug-file - entry : default@PreCheckSyscap cost memory 0.01309967041015625
+[2024-07-09T14:33:35.965] [DEBUG] debug-file - runTaskFromQueue task cost before running: 253 ms 
+[2024-07-09T14:33:35.965] [INFO] debug-file - Finished :entry:default@PreCheckSyscap... after 1 ms 
+[2024-07-09T14:33:35.967] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.967] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.967] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:35.972] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgContextInfo
+[2024-07-09T14:33:35.972] [DEBUG] debug-file - entry : default@GeneratePkgContextInfo cost memory 0.019195556640625
+[2024-07-09T14:33:35.973] [DEBUG] debug-file - runTaskFromQueue task cost before running: 261 ms 
+[2024-07-09T14:33:35.973] [INFO] debug-file - Finished :entry:default@GeneratePkgContextInfo... after 1 ms 
+[2024-07-09T14:33:35.975] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.975] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.975] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:35.976] [DEBUG] debug-file - Executing task :entry:default@ProcessIntegratedHsp
+[2024-07-09T14:33:35.977] [DEBUG] debug-file - entry:default@ProcessIntegratedHsp is not up-to-date, since the output file 'E:\Files\Chrome_Files\Healthy_life\build\cache\default\integrated_hsp\integratedHspCache.json' does not exist.
+[2024-07-09T14:33:35.977] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp pre-execution cost: 1 ms .
+[2024-07-09T14:33:35.977] [DEBUG] debug-file - entry : default@ProcessIntegratedHsp cost memory 0.08034515380859375
+[2024-07-09T14:33:35.978] [DEBUG] debug-file - runTaskFromQueue task cost before running: 266 ms 
+[2024-07-09T14:33:35.978] [INFO] debug-file - Finished :entry:default@ProcessIntegratedHsp... after 2 ms 
+[2024-07-09T14:33:35.980] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.980] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.980] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:35.981] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithCmake
+[2024-07-09T14:33:35.981] [DEBUG] debug-file - entry : default@BuildNativeWithCmake cost memory 0.013885498046875
+[2024-07-09T14:33:35.981] [DEBUG] debug-file - runTaskFromQueue task cost before running: 269 ms 
+[2024-07-09T14:33:35.981] [INFO] debug-file - Finished :entry:default@BuildNativeWithCmake... after 1 ms 
+[2024-07-09T14:33:35.983] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.983] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.983] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:35.984] [DEBUG] debug-file - Executing task :entry:default@MakePackInfo
+[2024-07-09T14:33:35.988] [DEBUG] debug-file - Incremental task entry:default@MakePackInfo pre-execution cost: 3 ms .
+[2024-07-09T14:33:35.988] [DEBUG] debug-file - entry : default@MakePackInfo cost memory 0.142486572265625
+[2024-07-09T14:33:35.989] [INFO] debug-file - UP-TO-DATE :entry:default@MakePackInfo...  
+[2024-07-09T14:33:35.991] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.991] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.991] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:35.992] [DEBUG] debug-file - Executing task :entry:default@ProcessProfile
+[2024-07-09T14:33:35.993] [DEBUG] debug-file - Incremental task entry:default@ProcessProfile pre-execution cost: 1 ms .
+[2024-07-09T14:33:35.993] [DEBUG] debug-file - entry : default@ProcessProfile cost memory 0.05776214599609375
+[2024-07-09T14:33:35.993] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessProfile...  
+[2024-07-09T14:33:35.995] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.996] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:35.996] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:35.997] [DEBUG] debug-file - Executing task :entry:default@SyscapTransform
+[2024-07-09T14:33:35.998] [DEBUG] debug-file - entry:default@SyscapTransform is not up-to-date, since the output file 'E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\syscap\default\rpcid.sc' does not exist.
+[2024-07-09T14:33:35.998] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform pre-execution cost: 2 ms .
+[2024-07-09T14:33:35.998] [DEBUG] debug-file - entry : default@SyscapTransform cost memory 0.11700439453125
+[2024-07-09T14:33:35.999] [DEBUG] debug-file - runTaskFromQueue task cost before running: 287 ms 
+[2024-07-09T14:33:35.999] [INFO] debug-file - Finished :entry:default@SyscapTransform... after 3 ms 
+[2024-07-09T14:33:36.001] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.001] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.001] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.004] [DEBUG] debug-file - Executing task :entry:default@ProcessRouterMap
+[2024-07-09T14:33:36.008] [DEBUG] debug-file - Incremental task entry:default@ProcessRouterMap pre-execution cost: 3 ms .
+[2024-07-09T14:33:36.008] [DEBUG] debug-file - entry : default@ProcessRouterMap cost memory 0.25269317626953125
+[2024-07-09T14:33:36.009] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessRouterMap...  
+[2024-07-09T14:33:36.011] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.011] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.011] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.012] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithNinja
+[2024-07-09T14:33:36.012] [DEBUG] debug-file - entry : default@BuildNativeWithNinja cost memory 0.0282745361328125
+[2024-07-09T14:33:36.012] [DEBUG] debug-file - runTaskFromQueue task cost before running: 301 ms 
+[2024-07-09T14:33:36.013] [INFO] debug-file - Finished :entry:default@BuildNativeWithNinja... after 1 ms 
+[2024-07-09T14:33:36.014] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.014] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.015] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.015] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@ProcessResource
+[2024-07-09T14:33:36.017] [DEBUG] debug-file - Executing task :entry:default@ProcessResource
+[2024-07-09T14:33:36.018] [DEBUG] debug-file - Incremental task entry:default@ProcessResource pre-execution cost: 1 ms .
+[2024-07-09T14:33:36.018] [DEBUG] debug-file - entry : default@ProcessResource cost memory 0.1014556884765625
+[2024-07-09T14:33:36.020] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessResource...  
+[2024-07-09T14:33:36.022] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.022] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.022] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.024] [DEBUG] debug-file - Executing task :entry:default@GenerateLoaderJson
+[2024-07-09T14:33:36.034] [DEBUG] debug-file - Incremental task entry:default@GenerateLoaderJson pre-execution cost: 7 ms .
+[2024-07-09T14:33:36.034] [DEBUG] debug-file - entry : default@GenerateLoaderJson cost memory 0.46514892578125
+[2024-07-09T14:33:36.039] [INFO] debug-file - UP-TO-DATE :entry:default@GenerateLoaderJson...  
+[2024-07-09T14:33:36.041] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.041] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.041] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.043] [DEBUG] debug-file - Executing task :entry:default@ProcessLibs
+[2024-07-09T14:33:36.045] [DEBUG] debug-file - Incremental task entry:default@ProcessLibs pre-execution cost: 2 ms .
+[2024-07-09T14:33:36.045] [DEBUG] debug-file - entry : default@ProcessLibs cost memory 0.073028564453125
+[2024-07-09T14:33:36.046] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessLibs...  
+[2024-07-09T14:33:36.047] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.047] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.048] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.048] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@CompileResource
+[2024-07-09T14:33:36.050] [DEBUG] debug-file - Executing task :entry:default@CompileResource
+[2024-07-09T14:33:36.073] [DEBUG] debug-file - Incremental task entry:default@CompileResource pre-execution cost: 22 ms .
+[2024-07-09T14:33:36.073] [DEBUG] debug-file - entry : default@CompileResource cost memory -5.014488220214844
+[2024-07-09T14:33:36.075] [INFO] debug-file - UP-TO-DATE :entry:default@CompileResource...  
+[2024-07-09T14:33:36.076] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.077] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.077] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.078] [DEBUG] debug-file - Executing task :entry:default@DoNativeStrip
+[2024-07-09T14:33:36.079] [DEBUG] debug-file - Incremental task entry:default@DoNativeStrip pre-execution cost: 1 ms .
+[2024-07-09T14:33:36.079] [DEBUG] debug-file - entry : default@DoNativeStrip cost memory 0.0612030029296875
+[2024-07-09T14:33:36.080] [INFO] debug-file - UP-TO-DATE :entry:default@DoNativeStrip...  
+[2024-07-09T14:33:36.082] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.082] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.082] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.085] [DEBUG] debug-file - Executing task :entry:default@CompileArkTS
+[2024-07-09T14:33:36.113] [DEBUG] debug-file - Incremental task entry:default@CompileArkTS pre-execution cost: 26 ms .
+[2024-07-09T14:33:36.114] [DEBUG] debug-file - entry : default@CompileArkTS cost memory 1.0777587890625
+[2024-07-09T14:33:36.118] [INFO] debug-file - UP-TO-DATE :entry:default@CompileArkTS...  
+[2024-07-09T14:33:36.120] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.121] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.121] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.126] [DEBUG] debug-file - Executing task :entry:default@BuildJS
+[2024-07-09T14:33:36.133] [DEBUG] debug-file - entry : default@BuildJS cost memory 0.12424468994140625
+[2024-07-09T14:33:36.133] [DEBUG] debug-file - runTaskFromQueue task cost before running: 421 ms 
+[2024-07-09T14:33:36.133] [INFO] debug-file - Finished :entry:default@BuildJS... after 8 ms 
+[2024-07-09T14:33:36.140] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.140] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.140] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.143] [DEBUG] debug-file - Executing task :entry:default@CacheNativeLibs
+[2024-07-09T14:33:36.147] [DEBUG] debug-file - Incremental task entry:default@CacheNativeLibs pre-execution cost: 3 ms .
+[2024-07-09T14:33:36.148] [DEBUG] debug-file - entry : default@CacheNativeLibs cost memory 0.0783843994140625
+[2024-07-09T14:33:36.149] [INFO] debug-file - UP-TO-DATE :entry:default@CacheNativeLibs...  
+[2024-07-09T14:33:36.154] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.154] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.155] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.159] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgModuleJson
+[2024-07-09T14:33:36.169] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgModuleJson pre-execution cost: 2 ms .
+[2024-07-09T14:33:36.169] [DEBUG] debug-file - entry : default@GeneratePkgModuleJson cost memory 0.0847930908203125
+[2024-07-09T14:33:36.170] [INFO] debug-file - UP-TO-DATE :entry:default@GeneratePkgModuleJson...  
+[2024-07-09T14:33:36.182] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.183] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.183] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.203] [DEBUG] debug-file - Executing task :entry:default@PackageHap
+[2024-07-09T14:33:36.254] [DEBUG] debug-file - Incremental task entry:default@PackageHap pre-execution cost: 47 ms .
+[2024-07-09T14:33:36.254] [DEBUG] debug-file - entry : default@PackageHap cost memory 0.9111099243164062
+[2024-07-09T14:33:36.257] [INFO] debug-file - UP-TO-DATE :entry:default@PackageHap...  
+[2024-07-09T14:33:36.261] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.261] [DEBUG] debug-file - jsonObjWithoutParam {} at undefined
+[2024-07-09T14:33:36.261] [DEBUG] debug-file - jsonObjWithoutParam {"license":"","devDependencies":{},"author":"","name":"entry","description":"Please describe the basic information.","main":"","version":"1.0.0","dependencies":{}} at undefined
+[2024-07-09T14:33:36.264] [DEBUG] debug-file - Executing task :entry:default@SignHap
+[2024-07-09T14:33:36.265] [WARN] debug-file - Will skip sign 'hos_hap'. No signingConfigs profile is configured in current project.
+             If needed, configure the signingConfigs in E:\Files\Chrome_Files\Healthy_life\build-profile.json5.
+[2024-07-09T14:33:36.266] [DEBUG] debug-file - entry:default@SignHap is not up-to-date, since the output file 'E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\entry-default-signed.hap' does not exist.
+[2024-07-09T14:33:36.266] [DEBUG] debug-file - Incremental task entry:default@SignHap pre-execution cost: 2 ms .
+[2024-07-09T14:33:36.266] [DEBUG] debug-file - entry : default@SignHap cost memory 0.13104248046875
+[2024-07-09T14:33:36.267] [DEBUG] debug-file - runTaskFromQueue task cost before running: 555 ms 
+[2024-07-09T14:33:36.268] [INFO] debug-file - Finished :entry:default@SignHap... after 3 ms 
+[2024-07-09T14:33:36.270] [DEBUG] debug-file - Executing task :entry:assembleHap
+[2024-07-09T14:33:36.270] [DEBUG] debug-file - entry : assembleHap cost memory 0.01142120361328125
+[2024-07-09T14:33:36.270] [DEBUG] debug-file - runTaskFromQueue task cost before running: 558 ms 
+[2024-07-09T14:33:36.270] [INFO] debug-file - Finished :entry:assembleHap... after 1 ms 
+[2024-07-09T14:33:36.281] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PreBuild is up-to-date.
+[2024-07-09T14:33:36.281] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateMetadata is up-to-date.
+[2024-07-09T14:33:36.281] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MergeProfile is up-to-date.
+[2024-07-09T14:33:36.281] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CreateBuildProfile is up-to-date.
+[2024-07-09T14:33:36.281] [DEBUG] debug-file - Update task entry:default@GeneratePkgContextInfo output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader\default\pkgContextInfo.json cache.
+[2024-07-09T14:33:36.281] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgContextInfo post-execution cost:1 ms .
+[2024-07-09T14:33:36.282] [DEBUG] debug-file - Update task entry:default@ProcessIntegratedHsp output file:E:\Files\Chrome_Files\Healthy_life\build\cache\default\integrated_hsp\integratedHspCache.json cache.
+[2024-07-09T14:33:36.282] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp post-execution cost:1 ms .
+[2024-07-09T14:33:36.283] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MakePackInfo is up-to-date.
+[2024-07-09T14:33:36.283] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessProfile is up-to-date.
+[2024-07-09T14:33:36.283] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:D:\Program Files\Huawei\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\toolchains\syscap_tool.exe cache by regenerate.
+[2024-07-09T14:33:36.284] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:D:\Program Files\Huawei\DevEco Studio\sdk\HarmonyOS-NEXT-DB1\openharmony\ets\api\device-define cache by regenerate.
+[2024-07-09T14:33:36.284] [DEBUG] debug-file - Update task entry:default@SyscapTransform output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\syscap\default\rpcid.sc cache.
+[2024-07-09T14:33:36.285] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform post-execution cost:3 ms .
+[2024-07-09T14:33:36.285] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessRouterMap is up-to-date.
+[2024-07-09T14:33:36.285] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessResource is up-to-date.
+[2024-07-09T14:33:36.285] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateLoaderJson is up-to-date.
+[2024-07-09T14:33:36.286] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessLibs is up-to-date.
+[2024-07-09T14:33:36.286] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileResource is up-to-date.
+[2024-07-09T14:33:36.286] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@DoNativeStrip is up-to-date.
+[2024-07-09T14:33:36.286] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileArkTS is up-to-date.
+[2024-07-09T14:33:36.287] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader\default cache by regenerate.
+[2024-07-09T14:33:36.288] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2024-07-09T14:33:36.288] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\module.json cache by regenerate.
+[2024-07-09T14:33:36.288] [DEBUG] debug-file - Update task entry:default@BuildJS input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2024-07-09T14:33:36.289] [DEBUG] debug-file - Update task entry:default@BuildJS output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\intermediates\loader_out\default\js cache.
+[2024-07-09T14:33:36.289] [DEBUG] debug-file - Incremental task entry:default@BuildJS post-execution cost:3 ms .
+[2024-07-09T14:33:36.289] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CacheNativeLibs is up-to-date.
+[2024-07-09T14:33:36.289] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GeneratePkgModuleJson is up-to-date.
+[2024-07-09T14:33:36.290] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PackageHap is up-to-date.
+[2024-07-09T14:33:36.290] [DEBUG] debug-file - Update task entry:default@SignHap input file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\entry-default-unsigned.hap cache by regenerate.
+[2024-07-09T14:33:36.290] [DEBUG] debug-file - Update task entry:default@SignHap output file:E:\Files\Chrome_Files\Healthy_life\entry\build\default\outputs\default\entry-default-signed.hap cache.
+[2024-07-09T14:33:36.290] [DEBUG] debug-file - Incremental task entry:default@SignHap post-execution cost:1 ms .
