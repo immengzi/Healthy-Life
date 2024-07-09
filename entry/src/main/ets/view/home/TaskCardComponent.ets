@@ -79,7 +79,12 @@ export struct TaskCard {
     .justifyContent(FlexAlign.SpaceBetween)
     .borderRadius($r('app.float.default_24'))
     .padding({ left: Const.THOUSANDTH_50, right: Const.THOUSANDTH_33 })
-    .backgroundColor($r('app.color.white'))
+    // .backgroundColor($r('app.color.white'))
+    .linearGradient({
+      direction: GradientDirection.Left, // 渐变方向
+      repeating: false, // 渐变颜色是否重复
+      colors: [[$r('app.color.white'), 1-Number(this.taskInfo.finValue)/Number(this.taskInfo.targetValue)], [0xB0E0E6, 0]] // 数组末尾元素占比小于1时满足重复着色效果
+    })
     .onClick(() => this.clickAction(true))
     .gesture(LongPressGesture().onAction(() => this.clickAction(false)))
   }
