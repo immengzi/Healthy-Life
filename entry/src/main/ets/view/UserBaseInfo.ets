@@ -42,23 +42,32 @@ export async function photoPickerGetUri(): Promise<string> {
 
 @Component
 export struct UserBaseInfo {
-  @Prop nickname: string = '';
-  @Prop signature: string = '';
-  @Prop icon: string | Resource = $r('app.media.ic_user');
+  @State nickname: string = '';
+  @State signature: string = '';
+  @State icon: string = ''
 
   build() {
     Column() {
       // userIcon
       Column() {
-        Image(this.icon)
-          .objectFit(ImageFit.Contain)
-          .height($r('app.float.default_66'))
-          .width($r('app.float.default_66'))
-          .margin({ top: $r('app.float.default_71') })
+        if (this.icon != '') {
+          Image(this.icon)
+            .height($r('app.float.default_66'))
+            .width($r('app.float.default_66'))
+            .margin({ top: $r('app.float.default_71') })
+            .borderRadius($r('app.float.default_40'))
+        } else {
+          Image($r('app.media.ic_user'))
+            .objectFit(ImageFit.Contain)
+            .height($r('app.float.default_66'))
+            .width($r('app.float.default_66'))
+            .margin({ top: $r('app.float.default_71') })
+        }
       }.onClick(async () => {
         Logger.debug('UserBaseInfo', '打开相册');
         await photoPickerGetUri().then(value => {
           this.icon = value;
+          Logger.debug('UserBaseInfo', this.icon);
         });
       })
 
