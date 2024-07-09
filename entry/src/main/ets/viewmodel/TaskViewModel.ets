@@ -130,7 +130,7 @@ export const addTask = (params: TaskInfo, context: Context) => {
     let taskInfoStr = JSON.stringify(params);
     let taskInfo: TaskInfo = JSON.parse(taskInfoStr);
     taskInfo.date = new Date().toDateString();
-    taskInfo.isDone = true;
+    taskInfo.isDone = false;
     TaskInfoApi.updateDataByDate(taskInfo, (flag: number) => {
       if (!flag) {
         Logger.error('insertTaskSetting', 'updateTaskSetting Error!');
@@ -242,7 +242,7 @@ export const createAppleRange = () => {
 export const createSmileRange = () => {
   const smileRangeArr: Array<string> = [];
   for (let i = 1; i <= Const.SMILE_RANGE; i++) {
-    smileRangeArr.push(`${i} 个`);
+    smileRangeArr.push(`${i} 次`);
   }
   return smileRangeArr;
 }
@@ -254,7 +254,7 @@ export const createSmileRange = () => {
 export const createBrushRange = () => {
   const brushRangeArr: Array<string> = [];
   for (let i = 1; i <= Const.BRUSH_TEETH_RANGE; i++) {
-    brushRangeArr.push(`${i} 个`);
+    brushRangeArr.push(`${i} 次`);
   }
   return brushRangeArr;
 }
