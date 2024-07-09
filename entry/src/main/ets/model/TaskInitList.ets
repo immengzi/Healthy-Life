@@ -80,7 +80,7 @@ export const TaskMapById: Array<ITaskItem> = [
     targetValue: '0.25',
     isOpen: false,
     unit: 'L',
-    step: 0,
+    step: 0.25,
     isInit: true,
     isAlarm: false,
     startTime: '08: 00',
@@ -110,7 +110,7 @@ export const TaskMapById: Array<ITaskItem> = [
     targetValue: '1',
     isOpen: false,
     unit: '次',
-    step: 0,
+    step: 1,
     isInit: true,
     isAlarm: false,
     startTime: '08: 00',
@@ -125,7 +125,7 @@ export const TaskMapById: Array<ITaskItem> = [
     targetValue: '1',
     isOpen: false,
     unit: '次',
-    step: 0,
+    step: 1,
     isInit: true,
     isAlarm: false,
     startTime: '08: 00',
@@ -149,7 +149,7 @@ export const TaskMapById: Array<ITaskItem> = [
   }
 ]
 
-export const TaskItem = new TaskInfo(1, '', 0, '7:00', true, 'string', 'string;', '', true, '6:58', false);
+export const TaskItem = new TaskInfo(1, '', 0, '7:00', true, 'string', 'string;', '', false, '6:58', false);
 
 export const RemindContentMap: Array<RemindContentItem> = [
   {
