@@ -211,3 +211,25 @@ export const createAppleRange = () => {
     }
     return appleRangeArr;
 };
+/**
+ * @description Generate the range of smiling 1 - 3
+ * @return Array<string>
+ */
+export const createSmileRange = () => {
+    const smileRangeArr: Array<string> = [];
+    for (let i = 1; i <= Const.SMILE_RANGE; i++) {
+        smileRangeArr.push(`${i} 个`);
+    }
+    return smileRangeArr;
+};
+/**
+ * @description Generate the range of brushing teeth 1 - 3
+ * @return Array<string>
+ */
+export const createBrushRange = () => {
+    const brushRangeArr: Array<string> = [];
+    for (let i = 1; i <= Const.BRUSH_TEETH_RANGE; i++) {
+        brushRangeArr.push(`${i} 个`);
+    }
+    return brushRangeArr;
+};

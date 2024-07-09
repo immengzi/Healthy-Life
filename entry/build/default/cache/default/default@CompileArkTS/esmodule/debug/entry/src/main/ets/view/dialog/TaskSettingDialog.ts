@@ -18,13 +18,15 @@ interface TargetSettingDialog_Params {
     controller?: CustomDialogController;
     drinkRange?: string[];
     appleRange?: string[];
+    smileRange?: string[];
+    brushRange?: string[];
     currentValue?: string;
     currentTime?: string;
 }
 import promptAction from "@ohos:promptAction";
 import type { ITaskItem } from '../../model/TaskInitList';
 import { frequencyRange } from "@bundle:com.example.healthy_life/entry/ets/common/utils/Utils";
-import { returnTimeStamp, createAppleRange, createDrinkRange, formatTime } from "@bundle:com.example.healthy_life/entry/ets/viewmodel/TaskViewModel";
+import { returnTimeStamp, createAppleRange, createDrinkRange, formatTime, createSmileRange, createBrushRange } from "@bundle:com.example.healthy_life/entry/ets/viewmodel/TaskViewModel";
 import { taskType } from "@bundle:com.example.healthy_life/entry/ets/viewmodel/TaskInfo";
 import { CommonConstants as Const } from "@bundle:com.example.healthy_life/entry/ets/common/constants/CommonConstants";
 import type { FrequencyContentType } from '../../model/TaskInitList';
@@ -40,6 +42,8 @@ export class TargetSettingDialog extends ViewPU {
         }, this);
         this.drinkRange = createDrinkRange();
         this.appleRange = createAppleRange();
+        this.smileRange = createSmileRange();
+        this.brushRange = createBrushRange();
         this.currentValue = this.settingParams.targetValue;
         this.currentTime = Const.DEFAULT_TIME;
         this.setInitiallyProvidedValue(params);
@@ -54,6 +58,12 @@ export class TargetSettingDialog extends ViewPU {
         }
         if (params.appleRange !== undefined) {
             this.appleRange = params.appleRange;
+        }
+        if (params.smileRange !== undefined) {
+            this.smileRange = params.smileRange;
+        }
+        if (params.brushRange !== undefined) {
+            this.brushRange = params.brushRange;
         }
         if (params.currentValue !== undefined) {
             this.currentValue = params.currentValue;
@@ -85,6 +95,8 @@ export class TargetSettingDialog extends ViewPU {
     }
     private drinkRange: string[];
     private appleRange: string[];
+    private smileRange: string[];
+    private brushRange: string[];
     private currentValue: string;
     private currentTime: string;
     compareTime(startTime: string, endTime: string) {
@@ -158,10 +170,23 @@ export class TargetSettingDialog extends ViewPU {
                     TimePicker.pop();
                 });
             }
-            else {
+            else if ([taskType.drinkWater, taskType.eatApple].indexOf(this.settingParams?.taskID) > Const.HAS_NO_INDEX) {
                 this.ifElseBranchUpdateFunction(1, () => {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         TextPicker.create({ range: this.settingParams?.taskID === taskType.drinkWater ? this.drinkRange : this.appleRange });
+                        TextPicker.width(Const.THOUSANDTH_900);
+                        TextPicker.height(Const.THOUSANDTH_800);
+                        TextPicker.onChange((value: string | string[]) => {
+                            this.currentValue = (value as string)?.split(' ')[0];
+                        });
+                    }, TextPicker);
+                    TextPicker.pop();
+                });
+            }
+            else {
+                this.ifElseBranchUpdateFunction(2, () => {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        TextPicker.create({ range: this.settingParams?.taskID === taskType.smile ? this.smileRange : this.brushRange });
                         TextPicker.width(Const.THOUSANDTH_900);
                         TextPicker.height(Const.THOUSANDTH_800);
                         TextPicker.onChange((value: string | string[]) => {
