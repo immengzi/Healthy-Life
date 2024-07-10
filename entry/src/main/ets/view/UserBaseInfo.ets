@@ -12,20 +12,64 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import Logger from '../common/utils/Logger';
+// PictureSaving.ets
+import { picker } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 定义一个URI数组，用于接收PhotoViewPicker返回的用于选择图像的URI。
+let uris: Array<string> = [];
+
+// 调用PhotoViewPicker.select选择图片。
+export async function photoPickerGetUri(): Promise<string> {
+  try {
+    let PhotoSelectOptions = new picker.PhotoSelectOptions();
+    PhotoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    PhotoSelectOptions.maxSelectNumber = 1;
+    let photoPicker = new picker.PhotoViewPicker();
+    await photoPicker.select(PhotoSelectOptions).then((PhotoSelectResult: picker.PhotoSelectResult) => {
+      Logger.info('PhotoViewPicker.select successfully, PhotoSelectResult uri: ' + JSON.stringify(PhotoSelectResult));
+      uris = PhotoSelectResult.photoUris;
+    }).catch((err: BusinessError) => {
+      Logger.error('PhotoViewPicker.select failed with err: ' + JSON.stringify(err));
+    });
+  } catch (error) {
+    let err = error as BusinessError;
+    Logger.error('PhotoViewPicker failed with err: ' + err.message);
+  }
+  return uris[0].toString();
+}
 
 @Component
 export struct UserBaseInfo {
-  @Prop nickname: string = '';
-  @Prop signature: string = '';
+  @State nickname: string = '';
+  @State signature: string = '';
+  @State icon: string = ''
 
   build() {
     Column() {
       // userIcon
-      Image($r('app.media.ic_user'))
-        .objectFit(ImageFit.Contain)
-        .height($r('app.float.default_66'))
-        .width($r('app.float.default_66'))
-        .margin({ top: $r('app.float.default_71') })
+      Column() {
+        if (this.icon != '') {
+          Image(this.icon)
+            .height($r('app.float.default_66'))
+            .width($r('app.float.default_66'))
+            .margin({ top: $r('app.float.default_71') })
+            .borderRadius($r('app.float.default_40'))
+        } else {
+          Image($r('app.media.ic_user'))
+            .objectFit(ImageFit.Contain)
+            .height($r('app.float.default_66'))
+            .width($r('app.float.default_66'))
+            .margin({ top: $r('app.float.default_71') })
+        }
+      }.onClick(async () => {
+        Logger.debug('UserBaseInfo', '打开相册');
+        await photoPickerGetUri().then(value => {
+          this.icon = value;
+          Logger.debug('UserBaseInfo', this.icon);
+        });
+      })
 
       Column() {
         Text('LV.7')
