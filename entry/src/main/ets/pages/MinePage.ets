@@ -16,11 +16,62 @@
 import { MineListInfo } from '../view/MineListInfo';
 import { UserBaseInfo } from '../view/UserBaseInfo';
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
+import UserInfoApi from '../common/database/tables/UserInfoApi';
+import UserInfoData from '../viewmodel/UserInfoData';
+import Logger from '../common/utils/Logger';
 
 @Component
 export struct MineIndex {
+  private UserInfoTable = new UserInfoApi(() => {
+  });
+  @State userInfo: UserInfoData[] = [];
   @State nickname: string = Const.NICK_NAME;
   @State signature: string = Const.SIGNATURE;
+
+  // 查找用户信息
+  aboutToAppear() {
+    this.UserInfoTable.getRdbStore(() => { // 获取数据库
+      this.UserInfoTable.query(1, (result: UserInfoData[]) => { // 查询数据库中的用户
+        this.userInfo.push(result[0]);
+        this.nickname = this.userInfo[0].username
+        Logger.info('MinePage', `${this.nickname}`);
+      }, false);
+      if (this.userInfo.length == 0) {
+        // 插入新数据
+        let newUserInfo = new UserInfoData()
+        this.UserInfoTable.insertData(newUserInfo, (id: number) => {
+          newUserInfo.id = id;
+          this.userInfo.push(newUserInfo);
+          this.nickname = this.userInfo[0].username
+        });
+      }
+    });
+    Logger.info('MinePage', `${this.nickname}`);
+  }
+
+  onPageShow() {
+    // 查找用户信息
+    this.UserInfoTable.getRdbStore(() => { // 获取数据库
+      this.UserInfoTable.query(1, (result: UserInfoData[]) => { // 查询数据库中的用户
+        this.userInfo.push(result[0]);
+        this.nickname = this.userInfo[0].username
+        Logger.info('MinePage', `${this.nickname}`);
+      }, false);
+    });
+    Logger.info('MinePage', `${this.nickname}`);
+  }
+
+  onForeground() {
+    // 查找用户信息
+    this.UserInfoTable.getRdbStore(() => { // 获取数据库
+      this.UserInfoTable.query(1, (result: UserInfoData[]) => { // 查询数据库中的用户
+        this.userInfo.push(result[0]);
+        this.nickname = this.userInfo[0].username
+        Logger.info('MinePage', `${this.nickname}`);
+      }, false);
+    });
+    Logger.info('MinePage', `${this.nickname}`);
+  }
 
   build() {
     Column() {

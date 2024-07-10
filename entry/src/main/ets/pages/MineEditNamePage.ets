@@ -17,6 +17,9 @@ import { router } from '@kit.ArkUI';
 // import { CommonConstants } from '../common/constants/CommonConstants';
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
 import { CommonConstants } from '../common/constants/UserConstants';
+import UserInfoApi from '../common/database/tables/UserInfoApi';
+import Logger from '../common/utils/Logger';
+import UserInfoData from '../viewmodel/UserInfoData';
 
 @CustomDialog
 struct CustomDialogExample {
@@ -97,6 +100,9 @@ struct Index {
     isModal: false
   })
   @State name: string = ''
+  @State userInfo: UserInfoData[] = []
+  private UserInfoTable = new UserInfoApi(() => {
+  });
 
   build() {
     Row() {
@@ -120,16 +126,26 @@ struct Index {
                   this.dialogController.open();
                   setTimeout(() => {
                     this.dialogController?.close();
-                  }, 3000)
+                  }, 1000)
                 }
                 return
               }
               // 保存成功
+              this.UserInfoTable.getRdbStore(() => { // 获取数据库
+                this.UserInfoTable.query(1, (result: UserInfoData[]) => { // 查询数据库中的用户
+                  this.userInfo.push(result[0]);
+                  this.userInfo[0].username = this.name
+                  Logger.info('MineEditNamePage', `${this.name}`);
+                  this.UserInfoTable.updateData(this.userInfo[0], () => {
+                  });
+                }, false);
+              });
+
               if (this.dialogController2 != null) {
                 this.dialogController2.open();
                 setTimeout(() => {
                   this.dialogController2?.close();
-                }, 3000)
+                }, 1000)
               }
             }).margin({ top: 50 })
         }

@@ -19,6 +19,8 @@ import { CommonConstants as Const } from '../common/constants/CommonConstants';
 import Logger from '../common/utils/Logger';
 import { DateModel } from '../viewmodel/DateModel';
 import { getRealTimeDate } from '../viewmodel/GetDate';
+import UserInfoData from '../viewmodel/UserInfoData';
+import UserInfoApi from '../common/database/tables/UserInfoApi';
 
 
 @Entry
@@ -42,6 +44,11 @@ struct Index {
   onCancel() {
   }
 
+  @State nickname: string = Const.NICK_NAME;
+  private UserInfoTable = new UserInfoApi(() => {
+  });
+  @State userInfo: UserInfoData[] = [];
+
   aboutToAppear(): void {
     this.dateModel = getRealTimeDate();
     this.currentMonth = this.dateModel.month;
@@ -55,8 +62,32 @@ struct Index {
     }
   }
 
+  onPageShow() {
+    // 查找用户信息
+    this.UserInfoTable.getRdbStore(() => { // 获取数据库
+      this.UserInfoTable.query(1, (result: UserInfoData[]) => { // 查询数据库中的用户
+        this.userInfo.push(result[0]);
+        this.nickname = this.userInfo[0].username
+        Logger.info('MinePage', `${this.nickname}`);
+      }, false);
+    });
+    Logger.info('MinePage', `${this.nickname}`);
+  }
+
+  onForeground() {
+    // 查找用户信息
+    this.UserInfoTable.getRdbStore(() => { // 获取数据库
+      this.UserInfoTable.query(1, (result: UserInfoData[]) => { // 查询数据库中的用户
+        this.userInfo.push(result[0]);
+        this.nickname = this.userInfo[0].username
+        Logger.info('MinePage', `${this.nickname}`);
+      }, false);
+    });
+    Logger.info('MinePage', `${this.nickname}`);
+  }
+
   @Builder
-  Options(name: Resource, url: string, value: string = "???") {
+  Options(name: Resource, url: string) {
     Row() {
       Column() {
         Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
@@ -89,7 +120,7 @@ struct Index {
               .fontColor($r('app.color.no_data_background'))
               .textAlign(TextAlign.End)
           } else {
-            Text(value)
+            Text(this.nickname)
               .fontSize($r('app.float.card_padding'))
               .fontWeight(FontWeight.Medium)
               .fontColor($r('app.color.no_data_background'))
@@ -181,7 +212,6 @@ struct Index {
         return
       }
       if (url == '生日') {
-        // this.dialogController.open();
         CalendarPickerDialog.show({
           selected: this.selectedDate,
           onAccept: (value) => {
@@ -204,7 +234,7 @@ struct Index {
       Navigation() {
         Column() {
           this.Options($r('app.string.user_name'), 'pages/MineEditNamePage')
-          this.Options($r('app.string.gender'), '性别', this.selectGender)
+          this.Options($r('app.string.gender'), '性别')
           this.Options($r('app.string.birth_data'), '生日')
           this.Options($r('app.string.height'), '身高')
           this.Options($r('app.string.weight'), '体重')

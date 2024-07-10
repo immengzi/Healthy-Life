@@ -42,9 +42,9 @@ export async function photoPickerGetUri(): Promise<string> {
 
 @Component
 export struct UserBaseInfo {
-  @State nickname: string = '';
-  @State signature: string = '';
-  @State icon: string = ''
+  @Prop nickname: string = '';
+  @Prop signature: string = '';
+  @Prop icon: string = ''
 
   build() {
     Column() {
@@ -85,7 +85,7 @@ export struct UserBaseInfo {
       .justifyContent(FlexAlign.Center)
 
       // nickname
-      Text(this.nickname)
+      Text(`${this.nickname}`,)
         .fontSize($r('app.float.default_20'))
         .fontFamily($r('app.string.Helvetica'))
         .margin({ bottom: $r('app.float.default_6') })
