@@ -46,23 +46,30 @@ export struct TaskCard {
   @Builder
   targetValueBuilder() {
     if (this.taskInfo.isDone) {
-      HealthText({ title: '', titleResource: $r('app.string.task_done') })
-      HealthText({
-        title: this.taskInfo.finValue || `--`,
-        fontSize: $r('app.float.default_24')
-      })
-      Text(` / ${this.taskInfo.targetValue} ${TaskMapById[this.taskInfo.taskID - 1].unit}`)
-        .labelTextStyle()
-        .fontWeight(Const.FONT_WEIGHT_400)
+      Row(){
+        if (this.taskInfo.taskID != 1 && this.taskInfo.taskID != 6) {
+          HealthText({
+            title: this.taskInfo.finValue || `--`,
+            fontSize: $r('app.float.default_24')
+          })
+          Text(` / ${this.taskInfo.targetValue} ${TaskMapById[this.taskInfo.taskID - 1].unit}`)
+            .labelTextStyle()
+            .fontWeight(Const.FONT_WEIGHT_400)
+            .padding(10)
+        }
+        HealthText({ title: '', titleResource: $r('app.string.task_done') })
+      }
+      .align(Alignment.End)
     } else {
       Row() {
         HealthText({
           title: this.taskInfo.finValue || `--`,
           fontSize: $r('app.float.default_24')
-        })
+        }).align(Alignment.End)
         Text(` / ${this.taskInfo.targetValue} ${TaskMapById[this.taskInfo.taskID - 1].unit}`)
           .labelTextStyle()
           .fontWeight(Const.FONT_WEIGHT_400)
+          .align(Alignment.End)
       }
     }
   }
