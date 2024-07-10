@@ -18,7 +18,7 @@ import { ITaskItem } from '../../model/TaskInitList';
 import { frequencyRange } from '../../common/utils/Utils';
 import { returnTimeStamp, createAppleRange, createDrinkRange, formatTime,
   createSmileRange,
-  createBrushRange} from '../../viewmodel/TaskViewModel';
+  createBrushRange, createRunRange} from '../../viewmodel/TaskViewModel';
 import { taskType } from '../../viewmodel/TaskInfo';
 import { CommonConstants as Const } from '../..//common/constants/CommonConstants';
 import { FrequencyContentType } from '../../model/TaskInitList';
@@ -31,6 +31,7 @@ export struct TargetSettingDialog {
   appleRange: string[] = createAppleRange();
   smileRange: string[] = createSmileRange();
   brushRange: string[] = createBrushRange();
+  runRange: string[] = createRunRange();
   currentValue: string = this.settingParams.targetValue;
   currentTime: string = Const.DEFAULT_TIME;
 
@@ -87,6 +88,13 @@ export struct TargetSettingDialog {
           })
       } else if ([taskType.drinkWater, taskType.eatApple].indexOf(this.settingParams?.taskID) > Const.HAS_NO_INDEX) {
         TextPicker({ range: this.settingParams?.taskID === taskType.drinkWater ? this.drinkRange : this.appleRange })
+          .width(Const.THOUSANDTH_900,)
+          .height(Const.THOUSANDTH_800,)
+          .onChange((value: string | string[]) => {
+            this.currentValue = (value as string)?.split(' ')[0];
+          })
+      } else if ([taskType.run].indexOf(this.settingParams?.taskID) > Const.HAS_NO_INDEX) {
+        TextPicker({ range: this.runRange })
           .width(Const.THOUSANDTH_900,)
           .height(Const.THOUSANDTH_800,)
           .onChange((value: string | string[]) => {

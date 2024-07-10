@@ -258,3 +258,15 @@ export const createBrushRange = () => {
   }
   return brushRangeArr;
 }
+
+/**
+ * @description Generate the range of running 1-20km
+ * @return Array<string>
+ */
+export const createRunRange = () => {
+  const runRangeArr: Array<string> = [];
+  for (let i = 1; i <= Const.RUN_RANGE; i++) {
+    runRangeArr.push(`${i} km`);
+  }
+  return runRangeArr;
+}
