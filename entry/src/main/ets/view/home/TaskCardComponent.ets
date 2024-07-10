@@ -65,11 +65,10 @@ export struct TaskCard {
         HealthText({
           title: this.taskInfo.finValue || `--`,
           fontSize: $r('app.float.default_24')
-        }).align(Alignment.End)
+        })
         Text(` / ${this.taskInfo.targetValue} ${TaskMapById[this.taskInfo.taskID - 1].unit}`)
           .labelTextStyle()
           .fontWeight(Const.FONT_WEIGHT_400)
-          .align(Alignment.End)
       }
     }
   }
