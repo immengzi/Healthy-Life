@@ -27,7 +27,7 @@ export struct BadgeCard {
         .width(Const.FULL_WIDTH)
         .height(Const.ACHIEVE_CARD_IMG_HEIGHT)
         .objectFit(ImageFit.Contain)
-      Text($r('app.string.task_achievement_level', Number(this.content)))
+      Text(this.content)        //$r('app.string.task_achievement_level', Number(this.content))
         .lineHeight($r('app.float.default_16'))
         .fontSize($r('app.float.default_12'))
         .fontColor($r('app.color.white'))
@@ -36,3 +36,4 @@ export struct BadgeCard {
     .padding({ top: Const.ACHIEVE_CARD_TOP, bottom: Const.ACHIEVE_CARD_BOTTOM })
   }
 }
+

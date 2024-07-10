@@ -14,10 +14,13 @@
  */
 
 import { ACHIEVEMENT_LEVEL_LIST } from './TaskInitList';
+import { CommonConstants as Const } from '../common/constants/CommonConstants';
 import GlobalInfo from '../viewmodel/GlobalInfo';
 import GlobalInfoApi from '../common/database/tables/GlobalInfoApi';
 
 export const ACHIEVEMENT_LEVEL_KEY = 'AchievementLevelKey';
+export const ACHIEVEMENT_SINGLE_LEVEL_KEY = ['AchievementGetEarly','AchievementDrink','AchievementApple',
+  'AchievementSmile','AchievementBrush','AchievementSleepEarly','AchievementRun'];
 
 export function getAchievementLevel() {
   GlobalInfoApi.query((res: GlobalInfo) => {
@@ -28,6 +31,20 @@ export function getAchievementLevel() {
       AppStorage.set<Number>(ACHIEVEMENT_LEVEL_KEY, Number(achievements[achievements.length - 1]));
     }
   })
+
+}
+
+export function getSingleAchievementLevel() {
+  for(let i = 1; i <= Const.TASK_NUM; i++){
+    GlobalInfoApi.query((res: GlobalInfo) => {
+      let globalInfo: GlobalInfo = res;
+      let achievementStr = globalInfo.achievements ?? '';
+      let achievements = achievementStr.split(',');
+      if (achievements.length > 0) {
+        AppStorage.set<Number>(ACHIEVEMENT_SINGLE_LEVEL_KEY[i-1], Number(achievements[achievements.length - 1]));
+      }
+    }, i)
+  }
 
 }
 

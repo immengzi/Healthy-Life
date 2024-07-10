@@ -14,12 +14,13 @@
  */
 
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
-import { BadgePanel } from './BadgePanelComponent';
+import { BadgePanel, ContinuePanel, DegreePanel } from './BadgePanelComponent';
 import { TitleBar } from './TitleBarComponent';
 import Logger from '../common/utils/Logger';
 
 @Component
 export struct AchievementIndex {
+
   aboutToAppear() {
     Logger.debug('AchievementIndex', 'aboutToAppear')
   }
@@ -31,7 +32,16 @@ export struct AchievementIndex {
   build() {
     Column({ space: Const.DEFAULT_20 }) {
       TitleBar()
-      BadgePanel()
+      Scroll(){
+        Column(){
+          BadgePanel()
+          ContinuePanel()
+          DegreePanel()
+        }
+      }
+      .layoutWeight(1)
+      .scrollBar(BarState.Off)
+      .align(Alignment.TopStart)
     }
     .padding(Const.DEFAULT_10)
     .height(Const.FULL_HEIGHT)

@@ -15,6 +15,8 @@
 import AchievementMapInfo from '../viewmodel/AchievementMapInfo';
 import TaskInfo from '../viewmodel/TaskInfo';
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
+import ContinueMapInfo from '../viewmodel/ContinueMapInfo';
+import DegreeMapInfo from '../viewmodel/DegreeMapInfo';
 
 export interface ITaskItem {
   taskID: number;
@@ -56,6 +58,14 @@ export const TaskList: TaskInfo[] = [
 let achievementMap = new AchievementMapInfo();
 
 export const AchievementMap = achievementMap;
+
+// 单任务连续 图片资源
+let continueMap = new ContinueMapInfo();
+export const ContinueMap = continueMap;
+
+// 单任务完成率 图片资源
+let degreeMap = new DegreeMapInfo();
+export const DegreeMap = degreeMap;
 
 export const TaskMapById: Array<ITaskItem> = [
   {
@@ -199,3 +209,9 @@ export const RemindContentMap: Array<RemindContentItem> = [
 ];
 
 export const ACHIEVEMENT_LEVEL_LIST = [3, 7, 30, 50, 73, 99];
+
+// 单任务连续指标
+export const CONTINUE_LEVEL_LIST = [3, 30, 90];
+
+// 单任务完成率指标
+export const DEGREE_LEVEL_LIST = [200, 300, 400];

@@ -14,7 +14,7 @@
  */
 
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
-import { isReachNewAchievement, ACHIEVEMENT_LEVEL_KEY } from '../model/AchieveModel';
+import { isReachNewAchievement, ACHIEVEMENT_LEVEL_KEY, ACHIEVEMENT_SINGLE_LEVEL_KEY } from '../model/AchieveModel';
 import { TaskMapById, ITaskItem, ACHIEVEMENT_LEVEL_LIST } from '../model/TaskInitList';
 import TaskInfo from './TaskInfo';
 import DayInfo from './DayInfo';
@@ -355,7 +355,7 @@ export class HomeStore {
 
         let isNewAchieve = isReachNewAchievement(achievementInfo);
         if (isNewAchieve) {
-          AppStorage.setOrCreate(ACHIEVEMENT_LEVEL_KEY, achievementInfo.checkInDays);
+          AppStorage.setOrCreate(ACHIEVEMENT_SINGLE_LEVEL_KEY[taskID-1], achievementInfo.checkInDays);
           achievementInfo.achievements = achievementInfo.achievements + ',' + achievementInfo.checkInDays;
         }
         GlobalInfoApi.updateData(achievementInfo, (res: number) => {

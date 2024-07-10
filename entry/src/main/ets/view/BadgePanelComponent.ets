@@ -15,15 +15,17 @@
 
 import { BadgeCard } from './BadgeCardComponent'
 import { getAchievementLevel } from '../model/AchieveModel'
-import { getBadgeCardItems } from '../viewmodel/AchievementViewModel'
+import { getBadgeCardItems, getContinueCardItems, getDegreeCardItems } from '../viewmodel/AchievementViewModel'
 import Logger from '../common/utils/Logger'
 import { ACHIEVEMENT_LEVEL_KEY } from '../model/AchieveModel'
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
 import CardInfo from '../viewmodel/CardInfo'
 
+
+// 总体成就框图
 @Component
 export struct BadgePanel {
-  @StorageProp(ACHIEVEMENT_LEVEL_KEY) successiveDays: number = 0;
+  @StorageProp(ACHIEVEMENT_LEVEL_KEY) successiveDays: number=0;
 
   aboutToAppear() {
     Logger.debug('BadgePanel', 'aboutToAppear');
@@ -33,6 +35,49 @@ export struct BadgePanel {
   build() {
     Flex({ direction: FlexDirection.Row, wrap: FlexWrap.Wrap }) {
       ForEach(getBadgeCardItems(this.successiveDays), (item: CardInfo) => {
+        BadgeCard({ content: item.titleContent, imgSrc: item.achievement })
+      })
+    }
+    .width(Const.FULL_WIDTH)
+  }
+}
+
+
+// 单任务连续成就框图
+@Component
+export struct ContinuePanel {
+  @StorageProp(ACHIEVEMENT_LEVEL_KEY) successiveDays: Array<number> = [0,0,0,0,0,0];    // ACHIEVEMENT_LEVEL_KEY
+
+
+  aboutToAppear() {
+    Logger.debug('ContinuePanel', 'aboutToAppear');
+    getAchievementLevel();                                    // getAchievementLevel()
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Row, wrap: FlexWrap.Wrap }) {
+      ForEach( getContinueCardItems([4,3,7,44,0,0]), (item: CardInfo) => {//this.successiveDays
+        BadgeCard({ content: item.titleContent, imgSrc: item.achievement })
+      })
+    }
+    .width(Const.FULL_WIDTH)
+  }
+}
+
+
+// 单任务完成率成就框图
+@Component
+export struct DegreePanel {
+  @StorageProp(ACHIEVEMENT_LEVEL_KEY) successiveDays: Array<number> = [0,0,0,0];    // ACHIEVEMENT_LEVEL_KEY
+
+  aboutToAppear() {
+    Logger.debug('DegreePanel', 'aboutToAppear');
+    getAchievementLevel();                                    // getAchievementLevel()
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Row, wrap: FlexWrap.Wrap }) {
+      ForEach( getDegreeCardItems([0,200,300,0]), (item: CardInfo) => {  //this.successiveDays
         BadgeCard({ content: item.titleContent, imgSrc: item.achievement })
       })
     }
