@@ -27,8 +27,11 @@ class GlobalInfoApi {
    * @param globalInfo
    * @param callback
    */
-  insertData(globalInfo: GlobalInfo, callback: Function): void {
+  insertData(globalInfo: GlobalInfo, callback: Function, id: number = 0): void {
     const valueBucket = generateBucket(globalInfo);
+    if (id) {
+      valueBucket['id'] = id;
+    }
     RdbUtils.insert('GlobalInfo', valueBucket).then(result => {
       callback(result);
     });
@@ -41,10 +44,13 @@ class GlobalInfoApi {
    * @param globalInfo
    * @param callback
    */
-  updateData(globalInfo: GlobalInfo, callback: Function): void {
+  updateData(globalInfo: GlobalInfo, callback: Function, id: number = 0): void {
     const valueBucket = generateBucket(globalInfo);
+    if(id){
+      valueBucket['id'] = id;
+    }
     let predicates = new relationalStore.RdbPredicates(Const.GLOBAL_INFO.tableName ? Const.GLOBAL_INFO.tableName : '');
-    predicates.equalTo('id', 0);
+    predicates.equalTo('id', Number(id));
     RdbUtils.update(valueBucket, predicates).then((result: number) => {
       callback(result);
     });
@@ -56,9 +62,9 @@ class GlobalInfoApi {
    *
    * @param callback
    */
-  query(callback: Function): void {
+  query(callback: Function, id: number = 0): void {
     let predicates = new relationalStore.RdbPredicates(Const.GLOBAL_INFO.tableName ? Const.GLOBAL_INFO.tableName : '');
-    predicates.equalTo('id', 0);
+    predicates.equalTo('id', Number(id));
     RdbUtils.query(predicates).then(resultSet => {
       let count = resultSet.rowCount;
       if (count === 0) {
