@@ -16,25 +16,142 @@ import { router } from '@kit.ArkUI';
 
 // import { CommonConstants } from '../common/constants/CommonConstants';
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
+import { CommonConstants } from '../common/constants/UserConstants';
+import UserInfoApi from '../common/database/tables/UserInfoApi';
+import Logger from '../common/utils/Logger';
+import UserInfoData from '../viewmodel/UserInfoData';
+
+@CustomDialog
+struct CustomDialogExample {
+  controller?: CustomDialogController;
+
+  build() {
+    Column() {
+      Text("昵称不规范！")
+        .fontSize($r('app.float.font_size1'))
+        .fontColor(Color.Black)
+        .height($r('app.float.toast_height'))
+    }
+    .backgroundColor($r('app.color.white'))
+    .borderRadius($r('app.float.border_radius2'))
+    .width($r('app.float.toast_width'))
+  }
+}
+
+@CustomDialog
+struct CustomDialogExample2 {
+  controller?: CustomDialogController;
+
+  build() {
+    Column() {
+      Text("保存成功")
+        .fontSize($r('app.float.font_size1'))
+        .fontColor(Color.Black)
+        .height($r('app.float.toast_height'))
+    }
+    .backgroundColor($r('app.color.white'))
+    .borderRadius($r('app.float.border_radius2'))
+    .width($r('app.float.toast_width'))
+  }
+}
+
 
 @Entry
 @Component
 struct Index {
+  dialogController: CustomDialogController | null = new CustomDialogController({
+    builder: CustomDialogExample(),
+    openAnimation: {
+      duration: 300,
+      curve: Curve.Friction,
+      delay: CommonConstants.DELAY,
+      playMode: PlayMode.Alternate
+    },
+    closeAnimation: {
+      duration: 300,
+      curve: Curve.Friction,
+      delay: CommonConstants.DELAY,
+      playMode: PlayMode.Alternate
+    },
+    alignment: DialogAlignment.Bottom,
+    offset: { dx: CommonConstants.ZERO, dy: $r('app.float.offset_dy') },
+    customStyle: true,
+    cornerRadius: $r('app.float.corner_radius'),
+    isModal: false
+  })
+  dialogController2: CustomDialogController | null = new CustomDialogController({
+    builder: CustomDialogExample2(),
+    openAnimation: {
+      duration: 300,
+      curve: Curve.Friction,
+      delay: CommonConstants.DELAY,
+      playMode: PlayMode.Alternate
+    },
+    closeAnimation: {
+      duration: 300,
+      curve: Curve.Friction,
+      delay: CommonConstants.DELAY,
+      playMode: PlayMode.Alternate
+    },
+    alignment: DialogAlignment.Bottom,
+    offset: { dx: CommonConstants.ZERO, dy: $r('app.float.offset_dy') },
+    customStyle: true,
+    cornerRadius: $r('app.float.corner_radius'),
+    isModal: false
+  })
+  @State name: string = ''
+  @State userInfo: UserInfoData[] = []
+  private UserInfoTable = new UserInfoApi(() => {
+  });
 
   build() {
     Row() {
       Navigation() {
         Column() {
-          TextInput()
+          TextInput({ placeholder: "起一个昵称" })
             .margin({
-              top: $r('app.float.margin_top'),
+              top: $r('app.float.corner_radius'),
               left: $r('app.float.corner_radius'),
               right: $r('app.float.corner_radius')
-            })
+            }).onChange((value: string) => {
+            this.name = value
+          }).enableKeyboardOnFocus(true)
+
+          Button('保存')
+            .width($r('app.float.default_120'))
+            .height($r('app.float.default_40'))// Write the information and clear the content so that the text box is cleared after you click Save.
+            .onClick(() => {
+              if (this.name == '' || this.name.length > 30) {
+                if (this.dialogController != null) {
+                  this.dialogController.open();
+                  setTimeout(() => {
+                    this.dialogController?.close();
+                  }, 1000)
+                }
+                return
+              }
+              // 保存成功
+              this.UserInfoTable.getRdbStore(() => { // 获取数据库
+                this.UserInfoTable.query(1, (result: UserInfoData[]) => { // 查询数据库中的用户
+                  this.userInfo.push(result[0]);
+                  this.userInfo[0].username = this.name
+                  Logger.info('MineEditNamePage', `${this.name}`);
+                  this.UserInfoTable.updateData(this.userInfo[0], () => {
+                  });
+                }, false);
+              });
+
+              if (this.dialogController2 != null) {
+                this.dialogController2.open();
+                setTimeout(() => {
+                  this.dialogController2?.close();
+                }, 1000)
+              }
+            }).margin({ top: 50 })
         }
       }
       .size({ width: Const.THOUSANDTH_1000, height: Const.THOUSANDTH_1000 })
-      .title($r('app.string.user_name'))
+      .title('昵称修改')
       .titleMode(NavigationTitleMode.Mini)
     }
     .height(Const.THOUSANDTH_1000)
