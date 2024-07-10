@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import { ListInfo } from '../view/ListInfo';
+import { MineListInfo } from '../view/MineListInfo';
 import { UserBaseInfo } from '../view/UserBaseInfo';
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
 
@@ -29,7 +29,7 @@ export struct MineIndex {
         signature: this.signature
       });
 
-      ListInfo();
+      MineListInfo();
     }
     .height(Const.FULL_HEIGHT)
     .backgroundColor($r('app.color.mineBgColor'))
