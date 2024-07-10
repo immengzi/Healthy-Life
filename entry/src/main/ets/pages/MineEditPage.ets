@@ -32,6 +32,12 @@ struct Index {
   @State currentYear: number = 1;
   @StorageLink('selectedDate') dateModel: DateModel = new DateModel(0, 0, 0, 0);
   private selectedDate: Date = new Date()
+  private provideWeight: string[] = []
+  private provideHeight: string[] = []
+  private selectWeightIndex: number = 50 - 20
+  private selectHeightIndex: number = 160 - 80
+  @State selectWeight: string = "50"
+  @State selectHeight: string = "160"
 
   onCancel() {
   }
@@ -41,6 +47,12 @@ struct Index {
     this.currentMonth = this.dateModel.month;
     this.currentDay = this.dateModel.day;
     this.currentYear = this.dateModel.year;
+    for (let i = 0; i < 160; i++) {
+      this.provideHeight.push(String(i + 80))
+    }
+    for (let i = 0; i < 100; i++) {
+      this.provideWeight.push(String(i + 20))
+    }
   }
 
   @Builder
@@ -60,6 +72,18 @@ struct Index {
               .textAlign(TextAlign.End)
           } else if (url == '生日') {
             Text(`${this.dateModel.year}年${this.dateModel.month}月${this.dateModel.day}日`)
+              .fontSize($r('app.float.card_padding'))
+              .fontWeight(FontWeight.Medium)
+              .fontColor($r('app.color.no_data_background'))
+              .textAlign(TextAlign.End)
+          } else if (url == '身高') {
+            Text(this.selectHeight + "cm")
+              .fontSize($r('app.float.card_padding'))
+              .fontWeight(FontWeight.Medium)
+              .fontColor($r('app.color.no_data_background'))
+              .textAlign(TextAlign.End)
+          } else if (url == '体重') {
+            Text(this.selectWeight + "kg")
               .fontSize($r('app.float.card_padding'))
               .fontWeight(FontWeight.Medium)
               .fontColor($r('app.color.no_data_background'))
@@ -128,6 +152,34 @@ struct Index {
         })
         return
       }
+      if (url == '身高') {
+        TextPickerDialog.show({
+          range: this.provideHeight,
+          selected: this.selectHeightIndex,
+          backgroundColor: $r('app.color.white'),
+          onAccept: (value: TextPickerResult) => {
+            this.selectHeightIndex = value.index as number;
+            this.selectHeight = value.value as string;
+            Logger.debug('MineEditPage', '编辑身高');
+          },
+          canLoop: false
+        })
+        return
+      }
+      if (url == '体重') {
+        TextPickerDialog.show({
+          range: this.provideWeight,
+          selected: this.selectWeightIndex,
+          backgroundColor: $r('app.color.white'),
+          onAccept: (value: TextPickerResult) => {
+            this.selectWeightIndex = value.index as number;
+            this.selectWeight = value.value as string;
+            Logger.debug('MineEditPage', '编辑体重');
+          },
+          canLoop: false
+        })
+        return
+      }
       if (url == '生日') {
         // this.dialogController.open();
         CalendarPickerDialog.show({
@@ -154,8 +206,8 @@ struct Index {
           this.Options($r('app.string.user_name'), 'pages/MineEditNamePage')
           this.Options($r('app.string.gender'), '性别', this.selectGender)
           this.Options($r('app.string.birth_data'), '生日')
-          this.Options($r('app.string.height'), 'pages/Toast')
-          this.Options($r('app.string.weight'), 'pages/Privacy')
+          this.Options($r('app.string.height'), '身高')
+          this.Options($r('app.string.weight'), '体重')
         }
       }
       .size({ width: Const.THOUSANDTH_1000, height: Const.THOUSANDTH_1000 })
