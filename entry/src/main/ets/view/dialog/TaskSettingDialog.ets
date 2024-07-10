@@ -192,6 +192,17 @@ export struct FrequencyDialog {
   private currentFrequency: string = Const.EVERYDAY;
   private frequencyChooseRange: FrequencyContentType[] = frequencyRange();
 
+  aboutToAppear() {
+    this.initializeFrequencyRange();
+  }
+
+  initializeFrequencyRange() {
+    const selectedIds = this.settingParams.frequency.split(',');
+    this.frequencyChooseRange.forEach((item) => {
+      item.isChecked = selectedIds.includes(item.id.toString());
+    });
+  }
+
   setFrequency() {
     const checkedArr = this.frequencyChooseRange.filter((item) => item?.isChecked)
     if (checkedArr.length === this.frequencyChooseRange.length || checkedArr.length === Const.NO_LENGTH) {
