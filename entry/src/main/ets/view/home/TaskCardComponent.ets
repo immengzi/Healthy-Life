@@ -47,6 +47,13 @@ export struct TaskCard {
   targetValueBuilder() {
     if (this.taskInfo.isDone) {
       HealthText({ title: '', titleResource: $r('app.string.task_done') })
+      HealthText({
+        title: this.taskInfo.finValue || `--`,
+        fontSize: $r('app.float.default_24')
+      })
+      Text(` / ${this.taskInfo.targetValue} ${TaskMapById[this.taskInfo.taskID - 1].unit}`)
+        .labelTextStyle()
+        .fontWeight(Const.FONT_WEIGHT_400)
     } else {
       Row() {
         HealthText({
