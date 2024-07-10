@@ -91,13 +91,30 @@ export default struct HomeIndex {
 
   //confirm clockL
   onConfirm(task: TaskInfo) {
-    this.homeStore.taskClock(task).then((res: AchievementInfo) => {
-      if (res.showAchievement) {
-        let achievementLevel = res.achievementLevel;
-        if (achievementLevel) {
-          this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG, achievementLevel);
-        } else {
-          this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG);
+    this.homeStore.taskClock(task).then((res: AchievementInfo | Array<AchievementInfo>) => {
+      if (res instanceof AchievementInfo){
+        if (res.showAchievement) {
+          let achievementLevel = res.achievementLevel;
+          if (achievementLevel) {
+            this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG, achievementLevel);
+          } else {
+            this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG);
+          }
+        }
+      } else {
+        let len = res.length;
+        for(let i = 0; i < len; i++){
+          let ins = res[i];
+          if (ins.showAchievement) {
+            let achievementLevel = ins.achievementLevel;
+            if (achievementLevel) {
+              if (ins.taskID) this.broadCast.emit(BroadCastType.SHOW_SINGLE_ACHIEVEMENT_DIALOG, [achievementLevel, ins.taskID]);
+              else this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG, achievementLevel);
+
+            } else {
+              this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG);
+            }
+          }
         }
       }
     })
