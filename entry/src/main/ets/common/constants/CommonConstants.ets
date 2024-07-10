@@ -200,12 +200,14 @@ export enum TaskType {
   Apple = 'apple',
   Smile = 'smile',
   Clean = 'clean',
-  Sleep = 'sleep'
+  Sleep = 'sleep',
+  Run = 'run'
 }
 
 export enum Unit {
   Liter = 'L',
   Pcs = '个',
   Times = '次',
-  Empty = ''
+  Empty = '',
+  Kilometer = 'Km'
 }
