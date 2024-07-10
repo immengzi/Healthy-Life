@@ -228,7 +228,8 @@ class FormUtils {
     data.forEach((item: TaskInfo) => {
       let temp: AgencyCardInfo = {
         targetValue: item.targetValue,
-        finValue: item.isDone ? item.targetValue : item.finValue,
+        // finValue: item.isDone ? item.targetValue : item.finValue,
+        finValue : item.finValue,
         finValueIsNull: item.isDone ? false : (item.finValue === '' ? true : false),
       };
       switch (item.taskID) {
