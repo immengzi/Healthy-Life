@@ -227,18 +227,26 @@ export class HomeStore {
     this.selectedDayInfo.taskList = this.selectedDayInfo.taskList.map((item) => {
       return item.taskID === taskItem?.taskID ? taskItem : item;
     });
-    let achievementLevel: number = 0;
-    if (taskItem.isDone) {
-      let dayInfo = await this.updateDayInfo();
-      if (dayInfo && dayInfo?.finTaskNum === dayInfo?.targetTaskNum) {
-        achievementLevel = await this.updateAchievement(this.selectedDayInfo.dayInfo);
+    let achievementSingle: AchievementInfo = new AchievementInfo();
+    let achievementDay: AchievementInfo = new AchievementInfo();
+    if(taskItem.isDone){
+      if (taskItem.taskID == 1 || taskItem.taskID == 6 || taskItem.finValue === taskItem.targetValue) {
+        achievementSingle.taskID = taskItem.taskID;
+        achievementSingle.achievementLevel = await this.updateSingleAchievement(this.selectedDayInfo.dayInfo, taskItem.taskID)
+        achievementSingle.showAchievement = ACHIEVEMENT_LEVEL_LIST.includes(achievementSingle.achievementLevel)
+        let dayInfo = await this.updateDayInfo();
+        if (dayInfo && dayInfo?.finTaskNum === dayInfo?.targetTaskNum) {
+          achievementDay.achievementLevel = await this.updateAchievement(this.selectedDayInfo.dayInfo);
+          achievementDay.showAchievement = ACHIEVEMENT_LEVEL_LIST.includes(achievementDay.achievementLevel)
+        }
       }
+      // else if (Number(taskItem.finValue) % Number(taskItem.targetValue) == 0){
+      //   achievementLevel = await this.updateSingleAchievement(this.selectedDayInfo.dayInfo, taskItem.taskID)
+      // }
     }
     this.dateArr = this.dateArr.map((item: WeekDateModel) => dateStr === item.dateStr ? this.selectedDayInfo : item);
-    return {
-      achievementLevel: achievementLevel,
-      showAchievement: ACHIEVEMENT_LEVEL_LIST.includes(achievementLevel)
-    } as AchievementInfo;
+    let res: Array<AchievementInfo> = [achievementSingle, achievementDay]
+    return res;
   }
 
   updateTask(task: TaskInfo): Promise<TaskInfo> {
@@ -249,7 +257,7 @@ export class HomeStore {
       let updateTask = new TaskInfo(task.id, task.date, taskID, targetValue, task.isAlarm, task.startTime,
         task.endTime, task.frequency, task.isDone, finValue, task.isOpen);
       let step = TaskMapById[taskID - 1].step;
-      let hasExceed = updateTask.isDone;
+      // let hasExceed = updateTask.isDone;
       if (step === 0) {
         updateTask.isDone = true;
         updateTask.finValue = targetValue;
@@ -318,6 +326,47 @@ export class HomeStore {
           });
         });
       })
+    });
+  }
+
+  updateSingleAchievement(dayInfo: DayInfo, taskID: number): Promise<number> {
+    Logger.debug('taskClock-updateAchievement', JSON.stringify(dayInfo));
+    return new Promise((resolve, reject) => {
+      let preDay = new Date();
+      let todayStr = dateToStr(preDay);
+      preDay.setDate(preDay.getDate() - 1);
+      preDay = new Date(preDay);
+      let preDayStr = dateToStr(preDay);
+      Logger.info('taskClock-updateAchievement-1', `${preDayStr}`);
+
+      GlobalInfoApi.query((res: GlobalInfo) => {
+        Logger.info('taskClock-globalInfoApi', JSON.stringify(res));
+        let achievementInfo = res;
+        if (achievementInfo.lastDate == preDayStr) {
+          achievementInfo.checkInDays += 1;
+          achievementInfo.lastDate = todayStr;
+        } else if (achievementInfo.lastDate != todayStr) {
+          achievementInfo.checkInDays = 1;
+          achievementInfo.firstDate = todayStr;
+          achievementInfo.lastDate = todayStr;
+        } else {
+          achievementInfo.checkInDays = achievementInfo.checkInDays == 0 ? achievementInfo.checkInDays : 1;
+        }
+
+        let isNewAchieve = isReachNewAchievement(achievementInfo);
+        if (isNewAchieve) {
+          AppStorage.setOrCreate(ACHIEVEMENT_LEVEL_KEY, achievementInfo.checkInDays);
+          achievementInfo.achievements = achievementInfo.achievements + ',' + achievementInfo.checkInDays;
+        }
+        GlobalInfoApi.updateData(achievementInfo, (res: number) => {
+          if (!res) {
+            Logger.error('taskClock-updateAchievement', JSON.stringify(res));
+            reject(res);
+          }
+          Logger.debug('taskClock-updateAchievement', JSON.stringify(achievementInfo));
+          isNewAchieve ? resolve(achievementInfo.checkInDays) : resolve(0);
+        }, taskID);
+      }, taskID)
     });
   }
 }
