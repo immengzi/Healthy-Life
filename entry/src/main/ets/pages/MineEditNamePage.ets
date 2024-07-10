@@ -21,6 +21,8 @@ import UserInfoApi from '../common/database/tables/UserInfoApi';
 import Logger from '../common/utils/Logger';
 import UserInfoData from '../viewmodel/UserInfoData';
 
+import emitter from '@ohos.events.emitter';
+
 @CustomDialog
 struct CustomDialogExample {
   controller?: CustomDialogController;
@@ -138,6 +140,21 @@ struct Index {
                   Logger.info('MineEditNamePage', `${this.name}`);
                   this.UserInfoTable.updateData(this.userInfo[0], () => {
                   });
+                  // 定义一个eventId为1的事件，事件优先级为Low
+                  let event: emitter.InnerEvent = {
+                    eventId: 1,
+                    priority: emitter.EventPriority.LOW
+                  }
+                  // 将修改后的名字发送出去
+                  let eventData: emitter.EventData = {
+                    data: {
+                      content: this.name,
+                      id: 1,
+                      isEmpty: false
+                    }
+                  };
+                  // 发送eventId为1的事件，事件内容为eventData
+                  emitter.emit(event, eventData);
                 }, false);
               });
 
