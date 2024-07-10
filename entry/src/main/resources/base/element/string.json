@@ -199,6 +199,30 @@
     {
       "name": "empty",
       "value": "empty"
+    },
+    {
+      "name": "base_personal_data",
+      "value": "基本资料"
+    },
+    {
+      "name": "user_name",
+      "value": "昵称"
+    },
+    {
+      "name": "gender",
+      "value": "性别"
+    },
+    {
+      "name": "birth_data",
+      "value": "出生日期"
+    },
+    {
+      "name": "height",
+      "value": "身高"
+    },
+    {
+      "name": "weight",
+      "value": "体重"
     }
   ]
 }
