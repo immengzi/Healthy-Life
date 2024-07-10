@@ -31,6 +31,9 @@ export class BroadCast {
       case BroadCastType.SHOW_ACHIEVEMENT_DIALOG:
         this.callBackArray.showAchievementDialog = callback;
         break;
+      case BroadCastType.SHOW_SINGLE_ACHIEVEMENT_DIALOG:
+        this.callBackArray.showSingleAchievementDialog = callback;
+        break;
       case BroadCastType.SHOW_TASK_DETAIL_DIALOG:
         this.callBackArray.showTaskDetailDialog = callback;
         break;
@@ -63,6 +66,9 @@ export class BroadCast {
         case BroadCastType.SHOW_ACHIEVEMENT_DIALOG:
           this.callBackArray.showAchievementDialog = () => {};
           break;
+        case BroadCastType.SHOW_ACHIEVEMENT_DIALOG:
+          this.callBackArray.showAchievementDialog = () => {};
+          break;
         case BroadCastType.SHOW_TASK_DETAIL_DIALOG:
           this.callBackArray.showTaskDetailDialog = () => {};
           break;
@@ -91,6 +97,9 @@ export class BroadCast {
     switch (event) {
       case BroadCastType.SHOW_ACHIEVEMENT_DIALOG:
         cbs = [this.callBackArray.showAchievementDialog];
+        break;
+      case BroadCastType.SHOW_SINGLE_ACHIEVEMENT_DIALOG:
+        cbs = [this.callBackArray.showSingleAchievementDialog];
         break;
       case BroadCastType.SHOW_TASK_DETAIL_DIALOG:
         cbs = [this.callBackArray.showTaskDetailDialog];
@@ -126,6 +135,7 @@ export class BroadCast {
 
 export enum BroadCastType {
   SHOW_ACHIEVEMENT_DIALOG = 'showAchievementDialog',
+  SHOW_SINGLE_ACHIEVEMENT_DIALOG = 'showSingleAchievementDialog',
   SHOW_TASK_DETAIL_DIALOG = 'showTaskDetailDialog',
   SHOW_TARGET_SETTING_DIALOG = 'showTargetSettingDialog',
   SHOW_REMIND_TIME_DIALOG = 'showRemindTimeDialog',

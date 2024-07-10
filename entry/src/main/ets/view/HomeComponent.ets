@@ -108,7 +108,9 @@ export default struct HomeIndex {
           if (ins.showAchievement) {
             let achievementLevel = ins.achievementLevel;
             if (achievementLevel) {
-              this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG, achievementLevel);
+              if (ins.taskID) this.broadCast.emit(BroadCastType.SHOW_SINGLE_ACHIEVEMENT_DIALOG, [achievementLevel, ins.taskID]);
+              else this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG, achievementLevel);
+
             } else {
               this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG);
             }
