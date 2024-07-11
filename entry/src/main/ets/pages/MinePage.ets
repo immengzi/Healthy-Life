@@ -20,6 +20,8 @@ import UserInfoApi from '../common/database/tables/UserInfoApi';
 import UserInfoData from '../viewmodel/UserInfoData';
 import Logger from '../common/utils/Logger';
 import emitter from '@ohos.events.emitter';
+import { util } from '@kit.ArkTS';
+import { image } from '@kit.ImageKit';
 
 @Component
 export struct MineIndex {
@@ -28,14 +30,16 @@ export struct MineIndex {
   @State userInfo: UserInfoData[] = [];
   @State nickname: string = Const.NICK_NAME;
   @State signature: string = Const.SIGNATURE;
+  @State icon: string | PixelMap | undefined = ""
 
   // 查找用户信息
-  aboutToAppear() {
+  async aboutToAppear() {
     this.UserInfoTable.getRdbStore(() => { // 获取数据库
       this.UserInfoTable.query(1, (result: UserInfoData[]) => { // 查询数据库中的用户
         if (result && result.length > 0) {
           this.userInfo.push(result[0]);
           this.nickname = this.userInfo[0]?.username;
+          this.icon = this.userInfo[0].icon;
           Logger.info('MinePage', `${this.nickname}`);
         } else {
           // 如果没有查询到数据，插入新数据
@@ -65,13 +69,29 @@ export struct MineIndex {
     };
     // 订阅eventId为1的事件
     emitter.on(event, callback);
+
+    await this.getIcon()
+  }
+
+  private async getIcon() {
+    if (this.icon == '') {
+      this.icon = undefined
+      return
+    }
+    let helper = new util.Base64Helper();
+    let buffer: ArrayBuffer = helper.decodeSync(this.icon as string, util.Type.MIME).buffer as ArrayBuffer;
+    let imageSource = image.createImageSource(buffer);
+    let opts: image.DecodingOptions = { editable: true };
+    let pixelMap = await imageSource.createPixelMap(opts);
+    this.icon = pixelMap
   }
 
   build() {
     Column() {
       UserBaseInfo({
         nickname: this.nickname,
-        signature: this.signature
+        signature: this.signature,
+        icon: this.icon as PixelMap | undefined
       });
 
       MineListInfo();

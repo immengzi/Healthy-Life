@@ -164,6 +164,8 @@ struct Index {
                   this.dialogController2?.close();
                 }, 1000)
               }
+              // 返回上一级
+              router.back()
             }).margin({ top: 50 })
         }
       }
