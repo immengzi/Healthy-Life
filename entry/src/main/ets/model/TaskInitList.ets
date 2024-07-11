@@ -215,3 +215,4 @@ export const CONTINUE_LEVEL_LIST = [3, 30, 90];
 
 // 单任务完成率指标
 export const DEGREE_LEVEL_LIST = [200, 300, 400];
+

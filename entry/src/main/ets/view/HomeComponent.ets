@@ -26,6 +26,7 @@ import { HealthDataSrcMgr } from '../common/utils/HealthDataSrcMgr';
 import { BroadCast, BroadCastType } from '../common/utils/BroadCast';
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
 import AchievementInfo from '../viewmodel/AchievementInfo';
+import { getDegreeSuccessiveDays, getSuccessiveDays } from '../model/AchieveModel';
 
 const WHITE_COLOR_0X = 255;
 
@@ -122,6 +123,8 @@ export default struct HomeIndex {
           }
         }
       }
+      getSuccessiveDays();
+      getDegreeSuccessiveDays();
     })
   }
 
