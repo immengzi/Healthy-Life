@@ -222,11 +222,11 @@ export default struct HomeIndex {
           this.editTaskAction();
         }
       })
-      AddCalendarBtn({
-        clickAction: () => {
-          this.showCalendar();
-        }
-      })
+      // AddCalendarBtn({
+      //   clickAction: () => {
+      //     this.showCalendar();
+      //   }
+      // })
       Row() {
         Text($r('app.string.EntryAbility_label'))
           .titleTextStyle()

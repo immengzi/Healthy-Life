@@ -27,13 +27,13 @@ function isAchieved(dateArr: Array<WeekDateModel>, cj: CJDateItem) {
   let result = false;
   for (let item of dateArr) {
     let dateStr_item_temp = String(item.date);
-    let dateStr_item:string = `${dateStr_item_temp.toString().substring(0,4)}${Number(dateStr_item_temp.toString().substring(5,7))}${Number(dateStr_item_temp.toString().substring(8,10))}`;
-    let dateStr:string = `${cj.fullYear}${(cj.month+1) % 12}${cj.date}`;
-
-
-
+    let dateStr_item: string = `${dateStr_item_temp.toString()
+      .substring(0, 4)}${Number(dateStr_item_temp.toString()
+      .substring(5, 7))}${Number(dateStr_item_temp.toString()
+      .substring(8, 10))}`;
+    let dateStr: string = `${cj.fullYear}${(cj.month + 1) % 12}${cj.date}`;
     if (Number(dateStr_item) == Number(dateStr)) {
-      if (item.dayInfo.targetTaskNum == item.dayInfo.finTaskNum && item.dayInfo.targetTaskNum !=0) {
+      if (item.dayInfo.targetTaskNum == item.dayInfo.finTaskNum && item.dayInfo.targetTaskNum != 0) {
         result = true;
       } else {
         result = false;
@@ -105,15 +105,15 @@ struct CalendarDetailPage {
   @Builder
   BuildCellBackground() {
     // if (this.cjDataItem.date == Number((router.getParams() as HomeStore).dateArr[0].date)) { // 今天
-    if (isAchieved((router.getParams() as HomeStore).dateArr, this.cjDataItem) ) { // 今天
-    //   if (this.cjDataItem.isToday) { // 今天
+    if (isAchieved((router.getParams() as HomeStore).dateArr, this.cjDataItem)) { // 今天
+      //   if (this.cjDataItem.isToday) { // 今天
       Column()
-        .backgroundImage($r('app.media.ic_home_all_done')).renderFit(RenderFit.RESIZE_FILL)
-      // Image($r('app.media.ic_user'))
-      //   .objectFit(ImageFit.Contain)
-      //   .height($r('app.float.default_66'))
-      //   .width($r('app.float.default_66'))
-      //   .margin({ top: $r('app.float.default_71') })
+        .backgroundImage($r('app.media.ic_home_all_done'))
+        .renderFit(RenderFit.RESIZE_FILL)// Image($r('app.media.ic_user'))
+          //   .objectFit(ImageFit.Contain)
+          //   .height($r('app.float.default_66'))
+          //   .width($r('app.float.default_66'))
+          //   .margin({ top: $r('app.float.default_71') })
 
         .backgroundColor(this.cjCellStatus.backgroundColor)
         .width('85%')
@@ -144,13 +144,13 @@ struct CalendarDetailPage {
         .fontColor(this.cjCellStatus.fontColor)
         .fontSize(this.cjCellStyle.fontSize)
         .fontWeight(this.cjCellStyle.fontFontWeight)
-      if (isAchieved((router.getParams() as HomeStore).dateArr, this.cjDataItem) ) { // 今天
-      Image($r('app.media.ic_home_all_done'))
-        .objectFit(ImageFit.Contain)
-        .height('20vp')
-        .width('20vp')
-        .margin({ top: '0vp' })
-        } else {
+      if (isAchieved((router.getParams() as HomeStore).dateArr, this.cjDataItem)) { // 今天
+        Image($r('app.media.ic_home_all_done'))
+          .objectFit(ImageFit.Contain)
+          .height('20vp')
+          .width('20vp')
+          .margin({ top: '0vp' })
+      } else {
         Text('')
           .height('20vp')
           .width('20vp')

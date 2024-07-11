@@ -36,7 +36,6 @@ export default struct AddCalendarBtn {
 
     .onClick(() => this.clickAction())
     .zIndex(Const.HOME_BTN_Z)
-    .position({ x: Const.THOUSANDTH_830, y: '33%' })
     .width($r('app.float.default_36'))
     .height($r('app.float.default_36'))
   }
