@@ -197,8 +197,8 @@ export class CommonConstants {
    * Rdb database config.
    */
   static readonly STORE_CONFIG: relationalStore.StoreConfig = {
-    // name: 'database.db',
-    name: 'taskInfo.db',
+    name: 'database.db',
+    // name: 'taskInfo.db',
     securityLevel: relationalStore.SecurityLevel.S1
   };
   /**
