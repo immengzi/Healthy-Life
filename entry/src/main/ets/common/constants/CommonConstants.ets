@@ -50,7 +50,7 @@ export class CommonConstants {
     columns: ['id', 'formId', 'formName', 'formDimension']
   } as CommonConstantsInfo
   // TaskNum
-  static readonly TASK_NUM = 6;
+  static readonly TASK_NUM = 7;
   // THOUSANDTH
   static readonly THOUSANDTH_15: string = '1.5%'; // ‘1.5%’
   static readonly THOUSANDTH_12: string = '2.2%'; // ‘2.2%’
@@ -167,6 +167,7 @@ export class CommonConstants {
   static readonly EAT_APPLE_RANGE: number = 100;
   static readonly SMILE_RANGE: number = 3;
   static readonly BRUSH_TEETH_RANGE: number = 3;
+  static readonly RUN_RANGE: number = 20;
   // letter spacing
   static readonly LETTER_1: number = 0.1;
   static readonly LETTER_34: number = 3.4;

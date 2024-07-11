@@ -26,6 +26,7 @@ import { HealthDataSrcMgr } from '../common/utils/HealthDataSrcMgr';
 import { BroadCast, BroadCastType } from '../common/utils/BroadCast';
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
 import AchievementInfo from '../viewmodel/AchievementInfo';
+import { getDegreeSuccessiveDays, getSuccessiveDays } from '../model/AchieveModel';
 
 const WHITE_COLOR_0X = 255;
 
@@ -91,15 +92,39 @@ export default struct HomeIndex {
 
   //confirm clockL
   onConfirm(task: TaskInfo) {
-    this.homeStore.taskClock(task).then((res: AchievementInfo) => {
-      if (res.showAchievement) {
-        let achievementLevel = res.achievementLevel;
-        if (achievementLevel) {
-          this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG, achievementLevel);
-        } else {
-          this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG);
+    this.homeStore.taskClock(task).then((res: AchievementInfo | Array<AchievementInfo>) => {
+      if (res instanceof AchievementInfo){
+        if (res.showAchievement) {
+          let achievementLevel = res.achievementLevel;
+          if (achievementLevel) {
+            this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG, achievementLevel);
+          } else {
+            this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG);
+          }
+        }
+      } else {
+        let len = res.length;
+        for(let i = 0; i < len; i++){
+          let ins = res[i];
+          if (ins.showAchievement) {
+            let achievementLevel = ins.achievementLevel;
+            if (achievementLevel) {
+              if (ins.taskID) {
+                if (achievementLevel < 200) this.broadCast.emit(BroadCastType.SHOW_SINGLE_ACHIEVEMENT_DIALOG,
+                  [achievementLevel, ins.taskID]);
+                else this.broadCast.emit(BroadCastType.SHOW_DEGREE_ACHIEVEMENT_DIALOG,
+                  [achievementLevel, ins.taskID]);
+              }
+              else this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG, achievementLevel);
+
+            } else {
+              this.broadCast.emit(BroadCastType.SHOW_ACHIEVEMENT_DIALOG);
+            }
+          }
         }
       }
+      getSuccessiveDays();
+      getDegreeSuccessiveDays();
     })
   }
 

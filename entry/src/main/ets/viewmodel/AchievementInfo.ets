@@ -17,6 +17,7 @@
  * Achievement info
  */
 export default class AchievementInfo {
+  taskID: number = 0;
   achievementLevel: number = 0;
   showAchievement: boolean = false;
 }
