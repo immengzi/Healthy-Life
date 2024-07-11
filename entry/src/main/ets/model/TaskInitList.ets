@@ -161,7 +161,7 @@ export const TaskMapById: Array<ITaskItem> = [
   {
     taskID: 7,
     taskName: $r('app.string.task_run'),
-    icon: $r("app.media.run"),
+    icon: $r("app.media.ic_task_run"),
     dialogBg: $r('app.media.ic_dialog_run'),
     targetValue: '1.0',
     isOpen: false,
