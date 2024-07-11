@@ -232,7 +232,7 @@ export class HomeStore {
     let achievementDegree: AchievementInfo = new AchievementInfo();
     let achievementDay: AchievementInfo = new AchievementInfo();
     if(taskItem.isDone){
-      if (taskItem.taskID == 1 || taskItem.taskID == 6 || taskItem.finValue === taskItem.targetValue) {
+      if (taskItem.taskID == 1 || taskItem.taskID == 6 || Number(taskItem.finValue) === Number(taskItem.targetValue)) {
         achievementSingle.taskID = taskItem.taskID;
         achievementSingle.achievementLevel = await this.updateSingleAchievement(this.selectedDayInfo.dayInfo, taskItem.taskID)
         achievementSingle.showAchievement = ACHIEVEMENT_LEVEL_LIST.includes(achievementSingle.achievementLevel)
