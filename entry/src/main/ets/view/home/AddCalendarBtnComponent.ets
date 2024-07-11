@@ -32,7 +32,7 @@ export default struct AddCalendarBtn {
         .allSize()
         .borderRadius(Const.BORDER_RADIUS_PERCENT_50)
     }
-    .backgroundColor('#FFFFFF')
+    .backgroundColor('#00ffffff')
 
     .onClick(() => this.clickAction())
     .zIndex(Const.HOME_BTN_Z)
