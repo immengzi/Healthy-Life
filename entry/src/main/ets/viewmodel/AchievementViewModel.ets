@@ -24,7 +24,7 @@ export function getBadgeCardItems(successiveDays: number): Array<CardInfo> {
     let onOrOff = successiveDays >= badgeMileStones[i] ? 'on' : 'off';
     let titleContent = String(badgeMileStones[i]);
     let cardInfo: CardInfo = new CardInfo();
-    cardInfo.titleContent = titleContent;
+    cardInfo.titleContent = '连续' + titleContent + '天打卡';
     cardInfo.achievement = getAchievement(`${onOrOff}_${badgeMileStones[i]}`);
     cardItems.push(cardInfo);
   }
