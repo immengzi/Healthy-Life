@@ -33,21 +33,22 @@ export struct MineIndex {
   aboutToAppear() {
     this.UserInfoTable.getRdbStore(() => { // 获取数据库
       this.UserInfoTable.query(1, (result: UserInfoData[]) => { // 查询数据库中的用户
-        this.userInfo.push(result[0]);
-        this.nickname = this.userInfo[0].username
-        Logger.info('MinePage', `${this.nickname}`);
+        if (result && result.length > 0) {
+          this.userInfo.push(result[0]);
+          this.nickname = this.userInfo[0]?.username;
+          Logger.info('MinePage', `${this.nickname}`);
+        } else {
+          // 如果没有查询到数据，插入新数据
+          let newUserInfo = new UserInfoData();
+          this.UserInfoTable.insertData(newUserInfo, (id: number) => {
+            newUserInfo.id = id;
+            this.userInfo.push(newUserInfo);
+            this.nickname = this.userInfo[0].username;
+            Logger.info('MinePage', `${this.nickname}`);
+          });
+        }
       }, false);
-      if (this.userInfo.length == 0) {
-        // 插入新数据
-        let newUserInfo = new UserInfoData()
-        this.UserInfoTable.insertData(newUserInfo, (id: number) => {
-          newUserInfo.id = id;
-          this.userInfo.push(newUserInfo);
-          this.nickname = this.userInfo[0].username
-        });
-      }
     });
-    Logger.info('MinePage', `${this.nickname}`);
 
     const TAG: string = 'ThreadModel';
     // 定义一个eventId为1的事件
