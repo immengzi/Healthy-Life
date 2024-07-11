@@ -106,7 +106,7 @@
     },
     {
       "name": "task_degree_achievement_level",
-      "value": "打卡超过%d"
+      "value": "打卡超过%d%"
     },
     {
       "name": "already_open",
