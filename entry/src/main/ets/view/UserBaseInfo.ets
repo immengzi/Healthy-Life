@@ -51,7 +51,7 @@ export struct UserBaseInfo {
       // userIcon
       Column() {
         if (this.icon != '') {
-          Image(this.icon)
+          Image(`${this.icon}`)
             .height($r('app.float.default_66'))
             .width($r('app.float.default_66'))
             .margin({ top: $r('app.float.default_71') })

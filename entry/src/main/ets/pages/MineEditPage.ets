@@ -53,9 +53,9 @@ struct Index {
 
   aboutToAppear(): void {
     this.dateModel = getRealTimeDate();
-    this.currentMonth = this.dateModel.month;
-    this.currentDay = this.dateModel.day;
-    this.currentYear = this.dateModel.year;
+    // this.currentMonth = this.dateModel.month;
+    // this.currentDay = this.dateModel.day;
+    // this.currentYear = this.dateModel.year;
     for (let i = 0; i < 160; i++) {
       this.provideHeight.push(String(i + 80))
     }
@@ -66,7 +66,26 @@ struct Index {
     this.UserInfoTable.getRdbStore(() => { // 获取数据库
       this.UserInfoTable.query(1, (result: UserInfoData[]) => { // 查询数据库中的用户
         this.userInfo.push(result[0]);
+        // 初始名称
         this.nickname = this.userInfo[0].username
+        // 初始生日
+        this.dateModel.month = Number(this.userInfo[0].mouth)
+        this.dateModel.year = Number(this.userInfo[0].year)
+        this.dateModel.day = Number(this.userInfo[0].date)
+        this.currentMonth = Number(this.userInfo[0].mouth)
+        this.currentDay = Number(this.userInfo[0].date)
+        this.currentYear = Number(this.userInfo[0].year)
+        this.selectedDate.setDate(this.currentDay)
+        this.selectedDate.setMonth(this.currentMonth)
+        this.selectedDate.setFullYear(this.currentYear)
+        // 初始身高体重
+        this.selectWeight = this.userInfo[0].weight
+        this.selectHeight = this.userInfo[0].height
+        this.selectWeightIndex = Number(this.selectWeight) - 20
+        this.selectHeightIndex = Number(this.selectHeight) - 80
+        // 初始性别
+        this.selectGender = this.userInfo[0].gender
+        this.selectGenderIndex = this.provideGender.findIndex(g => g == this.selectGender);
       }, false);
     });
 
@@ -131,7 +150,7 @@ struct Index {
               .fontColor($r('app.color.no_data_background'))
               .textAlign(TextAlign.End)
           } else if (url == '生日') {
-            Text(`${this.dateModel.year}年${this.dateModel.month}月${this.dateModel.day}日`)
+            Text(`${this.dateModel.year}年${this.dateModel.month + 1}月${this.dateModel.day}日`)
               .fontSize($r('app.float.card_padding'))
               .fontWeight(FontWeight.Medium)
               .fontColor($r('app.color.no_data_background'))
@@ -207,6 +226,13 @@ struct Index {
             this.selectGenderIndex = value.index as number;
             this.selectGender = value.value as string;
             Logger.debug('MineEditPage', '编辑性别');
+            // 保存
+            this.UserInfoTable.getRdbStore(() => { // 获取数据库
+              this.userInfo[0].gender = this.selectGender
+              Logger.info('MineEditPage', `编辑性别 ${this.userInfo[0].gender}`);
+              this.UserInfoTable.updateData(this.userInfo[0], () => {
+              });
+            });
           },
           canLoop: false
         })
@@ -221,6 +247,13 @@ struct Index {
             this.selectHeightIndex = value.index as number;
             this.selectHeight = value.value as string;
             Logger.debug('MineEditPage', '编辑身高');
+            // 保存
+            this.UserInfoTable.getRdbStore(() => { // 获取数据库
+              this.userInfo[0].height = this.selectHeight
+              Logger.info('MineEditPage', `编辑身高 ${this.userInfo[0].height}`);
+              this.UserInfoTable.updateData(this.userInfo[0], () => {
+              });
+            });
           },
           canLoop: false
         })
@@ -235,6 +268,13 @@ struct Index {
             this.selectWeightIndex = value.index as number;
             this.selectWeight = value.value as string;
             Logger.debug('MineEditPage', '编辑体重');
+            // 保存
+            this.UserInfoTable.getRdbStore(() => { // 获取数据库
+              this.userInfo[0].weight = this.selectWeight
+              Logger.info('MineEditPage', `编辑体重 ${this.userInfo[0].weight}`);
+              this.UserInfoTable.updateData(this.userInfo[0], () => {
+              });
+            });
           },
           canLoop: false
         })
@@ -248,6 +288,21 @@ struct Index {
             this.dateModel.month = value.getMonth()
             this.dateModel.year = value.getFullYear()
             this.dateModel.day = value.getDate()
+            // 保存
+            this.UserInfoTable.getRdbStore(() => { // 获取数据库
+              this.userInfo[0].mouth = String(this.dateModel.month)
+              this.userInfo[0].year = String(this.dateModel.year)
+              this.userInfo[0].date = String(this.dateModel.day)
+              this.currentMonth = Number(this.userInfo[0].mouth)
+              this.currentDay = Number(this.userInfo[0].date)
+              this.currentYear = Number(this.userInfo[0].year)
+              this.selectedDate.setDate(this.currentDay)
+              this.selectedDate.setMonth(this.currentMonth)
+              this.selectedDate.setFullYear(this.currentYear)
+              Logger.info('MineEditPage', `编辑生日 ${this.userInfo[0].date}`);
+              this.UserInfoTable.updateData(this.userInfo[0], () => {
+              });
+            });
           },
         })
         return
