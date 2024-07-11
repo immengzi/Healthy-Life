@@ -16,6 +16,7 @@
 import { router } from '@kit.ArkUI';
 import HealthText from './HealthTextComponent';
 import AddBtn from '../view/home/AddBtnComponent';
+import AddCalendarBtn from '../view/home/AddCalendarBtnComponent';
 import { TaskCard } from '../view/home//TaskCardComponent';
 import HomeTopView from '../view/home/HomeTopComponent';
 import { CustomDialogView, CustomDialogCallback } from '../view/dialog/CustomDialogView';
@@ -26,8 +27,17 @@ import { HealthDataSrcMgr } from '../common/utils/HealthDataSrcMgr';
 import { BroadCast, BroadCastType } from '../common/utils/BroadCast';
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
 import AchievementInfo from '../viewmodel/AchievementInfo';
+import { HashMap } from '@kit.ArkTS';
+import DayInfo from '../viewmodel/DayInfo';
 
 const WHITE_COLOR_0X = 255;
+
+// class structofDayInfoMap {
+//   dayInfoMap: HashMap<number, DayInfo> = new HashMap();
+// }
+class structofDayInfoArr {
+  dayInfoArr: DayInfo[] = [];
+}
 
 @Styles
 function allSize() {
@@ -118,6 +128,20 @@ export default struct HomeIndex {
       router.pushUrl({ url: 'pages/TaskListPage' });
     }
   }
+  showCalendar() {
+    // let dayInfoMap_tmp: structofDayInfoMap = {
+    //   dayInfoMap: this.homeStore.dayInfoMap
+    // };
+    // let dayInfoArr_tmp: DayInfo[] = [];
+    // for (let item of this.homeStore.dateArr) {
+    //   dayInfoArr_tmp.push(item.dayInfo);
+    // }
+    // let dayInfoArrStruct_tmp: structofDayInfoArr = {
+    //   dayInfoArr : dayInfoArr_tmp
+    // };
+    // router.pushUrl({ url: 'pages/CalendarDetailPage' , params: dayInfoArrStruct_tmp} );
+    router.pushUrl({ url: 'pages/CalendarDetailPage' , params: this.homeStore} );
+  }
 
   build() {
     Stack() {
@@ -127,6 +151,10 @@ export default struct HomeIndex {
           Text($r('app.string.task_list')).titleTextStyle()
           if (this.homeStore.getTaskListOfDay().length > 0) {
             Column({ space: Const.DEFAULT_8 }) {
+              // 循环渲染，创建子组件(taskcard)
+              // 参数1是待创建组件的信息组成的数组，
+              // 参数2是每个组件的创建操作，
+              // 参数3是标识组件信息的键值(用于判断组件是否变化，若无变化则跳过创建，使用原组件)
               ForEach(this.homeStore.getTaskListOfDay(), (item: TaskInfo) => {
                 TaskCard({
                   taskInfoStr: JSON.stringify(item),
@@ -167,6 +195,11 @@ export default struct HomeIndex {
       AddBtn({
         clickAction: () => {
           this.editTaskAction();
+        }
+      })
+      AddCalendarBtn({
+        clickAction: () => {
+          this.showCalendar();
         }
       })
       Row() {
