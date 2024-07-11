@@ -246,8 +246,8 @@ export class HomeStore {
         achievementDegree.taskID = taskItem.taskID;
         let degree: number = Number(taskItem.finValue) / Number(taskItem.targetValue) * 100
         achievementDegree.achievementLevel = await this.updateDegreeAchievement(this.selectedDayInfo.dayInfo, taskItem.taskID, degree);
-        achievementSingle.achievementLevel = degree;
-        achievementDegree.showAchievement = DEGREE_LEVEL_LIST.includes(achievementSingle.achievementLevel);
+        achievementDegree.achievementLevel = degree;
+        achievementDegree.showAchievement = DEGREE_LEVEL_LIST.includes(achievementDegree.achievementLevel);
       }
     }
     this.dateArr = this.dateArr.map((item: WeekDateModel) => dateStr === item.dateStr ? this.selectedDayInfo : item);
