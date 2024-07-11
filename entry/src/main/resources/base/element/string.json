@@ -89,12 +89,24 @@
       "value": "早睡"
     },
     {
+      "name": "task_run",
+      "value": "跑步"
+    },
+    {
       "name": "task_done",
       "value": "已完成"
     },
     {
       "name": "task_achievement_level",
       "value": "连续%d天达成"
+    },
+    {
+      "name": "task_single_achievement_level",
+      "value": "连续%d天%s"
+    },
+    {
+      "name": "task_degree_achievement_level",
+      "value": "打卡超过%d%"
     },
     {
       "name": "already_open",
@@ -195,6 +207,30 @@
     {
       "name": "empty",
       "value": "empty"
+    },
+    {
+      "name": "base_personal_data",
+      "value": "基本资料"
+    },
+    {
+      "name": "user_name",
+      "value": "昵称"
+    },
+    {
+      "name": "gender",
+      "value": "性别"
+    },
+    {
+      "name": "birth_data",
+      "value": "出生日期"
+    },
+    {
+      "name": "height",
+      "value": "身高"
+    },
+    {
+      "name": "weight",
+      "value": "体重"
     }
   ]
 }

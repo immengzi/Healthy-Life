@@ -14,6 +14,8 @@
  */
 
 import { AchievementDialog } from './AchievementDialog';
+import { AchievementSingleDialog } from './AchievementSingleDialog';
+import { AchievementDegreeDialog } from './AchievementDegreeDialog';
 import { TaskDetailDialog } from './TaskDetailDialog';
 import { BroadCast, BroadCastType } from '../../common/utils/BroadCast';
 import { TaskItem } from '../../model/TaskInitList';
@@ -31,12 +33,25 @@ export class CustomDialogCallback {
 export struct CustomDialogView {
   @State isShow: boolean = false;
   @Provide achievementLevel: number = 0;
+  @Provide taskID: number = 0;
   @Consume broadCast: BroadCast;
   @Provide currentTask: TaskInfo = TaskItem;
   @Provide dialogCallBack: CustomDialogCallback = new CustomDialogCallback();
   // achievement dialog
   achievementDialog: CustomDialogController = new CustomDialogController({
     builder: AchievementDialog(),
+    autoCancel: true,
+    customStyle: true
+  });
+  // single achievement
+  achievementSingleDialog: CustomDialogController = new CustomDialogController({
+    builder: AchievementSingleDialog(),
+    autoCancel: true,
+    customStyle: true
+  });
+  // degree achievement
+  achievementDegreeDialog: CustomDialogController = new CustomDialogController({
+    builder: AchievementDegreeDialog(),
     autoCancel: true,
     customStyle: true
   });
@@ -54,6 +69,20 @@ export struct CustomDialogView {
       Logger.debug('CustomDialogView', 'SHOW_ACHIEVEMENT_DIALOG');
       this.achievementLevel = achievementLevel;
       this.achievementDialog.open();
+    });
+
+    this.broadCast.on(BroadCastType.SHOW_SINGLE_ACHIEVEMENT_DIALOG, (achievementLevel: number, taskID: number) => {
+      Logger.debug('CustomDialogView', 'SHOW_SINGLE_ACHIEVEMENT_DIALOG');
+      this.achievementLevel = achievementLevel;
+      this.taskID = taskID
+      this.achievementSingleDialog.open();
+    });
+
+    this.broadCast.on(BroadCastType.SHOW_DEGREE_ACHIEVEMENT_DIALOG, (achievementLevel: number, taskID: number) => {
+      Logger.debug('CustomDialogView', 'SHOW_DEGREE_ACHIEVEMENT_DIALOG');
+      this.achievementLevel = achievementLevel;
+      this.taskID = taskID
+      this.achievementDegreeDialog.open();
     });
 
     // task clock dialog

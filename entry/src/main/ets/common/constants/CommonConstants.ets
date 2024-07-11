@@ -50,7 +50,7 @@ export class CommonConstants {
     columns: ['id', 'formId', 'formName', 'formDimension']
   } as CommonConstantsInfo
   // TaskNum
-  static readonly TASK_NUM = 6;
+  static readonly TASK_NUM = 7;
   // THOUSANDTH
   static readonly THOUSANDTH_15: string = '1.5%'; // ‘1.5%’
   static readonly THOUSANDTH_12: string = '2.2%'; // ‘2.2%’
@@ -148,6 +148,8 @@ export class CommonConstants {
   static readonly SMILE_CONTENT: string = '请保持微笑';
   static readonly BRUSH_TEETH_CONTENT: string = '每日刷牙';
   static readonly SLEEP_CONTENT: string = '早睡';
+  static readonly RUN_CONTENT: string = '该跑步啦';
+  static readonly RUN_TASK_NAME: string = '跑步';
   static readonly H_STORE: string = 'healthAppStore';
   static readonly REMINDER_AGENT_TAG: string = 'reminderAgent';
   static readonly PACKAGE_NAME: string = 'com.example.healthy_life';
@@ -165,6 +167,7 @@ export class CommonConstants {
   static readonly EAT_APPLE_RANGE: number = 100;
   static readonly SMILE_RANGE: number = 3;
   static readonly BRUSH_TEETH_RANGE: number = 3;
+  static readonly RUN_RANGE: number = 20;
   // letter spacing
   static readonly LETTER_1: number = 0.1;
   static readonly LETTER_34: number = 3.4;
@@ -197,12 +200,14 @@ export enum TaskType {
   Apple = 'apple',
   Smile = 'smile',
   Clean = 'clean',
-  Sleep = 'sleep'
+  Sleep = 'sleep',
+  Run = 'run'
 }
 
 export enum Unit {
   Liter = 'L',
   Pcs = '个',
   Times = '次',
-  Empty = ''
+  Empty = '',
+  Kilometer = 'Km'
 }

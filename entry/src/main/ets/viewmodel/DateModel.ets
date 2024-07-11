@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Huawei Device Co., Ltd.
+ * Copyright (c) 2024 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -13,15 +13,16 @@
  * limitations under the License.
  */
 
-/**
- * Broad Cast CallBack Info
- */
-export default class BroadCastCallBackInfo {
-   showAchievementDialog: Function = () => {};
-   showSingleAchievementDialog: Function = () => {};
-   showDegreeAchievementDialog: Function = () => {};
-   showTaskDetailDialog: Function = () => {};
-   showTargetSettingDialog: Function = () => {};
-   showRemindTimeDialog: Function = () => {};
-   showFrequencyDialog: Function = () => {};
+export class DateModel {
+  day: number;
+  week: number;
+  month: number;
+  year: number;
+
+  constructor(day: number, week: number, month: number, year: number) {
+    this.day = day;
+    this.week = week;
+    this.month = month;
+    this.year = year;
+  }
 }

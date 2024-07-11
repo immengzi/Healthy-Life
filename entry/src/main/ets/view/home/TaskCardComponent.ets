@@ -55,7 +55,20 @@ export struct TaskCard {
   @Builder
   targetValueBuilder() {
     if (this.taskInfo.isDone) {
-      HealthText({ title: '', titleResource: $r('app.string.task_done') })
+      Row() {
+        if (this.taskInfo.taskID != 1 && this.taskInfo.taskID != 6) {
+          HealthText({
+            title: this.taskInfo.finValue || `--`,
+            fontSize: $r('app.float.default_24')
+          })
+          Text(` / ${this.taskInfo.targetValue} ${TaskMapById[this.taskInfo.taskID - 1].unit}`)
+            .labelTextStyle()
+            .fontWeight(Const.FONT_WEIGHT_400)
+            .padding(10)
+        }
+        HealthText({ title: '', titleResource: $r('app.string.task_done') })
+      }
+      .align(Alignment.End)
     } else {
       Row() {
         // 子任务完成情况显示前半部分：--或者finalvalue（已累加值）
@@ -93,7 +106,10 @@ export struct TaskCard {
     .linearGradient({
       direction: GradientDirection.Left, // 渐变方向
       repeating: false, // 渐变颜色是否重复
-      colors: [[$r('app.color.white'), 1-Number(this.taskInfo.finValue)/Number(this.taskInfo.targetValue)], [0xB0E0E6, 0]] // 数组末尾元素占比小于1时满足重复着色效果
+      // colors: [[$r('app.color.white'), 1-Number(this.taskInfo.finValue)/Number(this.taskInfo.targetValue)], [0xB0E0E6, 0]] // 数组末尾元素占比小于1时满足重复着色效果
+      colors: (this.taskInfo.taskID === 1 || this.taskInfo.taskID === 6) ?
+        [[$r('app.color.white'), 1 - Number(Boolean(this.taskInfo.finValue))], [0xB0E0E6, 0]] :
+        [[$r('app.color.white'), 1 - Number(this.taskInfo.finValue) / Number(this.taskInfo.targetValue)], [0xB0E0E6, 0]]
     })
     .onClick(() => this.clickAction(true))
     .gesture(LongPressGesture().onAction(() => this.clickAction(false)))

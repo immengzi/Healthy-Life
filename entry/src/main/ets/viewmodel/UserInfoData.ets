@@ -1,10 +1,10 @@
 /*
  * Copyright (c) 2023 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License,Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,11 +13,14 @@
  * limitations under the License.
  */
 
-/**
- * Achievement info
- */
-export default class AchievementInfo {
-  taskID: number = 0;
-  achievementLevel: number = 0;
-  showAchievement: boolean = false;
+export default class AccountData {
+  id: number = -1;
+  username: string = '用户 001';
+  year: string = '2000';
+  mouth: string = '1';
+  date: string = '1';
+  gender: string = '保密';
+  weight: string = '50';
+  height: string = '160';
+  icon: string = '';
 }

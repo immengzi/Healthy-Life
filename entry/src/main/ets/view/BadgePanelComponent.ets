@@ -14,16 +14,23 @@
  */
 
 import { BadgeCard } from './BadgeCardComponent'
-import { getAchievementLevel } from '../model/AchieveModel'
-import { getBadgeCardItems } from '../viewmodel/AchievementViewModel'
+import {
+  ACHIEVEMENT_DEGREE_LEVEL_KEY_LIST,
+  ACHIEVEMENT_SINGLE_LEVEL_KEY_LIST,
+  getAchievementLevel,
+  getDegreeSuccessiveDays,
+  getSingleAchievementLevel, getSuccessiveDays } from '../model/AchieveModel'
+import { getBadgeCardItems, getContinueCardItems, getDegreeCardItems } from '../viewmodel/AchievementViewModel'
 import Logger from '../common/utils/Logger'
 import { ACHIEVEMENT_LEVEL_KEY } from '../model/AchieveModel'
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
 import CardInfo from '../viewmodel/CardInfo'
 
+
+// 总体成就框图
 @Component
 export struct BadgePanel {
-  @StorageProp(ACHIEVEMENT_LEVEL_KEY) successiveDays: number = 0;
+  @StorageProp(ACHIEVEMENT_LEVEL_KEY) successiveDays: number=0;
 
   aboutToAppear() {
     Logger.debug('BadgePanel', 'aboutToAppear');
@@ -33,6 +40,51 @@ export struct BadgePanel {
   build() {
     Flex({ direction: FlexDirection.Row, wrap: FlexWrap.Wrap }) {
       ForEach(getBadgeCardItems(this.successiveDays), (item: CardInfo) => {
+        BadgeCard({ content: item.titleContent, imgSrc: item.achievement })
+      })
+    }
+    .width(Const.FULL_WIDTH)
+  }
+}
+
+
+// 单任务连续成就框图
+@Component
+export struct ContinuePanel {
+  @StorageProp(ACHIEVEMENT_SINGLE_LEVEL_KEY_LIST) successiveDays: Array<number> = [];
+
+
+  aboutToAppear() {
+    Logger.debug('ContinuePanel', 'aboutToAppear');
+    getSingleAchievementLevel();                                    // getAchievementLevel()
+    getSuccessiveDays();
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Row, wrap: FlexWrap.Wrap }) {
+      ForEach( getContinueCardItems(this.successiveDays), (item: CardInfo) => {//this.successiveDays
+        BadgeCard({ content: item.titleContent, imgSrc: item.achievement })
+      })
+    }
+    .width(Const.FULL_WIDTH)
+  }
+}
+
+
+// 单任务完成率成就框图
+@Component
+export struct DegreePanel {
+  @StorageProp(ACHIEVEMENT_DEGREE_LEVEL_KEY_LIST) successiveDays: Array<number> = [];
+
+  aboutToAppear() {
+    Logger.debug('DegreePanel', 'aboutToAppear');
+    getAchievementLevel();                                    // getAchievementLevel()
+    getDegreeSuccessiveDays();
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Row, wrap: FlexWrap.Wrap }) {
+      ForEach( getDegreeCardItems(this.successiveDays), (item: CardInfo) => {  //this.successiveDays
         BadgeCard({ content: item.titleContent, imgSrc: item.achievement })
       })
     }

@@ -228,7 +228,8 @@ class FormUtils {
     data.forEach((item: TaskInfo) => {
       let temp: AgencyCardInfo = {
         targetValue: item.targetValue,
-        finValue: item.isDone ? item.targetValue : item.finValue,
+        // finValue: item.isDone ? item.targetValue : item.finValue,
+        finValue : item.finValue,
         finValueIsNull: item.isDone ? false : (item.finValue === '' ? true : false),
       };
       switch (item.taskID) {
@@ -249,6 +250,9 @@ class FormUtils {
           break;
         case taskType.sleepEarly:
           temp = this.getTemp(temp, TaskType.Sleep, Unit.Empty, true, item.isDone);
+          break;
+        case taskType.run:
+          temp = this.getTemp(temp, TaskType.Run, Unit.Kilometer, false, item.isDone);
           break;
         default:
           break;

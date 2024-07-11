@@ -6,5 +6,7 @@
     "pages/TaskListPage",
     "pages/TaskEditPage",
     "pages/CalendarDetailPage"
+    "pages/MineEditPage",
+    "pages/MineEditNamePage"
   ]
 }
