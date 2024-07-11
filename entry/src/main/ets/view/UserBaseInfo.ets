@@ -16,6 +16,9 @@ import Logger from '../common/utils/Logger';
 // PictureSaving.ets
 import { picker } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import UserInfoData from '../viewmodel/UserInfoData';
+import UserInfoApi from '../common/database/tables/UserInfoApi';
+import { buffer, util } from '@kit.ArkTS';
 
 // 定义一个URI数组，用于接收PhotoViewPicker返回的用于选择图像的URI。
 let uris: Array<string> = [];
@@ -45,17 +48,39 @@ export struct UserBaseInfo {
   @Prop nickname: string = '';
   @Prop signature: string = '';
   @Prop icon: string = ''
+  @State userInfo: UserInfoData[] = [];
+  private UserInfoTable = new UserInfoApi(() => {
+  });
+
+  aboutToAppear(): void {
+    // 查找用户信息
+    this.UserInfoTable.getRdbStore(() => { // 获取数据库
+      this.UserInfoTable.query(1, (result: UserInfoData[]) => { // 查询数据库中的用户
+        this.userInfo.push(result[0]);
+        // this.icon = this.userInfo[0].icon
+      }, false);
+    });
+  }
 
   build() {
     Column() {
       // userIcon
       Column() {
         if (this.icon != '') {
-          Image(`${this.icon}`)
+          Image(this.icon)
             .height($r('app.float.default_66'))
             .width($r('app.float.default_66'))
             .margin({ top: $r('app.float.default_71') })
             .borderRadius($r('app.float.default_40'))
+            .onComplete(msg => {
+              if (msg) {
+                Logger.debug('UserBaseInfo', JSON.stringify(msg))
+              }
+            })// 图片获取失败，打印结果
+            .onError(error => {
+              Logger.debug('UserBaseInfo', `load image fail ${this.icon}`)
+              Logger.debug('UserBaseInfo', JSON.stringify(error))
+            })
         } else {
           Image($r('app.media.ic_user'))
             .objectFit(ImageFit.Contain)
@@ -68,6 +93,13 @@ export struct UserBaseInfo {
         await photoPickerGetUri().then(value => {
           this.icon = value;
           Logger.debug('UserBaseInfo', this.icon);
+        });
+        // 保存
+        this.UserInfoTable.getRdbStore(() => { // 获取数据库
+          this.userInfo[0].icon = this.icon
+          Logger.info('UserBaseInfo', `编辑头像 ${this.userInfo[0].icon}`);
+          this.UserInfoTable.updateData(this.userInfo[0], () => {
+          });
         });
       })
 

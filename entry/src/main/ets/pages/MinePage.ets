@@ -28,6 +28,7 @@ export struct MineIndex {
   @State userInfo: UserInfoData[] = [];
   @State nickname: string = Const.NICK_NAME;
   @State signature: string = Const.SIGNATURE;
+  @State icon: string = ""
 
   // 查找用户信息
   aboutToAppear() {
@@ -36,6 +37,7 @@ export struct MineIndex {
         if (result && result.length > 0) {
           this.userInfo.push(result[0]);
           this.nickname = this.userInfo[0]?.username;
+          this.icon = this.userInfo[0].icon;
           Logger.info('MinePage', `${this.nickname}`);
         } else {
           // 如果没有查询到数据，插入新数据
@@ -71,7 +73,8 @@ export struct MineIndex {
     Column() {
       UserBaseInfo({
         nickname: this.nickname,
-        signature: this.signature
+        signature: this.signature,
+        icon: this.icon
       });
 
       MineListInfo();
