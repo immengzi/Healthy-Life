@@ -69,7 +69,7 @@ class GlobalInfoApi {
       let count = resultSet.rowCount;
       if (count === 0) {
         Logger.info('GlobalInfoTable', 'query no results!');
-        let result = new GlobalInfo('', '', 0, '');
+        let result = new GlobalInfo('', '', 0, '');3
         callback(result);
       } else {
         let result = new GlobalInfo('', '', 0, '');
@@ -81,6 +81,26 @@ class GlobalInfoApi {
         callback(result);
       }
     });
+  }
+
+  async queryInstant( id: number = 0): Promise<GlobalInfo> {
+    let predicates = new relationalStore.RdbPredicates(Const.GLOBAL_INFO.tableName ? Const.GLOBAL_INFO.tableName : '');
+    predicates.equalTo('id', Number(id));
+    let resultSet = await RdbUtils.query(predicates);
+    let count = resultSet.rowCount;
+    if (count === 0) {
+      Logger.info('GlobalInfoTable', 'query no results!');
+      let result = new GlobalInfo('', '', 0, '');
+      return result;
+    } else {
+      let result = new GlobalInfo('', '', 0, '');
+      resultSet.goToFirstRow();
+      result.firstDate = resultSet.getString(resultSet.getColumnIndex('firstDate'));
+      result.lastDate = resultSet.getString(resultSet.getColumnIndex('lastDate'));
+      result.checkInDays = resultSet.getDouble(resultSet.getColumnIndex('checkInDays'));
+      result.achievements = resultSet.getString(resultSet.getColumnIndex('achievements'));
+      return result;
+    }
   }
 }
 

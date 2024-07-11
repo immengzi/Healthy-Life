@@ -41,12 +41,17 @@ export class DatabaseModel {
           }
         });
         // insert global achievement data
-        for(let i = 0; i < Const.TASK_NUM; i++) {
+        for(let i = 1; i <= Const.TASK_NUM; i++) {
           GlobalInfoApi.insertData(globalInfo, (isDone: number) => {
             if (isDone) {
               Logger.info('AppStart', 'Insert globalInfo success: ' + JSON.stringify(globalInfo));
             }
           }, i);
+          GlobalInfoApi.insertData(globalInfo, (isDone: number) => {
+            if (isDone) {
+              Logger.info('AppStart', 'Insert globalInfo success: ' + JSON.stringify(globalInfo));
+            }
+          }, i * 100);
         }
 
         self.insertGlobalTask();

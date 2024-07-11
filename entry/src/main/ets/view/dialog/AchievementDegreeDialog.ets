@@ -14,14 +14,12 @@
  */
 
 import { CommonConstants as Const } from '../../common/constants/CommonConstants';
-import { AchievementMap, TaskMapById } from '../../model/TaskInitList';
-import { UIContext } from '@kit.ArkUI';
-import { resourceManager } from '@kit.LocalizationKit';
+import { AchievementMap, DegreeMap, TaskMapById } from '../../model/TaskInitList';
 
 const ANGLE_LARGE = 360;
 
 @CustomDialog
-export struct AchievementSingleDialog {
+export struct AchievementDegreeDialog {
   controller: CustomDialogController = new CustomDialogController({ builder: 0 });
   @Consume achievementLevel: number;
   @Consume taskID: number;
@@ -32,23 +30,14 @@ export struct AchievementSingleDialog {
 
   aboutToAppear() {
     switch (this.achievementLevel) {
-      case 3:
-        this.achievementMapValue = AchievementMap.on_3;
+      case 200:
+        this.achievementMapValue = DegreeMap.on__200;
         break;
-      case 7:
-        this.achievementMapValue = AchievementMap.on_7;
+      case 300:
+        this.achievementMapValue = DegreeMap.on__300;
         break;
-      case 30:
-        this.achievementMapValue = AchievementMap.on_30;
-        break;
-      case 50:
-        this.achievementMapValue = AchievementMap.on_50;
-        break;
-      case 73:
-        this.achievementMapValue = AchievementMap.on_73;
-        break;
-      case 99:
-        this.achievementMapValue = AchievementMap.on_99;
+      case 400:
+        this.achievementMapValue = DegreeMap.on__400;
         break;
       default:
         break;
@@ -63,8 +52,7 @@ export struct AchievementSingleDialog {
         .height(Const.THOUSANDTH_400)
         .objectFit(ImageFit.Contain)
 
-      Text($r('app.string.task_single_achievement_level', this.achievementLevel,
-        getContext(this).resourceManager.getStringSync(TaskMapById[this.taskID-1].taskName)))
+      Text($r('app.string.task_degree_achievement_level', this.achievementLevel))
         .fontSize($r('app.float.default_24'))
         .fontWeight(Const.FONT_WEIGHT_500)
         .fontColor($r('app.color.white'))

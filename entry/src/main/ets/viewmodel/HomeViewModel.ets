@@ -14,8 +14,9 @@
  */
 
 import { CommonConstants as Const } from '../common/constants/CommonConstants';
-import { isReachNewAchievement, ACHIEVEMENT_LEVEL_KEY, ACHIEVEMENT_SINGLE_LEVEL_KEY } from '../model/AchieveModel';
-import { TaskMapById, ITaskItem, ACHIEVEMENT_LEVEL_LIST } from '../model/TaskInitList';
+import { isReachNewAchievement, ACHIEVEMENT_LEVEL_KEY, ACHIEVEMENT_SINGLE_LEVEL_KEY,
+  isReachNewDegreeAchievement } from '../model/AchieveModel';
+import { TaskMapById, ITaskItem, ACHIEVEMENT_LEVEL_LIST, DEGREE_LEVEL_LIST } from '../model/TaskInitList';
 import TaskInfo from './TaskInfo';
 import DayInfo from './DayInfo';
 import { dateToStr, weekDateFormat } from '../common/utils/Utils';
@@ -228,6 +229,7 @@ export class HomeStore {
       return item.taskID === taskItem?.taskID ? taskItem : item;
     });
     let achievementSingle: AchievementInfo = new AchievementInfo();
+    let achievementDegree: AchievementInfo = new AchievementInfo();
     let achievementDay: AchievementInfo = new AchievementInfo();
     if(taskItem.isDone){
       if (taskItem.taskID == 1 || taskItem.taskID == 6 || taskItem.finValue === taskItem.targetValue) {
@@ -240,12 +242,16 @@ export class HomeStore {
           achievementDay.showAchievement = ACHIEVEMENT_LEVEL_LIST.includes(achievementDay.achievementLevel)
         }
       }
-      // else if (Number(taskItem.finValue) % Number(taskItem.targetValue) == 0){
-      //   achievementLevel = await this.updateSingleAchievement(this.selectedDayInfo.dayInfo, taskItem.taskID)
-      // }
+      else if (Number(taskItem.finValue) % Number(taskItem.targetValue) == 0){
+        achievementDegree.taskID = taskItem.taskID;
+        let degree: number = Number(taskItem.finValue) / Number(taskItem.targetValue) * 100
+        achievementDegree.achievementLevel = await this.updateDegreeAchievement(this.selectedDayInfo.dayInfo, taskItem.taskID, degree);
+        achievementSingle.achievementLevel = degree;
+        achievementDegree.showAchievement = DEGREE_LEVEL_LIST.includes(achievementSingle.achievementLevel);
+      }
     }
     this.dateArr = this.dateArr.map((item: WeekDateModel) => dateStr === item.dateStr ? this.selectedDayInfo : item);
-    let res: Array<AchievementInfo> = [achievementSingle, achievementDay]
+    let res: Array<AchievementInfo> = [achievementSingle, achievementDay, achievementDegree]
     return res;
   }
 
@@ -366,6 +372,31 @@ export class HomeStore {
           Logger.debug('taskClock-updateAchievement', JSON.stringify(achievementInfo));
           isNewAchieve ? resolve(achievementInfo.checkInDays) : resolve(0);
         }, taskID);
+      }, taskID)
+    });
+  }
+
+  updateDegreeAchievement(dayInfo: DayInfo, taskID: number, degree: number): Promise<number> {
+    Logger.debug('taskClock-updateAchievement', JSON.stringify(dayInfo));
+    return new Promise((resolve, reject) => {
+
+      GlobalInfoApi.query((res: GlobalInfo) => {
+        Logger.info('taskClock-globalInfoApi', JSON.stringify(res));
+        let achievementInfo = res;
+
+        let isNewAchieve = isReachNewDegreeAchievement(achievementInfo, degree);
+        if (isNewAchieve) {
+          // AppStorage.setOrCreate(ACHIEVEMENT_SINGLE_LEVEL_KEY[taskID-1], achievementInfo.checkInDays);
+          achievementInfo.achievements = achievementInfo.achievements + ',' + degree;
+        }
+        GlobalInfoApi.updateData(achievementInfo, (res: number) => {
+          if (!res) {
+            Logger.error('taskClock-updateAchievement', JSON.stringify(res));
+            reject(res);
+          }
+          Logger.debug('taskClock-updateAchievement', JSON.stringify(achievementInfo));
+          isNewAchieve ? resolve(degree) : resolve(0);
+        }, taskID * 100);
       }, taskID)
     });
   }

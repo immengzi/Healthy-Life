@@ -15,6 +15,7 @@
 
 import { AchievementDialog } from './AchievementDialog';
 import { AchievementSingleDialog } from './AchievementSingleDialog';
+import { AchievementDegreeDialog } from './AchievementDegreeDialog';
 import { TaskDetailDialog } from './TaskDetailDialog';
 import { BroadCast, BroadCastType } from '../../common/utils/BroadCast';
 import { TaskItem } from '../../model/TaskInitList';
@@ -48,6 +49,12 @@ export struct CustomDialogView {
     autoCancel: true,
     customStyle: true
   });
+  // degree achievement
+  achievementDegreeDialog: CustomDialogController = new CustomDialogController({
+    builder: AchievementDegreeDialog(),
+    autoCancel: true,
+    customStyle: true
+  });
   // task clock dialog
   taskDialog: CustomDialogController = new CustomDialogController({
     builder: TaskDetailDialog(),
@@ -69,6 +76,13 @@ export struct CustomDialogView {
       this.achievementLevel = achievementLevel;
       this.taskID = taskID
       this.achievementSingleDialog.open();
+    });
+
+    this.broadCast.on(BroadCastType.SHOW_DEGREE_ACHIEVEMENT_DIALOG, (achievementLevel: number, taskID: number) => {
+      Logger.debug('CustomDialogView', 'SHOW_DEGREE_ACHIEVEMENT_DIALOG');
+      this.achievementLevel = achievementLevel;
+      this.taskID = taskID
+      this.achievementDegreeDialog.open();
     });
 
     // task clock dialog

@@ -126,7 +126,7 @@ function getContinue(key: string) {
 
 // 输入单个任务完成率，  返回单任务完成率成就数组(CardInfo类型)
 export function getDegreeCardItems(successiveDays: Array<number>): Array<CardInfo> {   // CardInfo 成就对应的文字和图片
-  let DegreeList: Array<string> = ['喝水','吃苹果','每日微笑','每日刷牙']
+  let DegreeList: Array<string> = ['喝水','吃苹果','每日微笑','每日刷牙', '跑步']
 
   let badgeMileStones = DEGREE_LEVEL_LIST;   // 单任务完成率成就标准
   let cardItems: Array<CardInfo> = [];

@@ -19,6 +19,7 @@
 export default class BroadCastCallBackInfo {
    showAchievementDialog: Function = () => {};
    showSingleAchievementDialog: Function = () => {};
+   showDegreeAchievementDialog: Function = () => {};
    showTaskDetailDialog: Function = () => {};
    showTargetSettingDialog: Function = () => {};
    showRemindTimeDialog: Function = () => {};
