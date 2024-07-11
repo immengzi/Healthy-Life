@@ -73,6 +73,7 @@ class DayInfoApi {
         result.targetTaskNum = resultSet.getDouble(resultSet.getColumnIndex('targetTaskNum'));
         result.finTaskNum = resultSet.getDouble(resultSet.getColumnIndex('finTaskNum'));
         callback(result);
+
       }
       return;
     });

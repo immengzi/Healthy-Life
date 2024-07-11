@@ -34,15 +34,24 @@ function labelTextStyle() {
 
 @Component
 export struct TaskCard {
+  /**
+   * Prop装饰的变量为一种状态变量，其变量名和类型来自父组件，且数据是父->子单向同步。
+   * TaskCard的父组件是HomeIndex，同步的变量是taskInfoStr(保存了taskInfo信息)。
+   */
   @Prop taskInfoStr: string = '';
   clickAction: Function = (isClick: boolean) => {
   };
   @State taskInfo: TaskInfo = new TaskInfo(-1, '', -1, '', false, '', '', '', false, '', false);
 
+  // 解析由父组件同步的JSON格式的taskInfo数据
   aboutToAppear() {
     this.taskInfo = JSON.parse(this.taskInfoStr);
   }
 
+  /**
+   * 自定义构建函数，可理解为定义了一个在build里使用的函数。
+   * 更新子任务完成情况的显示。
+   */
   @Builder
   targetValueBuilder() {
     if (this.taskInfo.isDone) {
@@ -62,11 +71,12 @@ export struct TaskCard {
       .align(Alignment.End)
     } else {
       Row() {
+        // 子任务完成情况显示前半部分：--或者finalvalue（已累加值）
         HealthText({
           title: this.taskInfo.finValue || `--`,
           fontSize: $r('app.float.default_24')
         })
-        Text(` / ${this.taskInfo.targetValue} ${TaskMapById[this.taskInfo.taskID - 1].unit}`)
+        Text(` / ${this.taskInfo.targetValue} ${TaskMapById[this.taskInfo.taskID - 1].unit}`) // 子任务完成情况显示后半部分：/+targetvalue+单位
           .labelTextStyle()
           .fontWeight(Const.FONT_WEIGHT_400)
       }
